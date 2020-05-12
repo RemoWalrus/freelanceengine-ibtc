@@ -206,7 +206,7 @@ if( isset($convert->hour_rate) )
 						get_template_part( 'list', 'portfolios' );
 						wp_reset_query();
 
-						if(is_user_logged_in() && (ae_user_role( get_current_user_id() ) == EMPLOYER || $author_id==get_current_user_id())){
+						if(is_user_logged_in() && (ae_user_role( get_current_user_id() ) == EMPLOYER || $author_id==get_current_user_id() || is_super_admin())){
 							// list project worked
 							get_template_part( 'template/author', 'freelancer-history' );
 							wp_reset_query();
