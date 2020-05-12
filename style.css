@@ -708,7 +708,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 
 @media screen and (max-aspect-ratio: 8/3) {
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
-    margin-top: 25px;
+    margin-top: 0px;
     min-width: 250px;
     text-transform: uppercase;
     letter-spacing: 2px;
