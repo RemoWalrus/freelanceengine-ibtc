@@ -625,8 +625,12 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 /* MOBILE ONLY */
-@media only screen and (max-width: 720px) {
 
+
+@media only screen and (max-width: 767px) {
+.fre-page-title {
+    margin-bottom: 0px;
+	}
 	#myVideo {
 		display:none;
 		z-index:0;
