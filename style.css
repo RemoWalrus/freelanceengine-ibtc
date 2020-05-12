@@ -1,0 +1,751 @@
+/*
+Theme Name:     In Between The Chair
+Theme URI:      http://romergarcia.com/
+Description:    Child theme for the FreelanceEngine theme
+Author:         Romer Garcia & Latif Pala
+Author URI:     http://romergarcia.com/about/
+Template:       freelanceengine
+Version:        7.2
+*/
+
+/* colors for theme */
+
+.general>.container {
+	background-color: transparent;
+	width: 100%;
+}
+
+.page-container .blog-content p {
+    line-height: 25px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.wpb_wrapper blockquote > p {
+    font-size: 18px;
+}
+.sub-menu {
+    background: transparent;
+}
+#main_header{
+    background-color:rgba(182, 187, 207, 0.90);
+}
+.fre-account .dropdown-menu > li a:hover, .fre-notification i:hover {
+    color: #fff;
+}
+
+.fre-menu-main li a:hover {
+    background: none;
+	color: #fff;}
+.fre-account.open .fre-account-info i, .fre-account.open .fre-account-info span {
+    color: #635f7e;
+}
+.fre-account-info:hover i, .fre-account-info:hover span {
+    color: #635f7e;
+}
+.fre-menu-main > li:hover > a {
+    color: #2c3e50;
+}
+.fre-menu-main > li {
+    cursor: pointer;
+	color: #635f7e;
+}
+.dropdown-menu {
+    background-color: #d3d5e2;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #d3d5e2;
+    border: 1px solid rgba(1,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.checkbox-inline span:after, .fre-checkbox span:after {
+	color: #625f7d;
+}
+.checkbox-inline input[type=checkbox]:checked+span:before, .fre-checkbox input[type=checkbox]:checked+span:before {
+    border-color: #5c5e5d;
+}
+ a:focus, a:hover, .fre-search-dropdown>li>a:hover, .project-filter-clear:active, .project-filter-clear:focus, .project-filter-clear:hover {
+    color: #222;
+}
+
+.fre-menu-page .dropdown-menu>.active>a {
+    background-color: transparent;
+    color: #000;
+}
+.fre-work-block span {
+    width: 90px;
+    height: 90px;
+}
+.fre-stories-wrap .stories-img {
+    float: right;
+    width: 25%;
+}
+.fre-stories-wrap .stories-img + .stories-content {
+    width: 70%;
+    margin-right: 30%;
+}
+
+.fre-get-started {
+    background: #fff;
+}
+
+.fre-stories-wrap {
+	background: transparent;
+}
+/* darker arrows */
+.owl-carousel-stories .owl-next span::before, .owl-carousel-stories .owl-next span::after, .owl-carousel-stories .owl-prev span::before, .owl-carousel-stories .owl-prev span::after {
+    background: #625e7e;
+}
+
+/* color links and hovers */
+
+ a:focus, a:hover, .fre-search-dropdown>li>a.active  {
+	color: #fff;
+}
+
+/* FIX BLOG POST SPACING */
+
+.block-page {
+    margin-top: 0;
+    min-height: 750px;
+}
+
+/* BRANDED TITLES */
+
+.blog-header-container {
+    background: transparent;
+    border-bottom: 1px solid #e4e7ea;
+}
+.blog-header-container .blog-classic-top {
+    padding: 0 25px 0;
+    height: 80px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_story, .blog-header-container .blog-classic-top h2 {
+    font-family: quiche-sans, serif;
+	font-weight: 500;
+	line-height: 1.3em;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 3px;
+    color: #635f7e;
+	background-blend-mode:multiply;
+}
+
+.profile-list-title, .fre-freelancer-wrap h2 a, .fre-service .container>h2, .project-list-title {
+    font-size: 20px;
+    font-family: quiche-sans, sans-serif;
+    letter-spacing: .5px;
+	font-weight: 700;
+}
+
+h3, h4 {
+    font-family: 'quiche-sans', sans-serif;
+	letter-spacing: 0.5px;
+}
+/* h2 in profiles */
+h2.profh2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4em;
+	font-family: quiche-sans, sans-serif;
+	letter-spacing: .5px;
+}
+
+.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name {
+	color: #222;
+    line-height: 1.4em;
+    font-family: quiche-sans;
+    letter-spacing: 0.5px;
+}
+
+
+ .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn {
+	text-transform: uppercase;
+    letter-spacing: 1.5px;
+	font-family: quiche-sans, sans-serif;
+	font-size: 17px;
+	font-weight: 700;
+}
+.profile-employer-secure-wrap>h2, .freelance-video-title, .freelance-portfolio-title, .freelance-experience-title, .freelance-certificate-title, .freelance-education-title,  .fre-authen-login>h2, .fre-register-default>h2, .fre-authen-register>h2 {
+		text-transform: uppercase;
+    	letter-spacing: 1px;
+		font-family: quiche-sans, sans-serif;
+		font-size: 20px;
+}
+
+
+.fre-normal-btn-o:active, .fre-normal-btn-o:focus, .fre-normal-btn-o:hover {
+    background: #635f7e;
+    color: #FFFFFF;
+}
+.employer-info-save .employer-info-cancel-btn {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: quiche-sans, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.employer-info-save.btn-update-profile-top .fre-normal-btn, .employer-info-save.btn-update-profile-top .fre-normal-btn-disable {
+    letter-spacing: 3px;
+}
+
+/* LOGO SVG IMAGE */
+ img.logo {
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto 5px;
+    position: inherit;
+	box-sizing: border-box;
+	padding: 0 60px 30px;
+	max-width: 600px;
+}
+
+
+/* Tiny reset thingy */
+body,html{margin:0;padding:0;}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
+    background-color: #e9f9f9;
+}
+div.fre-chosen-single.chosen-container .chosen-results li.highlighted {
+    background-color: #b6bbcf;
+}
+
+/* video homepage */
+video {
+    display: inline-block;
+    vertical-align: top;
+}
+#myVideo {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	z-index: -1;
+	background-position: center;
+	background-size: cover;
+}
+.vid {
+    height: 100% !important;
+	max-height: 85vh;
+	z-index: 0;
+	}
+	.fre-how-work{
+		z-index: 9;
+	}
+
+/* Hide License Number */
+.license-wrapper {
+        display: none;
+}
+
+/* make profile bg color transparent */
+
+.ibtc-transparent, .fre-profile-box {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+.chairbk, .fre-page-wrapper {
+    background-image: url('assets/images/bgchairv1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fre-page-title h2 {
+    margin: 0;
+    font-family: quiche-sans, serif;
+	font-weight: 500;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 3px;
+    color: #635f7e;
+	background-blend-mode:multiply;
+    line-height: 1.3em;
+}
+
+.fre-page-title {
+	background: transparent !important;
+}
+
+
+/* TAGS ICONS and labels */
+
+.custom-field-wrapper li, .custom-field-wrapper li, .fre-switch input:checked+.fre-switch-slider, .fre-label {
+	    background-color: #c6cbde !important;
+}
+
+/* h2 in profiles */
+h2.profh2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4em;
+	font-family: quiche-sans, sans-serif;
+	letter-spacing: .5px;
+}
+
+.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name {
+	color: #222;
+    line-height: 1.4em;
+    font-family: quiche-sans;
+    letter-spacing: 0.5px;
+}
+
+
+ .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn {
+	text-transform: uppercase;
+    letter-spacing: 1.5px;
+	font-family: quiche-sans, sans-serif;
+	font-size: 17px;
+	font-weight: 700;
+}
+.profile-employer-secure-wrap>h2, .freelance-video-title, .freelance-portfolio-title, .freelance-experience-title, .freelance-certificate-title, .freelance-education-title,  .fre-authen-login>h2, .freelance-work-title {
+		text-transform: uppercase;
+    	letter-spacing: 1px;
+		font-family: quiche-sans, sans-serif;
+		font-size: 20px;
+}
+
+.fre-perfect-freelancer, .fre-page-section {
+    background-image: url('assets/images/bgchairv1.jpg') !important;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fre-page-section .container {
+	padding-bottom: 25px;
+}
+.freelance-video-title{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color:#2c3e50;
+}
+.freelance-video-add{
+  float: right;
+}
+.freelance-video-add .fre-normal-btn-o{
+  min-width: 110px;
+}
+
+/* Media uploader css */
+.media-frame-actions-heading{
+  display: none;
+}
+.media-modal-close .screen-reader-text{
+  display: none;
+}
+
+.check .screen-reader-text{
+  display: none;
+}
+.media-toolbar .media-toolbar-primary .media-search-input-label, .media-toolbar .media-toolbar-primary #media-search-input {
+  display: none;
+}
+.media-toolbar-secondary .media-attachments-filter-heading, .media-toolbar-secondary .screen-reader-text, .media-toolbar-secondary .attachment-filters{
+  display: none;
+}
+.custom-field .multi_select-field #jobcomp_chosen{
+  width: 100% !important;
+}
+
+/* Portfolio like css */
+/*.freelance-portfolio-like-wrap {
+    position: relative;
+}
+@media (min-width:1200px) {
+    .freelance-portfolio-like-wrap:hover .freelance-portfolio-like-img-wrap img {
+        -webkit-animation-name: fadeScale;
+        -moz-animation-name: fadeScale;
+        -o-animation-name: fadeScale;
+        animation-name: fadeScale
+    }
+}
+.freelance-portfolio-like-wrap:hover .freelance-portfolio-like {
+    opacity: 1
+}
+.freelance-portfolio-like-wrap .freelance-portfolio-like{
+    position: absolute;
+    top: 44%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    opacity: 0;
+    font-size: 18px;
+    font-weight: 500;
+    border:1px solid #ededed;
+    border-radius: 10px;
+}
+.freelance-portfolio-like-img-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 254px;
+    overflow: hidden;
+}
+.freelance-portfolio-like{
+  display: block;
+  width: 50%;
+}
+
+.freelance-portfolio-like-img-wrap img {
+    border:1px solid #ededed;
+    border-radius: 10px;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes fadeScale {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+@-moz-keyframes fadeScale {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+@-o-keyframes fadeScale {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        z-index: -1
+    }
+}
+
+@keyframes fadeScale {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        z-index: -1
+    }
+}*/
+div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="file"]{
+  display: block;
+}
+.wp-core-ui .button.button-hero{
+
+}
+@media only screen and (max-width:640px) and (max-height:400px) {
+  /*.image-details .media-modal, .media-modal{
+     top:5%;
+    left:5%;
+    right:5%;
+    bottom:5%;
+  }*/
+
+  img.logo {
+    vertical-align: middle;
+    display: block;
+    margin: 20px auto 20px;
+    position: inherit;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 320px;
+	}
+}
+/*FREELANCE ENGINE DEFAULT BREAKPOINT */
+@media only screen and (min-width:1200px){
+	.container {
+    width: 1080px !important
+	}
+	/* LOGO SVG IMAGE */
+ 	img.logo {
+    	vertical-align: middle;
+    	display: block;
+    	margin: 0 auto 50px;
+    	position: inherit;
+		box-sizing: border-box;
+		padding: 0 60px 35px;
+		max-width: 850px;
+	}
+
+	.fre-how-work {
+    	padding-top: 5vh;
+    	display: block;
+    	position: inherit;
+	}
+	.get-started-content {
+    padding: 78px 320px 78px 0;
+	}
+}
+@media only screen and (max-width:1199px){
+	.fre-menu-main li a, .fre-login>li a {
+    color: #333144 !important;
+}
+	.fre-menu-main li a:hover, .fre-login>li a:hover {
+		color:#ffffff !important;
+	}
+	.fre-menu-page {
+    width: 100%;
+    background: #969db7;
+}
+.dropdown-menu {
+    background-color: #969db7 !important;
+	}
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 721px) {
+
+	.fre-background{
+		top:-80px;
+		margin-bottom: -85px;
+		position: relative;
+		background-image: url('assets/images/BGlogin1.jpg');
+    height: 90vh;
+		overflow: auto;
+	}
+
+	.fre-bg-content {
+    	width: 100%;
+    	position: absolute;
+    	top: 40%;
+		-webkit-transform: translateY(00%);
+    	-ms-transform: translateY(0%);
+    	transform: translateY(0%);
+	}
+	.fre-authen-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+	}
+	footer {
+    display: block;
+    position: relative;
+    padding: 70px 0 0;
+    margin-top: 0px;
+	}
+	.fre-how-work {
+    padding-top: 8vh;
+    display: block;
+    position: inherit;
+	}
+	.fre-page-title {
+    padding: 40px 0 25px;
+    border-bottom: 1px solid #e4e7ea;
+    margin-bottom: 0px;
+	}
+	#wpforo-wrap {
+    color: #333333;
+    background-color: rgba(255,255,255,.6);
+	}
+	#wpforo-wrap .wpf-breadcrumb {
+       background-color: #FFFFFF;
+	}
+  .media-modal{
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+  }
+/* SPACING  HOMEPAGE */
+
+	.fre-our-stories {
+    padding: 36px 0;
+    background-image: url('assets/images/bgcommunity.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+	.stories2 {
+	background-image: url('assets/images/BGmain.jpg');
+	}
+}
+
+/* MOBILE ONLY */
+@media only screen and (max-width: 720px) {
+
+	#myVideo {
+		display:none;
+		z-index:0;
+	}
+	.vid {
+    height: 70vh !important;
+    max-height: 85vh;
+	}
+	  img.logo {
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto 20px;
+    position: inherit;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 400px;
+	width: 80%
+}
+	.fre-background {
+    top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    height: 85vh;
+	background-color: transparent;
+	background-image: url('assets/images/BGlogin1.jpg');
+	background-position: right;
+	}
+	.fre-bg-content {
+    width: 100%;
+    position: relative !important;
+	display:block;
+    top: 20%;
+	-webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    transform: translateY(10%);
+	}
+	.fre-bg-content .container {
+    padding: 0;
+    margin-top: 0px;
+    display: block;
+    background-color: transparent;
+	}
+
+	.fre-menu-main li a, .fre-login>li a {
+    color: #333144 !important;
+	}
+	.fre-menu-main li a:hover, .fre-login>li a:hover {
+		color:#ffffff !important;
+	}
+	.fre-menu-page {
+    width: 100%;
+    background: #969db7;
+	}
+	.dropdown-menu {
+    background-color: #969db7 !important;
+	}
+	.freelance-video-add {
+    float: left;
+    margin-top: 10px;
+  	}
+	.fre-how-work {
+    padding-top: 15vh;
+  	}
+	.fre-our-stories {
+    padding: 36px 0;
+    background-image: url('assets/images/bgcommunity.jpg');
+    background-attachment: fixed;
+	background-position: center;
+    background-size: cover;
+	}
+	.stories2 {
+	background-image: url('assets/images/BGmain.jpg');
+	}
+/* SPACING  HOMEPAGE */
+
+}
+/* MOBILE FIX */
+
+@media screen and (max-aspect-ratio: 8/3) {
+	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
+    margin-top: 25px;
+    min-width: 250px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	font-family: quiche-sans, sans-serif;
+	font-size: 16px;
+	}
+	img.logo {
+	max-width:500;
+	}
+
+}
+
+
+@media screen and (min-aspect-ratio: 8/3) {
+#myVideo {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	z-index:-1;
+	background-position: center;
+	background-size: cover;
+}
+.vid {
+    height: 100% !important;
+	max-height: 90vh;
+	}
+.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn {
+    margin-top: 70px;
+    min-width: 190px;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+	font-family: quiche-sans, sans-serif;
+	font-size: 14px;
+	}
+
+}

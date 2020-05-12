@@ -1,0 +1,27 @@
+/* 
+
+Theme Name: Classic
+
+Version: 1.1
+
+Description: IBTC Community Theme
+
+Theme URI: http://wpforo.com
+
+Author: gVectors Team
+
+*/
+
+#wpforo-wrap #wpforo-title {
+	padding: 2px 0 10px 0;
+    margin: 1px 0 15px 0;
+    font-family: quiche-sans, serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #635f7e;
+    background-blend-mode: multiply;
+    line-height: 1.3em;
+}
