@@ -97,6 +97,11 @@ Version:        7.2
     background: #625e7e;
 }
 
+.fre-freelancer-wrap {
+	border:0;
+	box-shadow: 0px 1px 1px 0px rgba(185, 184, 184, 0.75);
+}
+
 /* color links and hovers */
 
  a:focus, a:hover, .fre-search-dropdown>li>a.active  {
@@ -120,15 +125,22 @@ a, a:focus, a:hover {
 
 /* BRANDED TITLES */
 
+.freelance-experience-wrap>h2, .freelance-certificate-wrap>h2, .freelance-education-wrap>h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .blog-header-container {
-    background: transparent;
     border-bottom: 1px solid #e4e7ea;
+	z-index: 2;
+    background: transparent;
+	margin-bottom: 20px
 }
 .blog-header-container .blog-classic-top {
-    padding: 0 25px 0;
+    padding: 0 15px 0;
     height: 80px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_story, .blog-header-container .blog-classic-top h2 {
@@ -303,6 +315,11 @@ video {
 .ibtc-transparent, .fre-profile-box {
 	background-color: rgba(255, 255, 255, 0.7);
 }
+/*make blog bg color transparent */
+.page-container .blog-content {
+    box-shadow: 0px 1px 1px 0px rgba(185, 184, 184, 0.75);
+    background: rgba(255, 255, 255, .7);
+}
 .chairbk, .fre-page-wrapper {
     background-image: url('assets/images/bgchairv1.jpg');
     background-attachment: fixed;
@@ -364,7 +381,7 @@ h2.profh2 {
 		font-size: 20px;
 }
 
-.fre-perfect-freelancer, .fre-page-section {
+.fre-perfect-freelancer, .fre-page-section, .page-template-page-nosidebar {
     background-image: url('assets/images/bgchairv1.jpg') !important;
     background-attachment: fixed;
     background-size: cover;
@@ -568,7 +585,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 766px) {
+@media only screen and (min-width: 767px) {
 
 	.fre-background{
 		top:-80px;
@@ -603,18 +620,12 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     position: inherit;
 	}
 	.fre-page-title {
-    padding: 40px 0 25px;
+    padding: 30px 0 25px;
     border-bottom: 1px solid #e4e7ea;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 	}
-	#wpforo-wrap {
-    color: #333333;
-    background-color: rgba(255,255,255,.6);
-	}
-	#wpforo-wrap .wpf-breadcrumb {
-       background-color: #FFFFFF;
-	}
-  .media-modal{
+
+   .media-modal{
     top: 10%;
     bottom: 10%;
     left: 10%;
@@ -628,22 +639,60 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     background-attachment: fixed;
     background-size: cover;
 }
+	
 	.stories2 {
 	background-image: url('assets/images/BGmain.jpg');
 	}
 }
 
 /* MOBILE ONLY */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) and (min-width:721){
+		.fre-background{
+		top:-80px;
+		margin-bottom: -85px;
+		position: relative;
+		background-image: url('assets/images/BGlogin1.jpg');
+    	height: 90vh;
+		overflow: hidden;
+	}
 
+	.fre-bg-content {
+    	width: 100%;
+    	position: absolute;
+    	top: 40%;
+		-webkit-transform: translateY(00%);
+    	-ms-transform: translateY(0%);
+    	transform: translateY(0%);
+	}
+	.fre-authen-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+	}
+	footer {
+    display: block;
+    position: relative;
+    padding: 70px 0 0;
+    margin: 0px 0 0;
+	}
+	 .col-md-12 {
+    width: 50% !important;
+   }
+	
+}
+@media only screen and (max-width: 720px) {
+
+	div.block-page> div.col-sm-12 {
+	padding:0;
+	}
 	#myVideo {
 		display:none;
 		z-index:0;
 	}
 	
-	.fre-page-title {
-    margin-bottom: 20px;
+	.fre-page-title, .blog-header-container {
+    margin-bottom: 0px;
 }
+	
 	.vid {
     height: 70vh !important;
     max-height: 85vh;
@@ -713,6 +762,9 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	.stories2 {
 	background-image: url('assets/images/BGmain.jpg');
 	}
+	footer {
+    margin: 0px 0 0;
+	}
 /* SPACING  HOMEPAGE */
 
 }
@@ -748,7 +800,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 .vid {
     height: 100% !important;
 	max-height: 90vh;
-	z-index: -2;
+	z-index: 0;
 	}
 .fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn {
     margin-top: 70px;
@@ -766,7 +818,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 
 @media screen and (min-width:1200px) and (min-aspect-ratio: 8/3) {
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
-    margin-top: 20px;
+    margin-top: 5px;
     min-width: 250px;
 		font-size: 18px;
 	}
