@@ -279,7 +279,7 @@ video {
 .vid {
     height: 100% !important;
 	max-height: 85vh;
-	z-index: 0;
+	z-index: -1;
 	}
 	.fre-how-work{
 		z-index: 9;
@@ -567,8 +567,8 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 		margin-bottom: -85px;
 		position: relative;
 		background-image: url('assets/images/BGlogin1.jpg');
-    height: 90vh;
-		overflow: auto;
+    	height: 90vh;
+		overflow: hidden;
 	}
 
 	.fre-bg-content {
@@ -689,7 +689,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     margin-top: 10px;
   	}
 	.fre-how-work {
-    padding-top: 15vh;
+    padding-top: 5vh;
   	}
 	.fre-our-stories {
     padding: 36px 0;
@@ -708,7 +708,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 
 @media screen and (max-aspect-ratio: 8/3) {
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
-    margin-top: 0px;
+    margin-top: 20px;
     min-width: 250px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -716,7 +716,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	font-size: 16px;
 	}
 	img.logo {
-	max-width:500;
+	max-width:650px;
 	}
 
 }
@@ -736,6 +736,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 .vid {
     height: 100% !important;
 	max-height: 90vh;
+	z-index: -2;
 	}
 .fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn {
     margin-top: 70px;
@@ -745,5 +746,21 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	font-family: quiche-sans, sans-serif;
 	font-size: 14px;
 	}
+	img.logo {
+	max-width:80vh;
+	}
 
+}
+
+@media screen and (min-width:1200px) and (min-aspect-ratio: 8/3) {
+	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
+    margin-top: 20px;
+    min-width: 250px;
+		font-size: 18px;
+	}
+	img.logo {
+	max-width:500px;
+	}
+
+	
 }
