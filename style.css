@@ -560,7 +560,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 721px) {
+@media only screen and (min-width: 766px) {
 
 	.fre-background{
 		top:-80px;
@@ -626,7 +626,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 /* MOBILE ONLY */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 767px) {
 
 	#myVideo {
 		display:none;
