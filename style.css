@@ -143,7 +143,7 @@ a, a:focus, a:hover {
     margin-top: 8px;
 }
 
-h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_story, .blog-header-container .blog-classic-top h2 {
+h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_story, .blog-header-container .blog-classic-top h2, #title_service {
     font-family: quiche-sans, serif;
 	font-weight: 500;
 	line-height: 1.3em;
@@ -184,7 +184,7 @@ h2.profh2 {
 }
 
 
- .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn {
+ .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn, .fre-service-btn {
 	text-transform: uppercase;
     letter-spacing: 1.5px;
 	font-family: quiche-sans, sans-serif;
@@ -320,10 +320,13 @@ video {
     box-shadow: 0px 1px 1px 0px rgba(185, 184, 184, 0.75);
     background: rgba(255, 255, 255, .7);
 }
-.chairbk, .fre-page-wrapper {
+.chairbk, .fre-page-wrapper, .fre-service  {
     background-image: url('assets/images/bgchairv1.jpg');
     background-attachment: fixed;
     background-size: cover;
+}
+.fre-service-pricing {
+    background: rgba(255,255,255,.7);
 }
 .fre-page-title h2 {
     margin: 0;
