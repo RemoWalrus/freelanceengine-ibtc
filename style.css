@@ -282,7 +282,7 @@ video {
 	z-index: -1;
 	}
 	.fre-how-work{
-		z-index: 9;
+		z-index: 0;
 	}
 
 /* Hide License Number */
@@ -709,7 +709,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 @media screen and (max-aspect-ratio: 8/3) {
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
     margin-top: 20px;
-    min-width: 250px;
+    min-width: 280px;
     text-transform: uppercase;
     letter-spacing: 2px;
 	font-family: quiche-sans, sans-serif;
