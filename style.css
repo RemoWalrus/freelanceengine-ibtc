@@ -272,14 +272,14 @@ video {
 	width: 100%;
 	height: auto;
 	overflow:hidden;
-	z-index: -1;
+	z-index: 0;
 	background-position: center;
 	background-size: cover;
 }
 .vid {
     height: 100% !important;
 	max-height: 85vh;
-	z-index: -1;
+	z-index: 0;
 	}
 	.fre-how-work{
 		z-index: 0;
@@ -632,6 +632,10 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 		display:none;
 		z-index:0;
 	}
+	
+	.fre-page-title {
+    margin-bottom: 20px;
+}
 	.vid {
     height: 70vh !important;
     max-height: 85vh;
@@ -729,7 +733,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	width: 100%;
 	height: auto;
 	overflow:hidden;
-	z-index:-1;
+	z-index: 0;
 	background-position: center;
 	background-size: cover;
 }
