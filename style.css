@@ -527,24 +527,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 .wp-core-ui .button.button-hero{
 
 }
-@media only screen and (max-width:640px) and (max-height:400px) {
-  /*.image-details .media-modal, .media-modal{
-     top:5%;
-    left:5%;
-    right:5%;
-    bottom:5%;
-  }*/
 
-  img.logo {
-    vertical-align: middle;
-    display: block;
-    margin: 20px auto 20px;
-    position: inherit;
-    padding: 0px;
-    box-sizing: border-box;
-    max-width: 320px;
-	}
-}
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {
@@ -776,7 +759,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 @media screen and (max-aspect-ratio: 8/3) {
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
     margin-top: 20px;
-    min-width: 280px;
+    min-width: 200px;
     text-transform: uppercase;
     letter-spacing: 2px;
 	font-family: quiche-sans, sans-serif;
@@ -787,7 +770,15 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	}
 
 }
-
+@media screen and (max-aspect-ratio: 8/3) and (max-width:767px) {
+	img.logo {
+	max-width:320px;
+	padding: 0;
+	}
+	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
+		min-width: 240px;
+	}
+}
 
 @media screen and (min-aspect-ratio: 8/3) {
 #myVideo {
@@ -806,7 +797,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	z-index: 0;
 	}
 .fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn {
-    margin-top: 70px;
+    margin-top: 25px;
     min-width: 190px;
 	text-transform: uppercase;
     letter-spacing: 1px;
@@ -815,6 +806,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	}
 	img.logo {
 	max-width:80vh;
+	padding: 0;
 	}
 
 }
@@ -823,11 +815,31 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	.fre-bg-content .fre-btn, .fre-bg-content .fre-btn-disable, .fre-bg-content .fre-payment-list>li>.btn, fre-btn-o {
     margin-top: 5px;
     min-width: 250px;
-		font-size: 18px;
+	font-size: 18px;
 	}
 	img.logo {
 	max-width:500px;
+	padding: 0px;
 	}
+}
 
-	
+@media only screen and (max-width:996px) and (max-height:414px) {
+  /*.image-details .media-modal, .media-modal{
+     top:5%;
+    left:5%;
+    right:5%;
+    bottom:5%;
+  }*/
+.fre-bg-content h1 {
+    margin-bottom: 0px;
+}
+  img.logo {
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+    position: inherit;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 320px;
+	}
 }
