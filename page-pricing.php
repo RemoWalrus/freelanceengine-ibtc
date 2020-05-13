@@ -40,10 +40,10 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 				<?php
 
 				if( $show_project_pack ){
-					echo get_theme_mod("title_service") ? get_theme_mod("title_service") : __('Select the level of service you need for project posting', ET_DOMAIN);
+					echo get_theme_mod("title_service") ? get_theme_mod("title_service") : __('Select a plan for project and job posting', ET_DOMAIN);
 
 				} else if($show_bid_pack) {
-					echo get_theme_mod("title_service_freelancer") ? get_theme_mod("title_service_freelancer") : __('Select the level of service you need for project bidding', ET_DOMAIN);
+					echo get_theme_mod("title_service_freelancer") ? get_theme_mod("title_service_freelancer") : __('Select a plan to apply to projects', ET_DOMAIN);
 				}
 				?>
 			</h2>
