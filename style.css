@@ -102,8 +102,8 @@ Version:        7.2
  a:focus, a:hover, .fre-search-dropdown>li>a.active  {
 	color: #fff;
 }
-freelance-experience-action a {
-     color: #000;
+.freelance-experience-action a {
+     color: #625e7e;
 }
 a, a:focus, a:hover {
     color: #000;
