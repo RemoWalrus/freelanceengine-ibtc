@@ -75,10 +75,12 @@ function lp_fre_bid_required_fields($fields){
 	return $fields;
 }
 
-add_action( 'ae_insert_bid', 'lp_update_after_bidding', 12, 1 );
+add_action( 'ae_insert_bid', 'lp_update_after_bidding', 15, 1 );
 function lp_update_after_bidding($bid_id){
 	if(isset($_POST['preferred_contact_method'])){
-		update_post_meta($_POST['preferred_contact_method']);
+		update_post_meta($bid_id, 'preferred_contact_method', $_POST['preferred_contact_method']);
+	}else{
+		update_post_meta($bid_id, 'preferred_contact_method', '');
 	}
 }
 
