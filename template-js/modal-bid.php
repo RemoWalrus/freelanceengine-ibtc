@@ -40,12 +40,16 @@ $commission          = ae_get_option( 'commission', 0 );
 						} ?>
                     </div> */ ?>
                     <div class="fre-input-field">
-                        <label class="fre-field-title" for="bid_budget"><?php _e( 'Preferred Method of Contact.', ET_DOMAIN ); ?></label>
-                        <select name="preferred_contact_method" class="fre-chosen-multi" data-placeholder="<?php _e('Select preferred contact method', ET_DOMAIN); ?>">
-                            <option value="<?php _e('Email', ET_DOMAIN); ?>"><?php _e('Email', ET_DOMAIN); ?></option>
-                            <option value="<?php _e('Phone', ET_DOMAIN); ?>"><?php _e('Phone', ET_DOMAIN); ?></option>
-                            <option value="<?php _e('Private Message', ET_DOMAIN); ?>"><?php _e('Private Message', ET_DOMAIN); ?></option>
-                        </select>
+                        <label class="fre-field-title" for="preferred_contact_method"><?php _e( 'Preferred Method of Contact.', ET_DOMAIN ); ?></label>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding-left">
+                                <select name="preferred_contact_method" class="fre-chosen-single" data-placeholder="<?php _e('Select preferred contact method', ET_DOMAIN); ?>">
+                                    <option value="<?php _e('Email', ET_DOMAIN); ?>"><?php _e('Email', ET_DOMAIN); ?></option>
+                                    <option value="<?php _e('Phone', ET_DOMAIN); ?>"><?php _e('Phone', ET_DOMAIN); ?></option>
+                                    <option value="<?php _e('Private Message', ET_DOMAIN); ?>"><?php _e('Private Message', ET_DOMAIN); ?></option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <?php /*
                     <div class="fre-input-field no-margin-bottom">
