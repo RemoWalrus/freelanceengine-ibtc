@@ -56,12 +56,9 @@ $user_role      = ae_user_role( $user_ID );
     <div class="col-md-2 col-sm-3">
         <div class="col-free-bid">
         	<?php
-        	if( $show_bid_info  ) { ?>
-
-	            <p class="hidden-lg hidden-md hidden-sm"><?php _e( 'Bid', ET_DOMAIN ); ?></p>
-	            <p><b><?php echo $convert->bid_budget_text; ?></b></p>
-	            <p><?php //echo $convert->bid_time_text; ?></p> <?php
-
+        		if ( $convert->post_content && $show_bid_info ) {
+					echo '<p>'.$convert->post_content.'</p>';
+				}
 		    }
 		    ?>
         </div>
@@ -74,9 +71,7 @@ $user_role      = ae_user_role( $user_ID );
     <div class="col-md-7 col-sm-12">
         <div class="col-content-bid col-content-bid-<?php echo $convert->ID ?>">
 			<?php
-			if ( $convert->post_content && $show_bid_info ) {
-				echo $convert->post_content;
-			}
+			
 			if ( $user_ID == $project->post_author ) {
 				if ( $convert->flag == 1 ) {
 					if ( ae_get_option( 'use_escrow' ) ) {
