@@ -56,7 +56,9 @@ $bid_data = array();
 				$bid_query->the_post();
 				$convert = $post_object->convert( $post );
 				$show_bid_info = can_see_bid_info( $convert, $project);
-				if($show_bid_info){
+
+				$post_author = get_post_field('post_author', get_the_ID());
+				if($post_author==get_current_user_id()){
 					get_template_part( 'template/bidding', 'item' );
 				}
 			}
