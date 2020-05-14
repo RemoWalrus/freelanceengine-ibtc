@@ -15,7 +15,7 @@ $project_status = $project->post_status;
 $user_role      = ae_user_role( $user_ID );
 ?>
 <div class="row freelancer-bidding-item">
-    <div class="col-md-10 col-sm-9">
+    <div class="col-md-9 col-sm-9">
         <div class="row">
             <div class="col-md-8 col-sm-12">
                 <div class="col-free-bidding">
@@ -53,7 +53,7 @@ $user_role      = ae_user_role( $user_ID );
             </div>
         </div>
     </div>
-    <div class="col-md-2 col-sm-3">
+    <div class="col-md-3 col-sm-3">
         <div class="col-free-bid">
         	<?php
         		if ( $convert->post_content && $show_bid_info ) {
