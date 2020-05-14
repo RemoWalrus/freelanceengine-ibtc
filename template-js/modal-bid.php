@@ -41,7 +41,7 @@ $commission          = ae_get_option( 'commission', 0 );
                     </div> */ ?>
                     <div class="fre-input-field">
                         <label class="fre-field-title" for="bid_budget"><?php _e( 'Preferred Method of Contact.', ET_DOMAIN ); ?></label>
-                        <select name="preferred_contact_method">
+                        <select name="preferred_contact_method" class="fre-chosen-multi" data-placeholder="<?php _e('Select preferred contact method', ET_DOMAIN); ?>">
                             <option value="<?php _e('Email', ET_DOMAIN); ?>"><?php _e('Email', ET_DOMAIN); ?></option>
                             <option value="<?php _e('Phone', ET_DOMAIN); ?>"><?php _e('Phone', ET_DOMAIN); ?></option>
                             <option value="<?php _e('Private Message', ET_DOMAIN); ?>"><?php _e('Private Message', ET_DOMAIN); ?></option>
