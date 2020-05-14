@@ -70,6 +70,7 @@ add_action ( 'wp_enqueue_scripts', 'lp_freelanceengine_enqueue_styles');
 
 add_filter('fre_bid_required_field', 'lp_fre_bid_required_fields');
 function lp_fre_bid_required_fields($fields){
+	unset($fields[0]); // unset bid_budget
 	unset($fields[1]); // unset bid_time
 	return $fields;
 }
