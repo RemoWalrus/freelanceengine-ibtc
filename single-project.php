@@ -11,6 +11,7 @@ get_header();
 global $wp_query, $ae_post_factory, $post, $user_ID;
 $post_object = $ae_post_factory->get( PROJECT );
 $convert     = $post_object->convert( $post );
+$post_author = $convert->post_author;
 
 if ( have_posts() ) {
 	the_post(); ?>
@@ -28,8 +29,9 @@ if ( have_posts() ) {
 					}else{
 						get_template_part( 'template/single-project', 'info' );
 						get_template_part( 'template/single-project', 'content' );
-						
-						get_template_part( 'template/single-project', 'bidding' );
+						if(is_user_logged_in()){
+							get_template_part( 'template/single-project', 'bidding' );
+						}
 						
                     }
 				}

@@ -4,6 +4,8 @@ global $wp_query, $ae_post_factory, $post, $user_ID, $show_bid_info;
 $post_object = $ae_post_factory->get( PROJECT );
 $project     = $post_object->current_post;
 
+$project_author = $project->post_author;
+
 //$number_bids = (int) get_number_bids( get_the_ID() ); // 1.8.5
 add_filter( 'posts_orderby', 'fre_order_by_bid_status' );
 $bid_query = new WP_Query( array(
@@ -58,7 +60,7 @@ $bid_data = array();
 				$show_bid_info = can_see_bid_info( $convert, $project);
 
 				$post_author = get_post_field('post_author', get_the_ID());
-				if($post_author==get_current_user_id()){
+				if($post_author==get_current_user_id() || $project_author==get_current_user_id()){
 					get_template_part( 'template/bidding', 'item' );
 				}
 			}
