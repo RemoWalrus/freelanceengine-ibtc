@@ -59,7 +59,6 @@ $user_role      = ae_user_role( $user_ID );
         		if ( $convert->post_content && $show_bid_info ) {
 					echo '<p>'.$convert->post_content.'</p>';
 				}
-		    }
 		    ?>
         </div>
         <?php
