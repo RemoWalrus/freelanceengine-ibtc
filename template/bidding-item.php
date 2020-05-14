@@ -13,10 +13,6 @@ $post_object    = $ae_post_factory->get( BID );
 $convert        = $post_object->convert( $post );
 $project_status = $project->post_status;
 $user_role      = ae_user_role( $user_ID );
-
-echo "contact=".get_post_meta($convert->id, 'preferred_contact_method', true);
-
-
 ?>
 <div class="row freelancer-bidding-item">
     <div class="col-md-10 col-sm-9">

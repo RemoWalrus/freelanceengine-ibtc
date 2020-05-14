@@ -75,16 +75,6 @@ function lp_fre_bid_required_fields($fields){
 	return $fields;
 }
 
-add_action( 'ae_insert_bid', 'lp_update_after_bidding', 15, 1 );
-function lp_update_after_bidding($bid_id){
-	if(isset($_POST['preferred_contact_method'])){
-		update_post_meta($bid_id, 'preferred_contact_method', $_POST['preferred_contact_method']);
-	}else{
-		update_post_meta($bid_id, 'preferred_contact_method', '');
-	}
-}
-
-
 add_filter('fre_project_required_fields', 'lp_fre_project_required_fields');
 function lp_fre_project_required_fields($fields){
 	unset($fields[0]);
