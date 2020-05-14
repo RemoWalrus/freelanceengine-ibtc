@@ -55,17 +55,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
                         <span><?php _e('Budget',ET_DOMAIN);?></span>
                         <span class="secondary-color" ><?php echo $project->budget; ?></span>
                     </li>
-                    <li>
-                        <span><?php _e('Average Bid',ET_DOMAIN);?></span>
-                        <span class="secondary-color">
-                            <?php
-                            if ( $project->total_bids > 0 ) {
-	                            $avg = get_total_cost_bids( $project->ID ) / $project->total_bids;
-                            }
-                            echo fre_price_format( $avg );
-                            ?>
-                        </span>
-                    </li>
+                    
 					<?php if ( $project->text_country != '' ) { ?>
                         <li>
                             <span><?php _e( 'Location', ET_DOMAIN ); ?></span>

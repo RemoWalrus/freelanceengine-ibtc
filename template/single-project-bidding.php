@@ -56,7 +56,9 @@ $bid_data = array();
 				$bid_query->the_post();
 				$convert = $post_object->convert( $post );
 				$show_bid_info = can_see_bid_info( $convert, $project);
-				get_template_part( 'template/bidding', 'item' );
+				if($show_bid_info){
+					get_template_part( 'template/bidding', 'item' );
+				}
 			}
 		} else {
 			get_template_part( 'template/bid', 'not-item' );

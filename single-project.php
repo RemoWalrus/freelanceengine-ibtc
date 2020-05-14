@@ -11,7 +11,6 @@ get_header();
 global $wp_query, $ae_post_factory, $post, $user_ID;
 $post_object = $ae_post_factory->get( PROJECT );
 $convert     = $post_object->convert( $post );
-$project_author = $convert->project_author;
 
 if ( have_posts() ) {
 	the_post(); ?>
@@ -29,9 +28,9 @@ if ( have_posts() ) {
 					}else{
 						get_template_part( 'template/single-project', 'info' );
 						get_template_part( 'template/single-project', 'content' );
-						if($project_author==$user_ID){
-							get_template_part( 'template/single-project', 'bidding' );
-						}
+						
+						get_template_part( 'template/single-project', 'bidding' );
+						
                     }
 				}
 				echo '<script type="data/json" id="project_data">' . json_encode( $convert ) . '</script>';
