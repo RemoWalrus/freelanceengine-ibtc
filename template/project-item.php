@@ -27,7 +27,7 @@ else
 				echo "</span>";
 			}
 			?>
-            <span><?php echo $budget; ?></span>
+            <?php echo '<span>'.$budget.'</span>'; ?>
         </div>
         <div class="project-list-desc">
             <p><?php echo $current->post_content_trim; ?></p>
