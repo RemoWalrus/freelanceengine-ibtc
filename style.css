@@ -754,8 +754,11 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     	height: 90vh;
 		overflow: hidden;
 	}
-		.fre-jobs-list>li {
+		.fre-jobs-list>li, .jobs-date {
     text-align: center;
+}
+	.jobs-view {
+    width: 100%;
 }
 
 	.fre-bg-content {
@@ -790,8 +793,11 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 		display:none;
 		z-index:0;
 	}
-	.fre-jobs-list>li {
+	.fre-jobs-list>li, .jobs-date {
     text-align: center;
+}
+	.jobs-view {
+    width: 100%;
 }
 	
 	.fre-page-title, .blog-header-container {
