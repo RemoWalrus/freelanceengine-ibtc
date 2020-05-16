@@ -173,7 +173,7 @@ if( isset($convert->hour_rate) )
 		                                //et_render_custom_field($convert);
 
 		                                echo '<div class="custom-field-wrapper licensed-wrapper" >';
-							            echo '<span class="ae-field-title licensed-title">'.__('Licensed', ET_DOMAIN).':</span>';
+							            echo '<span class="ae-field-title licensed-title">'.__('License Held', ET_DOMAIN).':</span>';
 							            echo $licensed;
 							            echo '</div>';
 
