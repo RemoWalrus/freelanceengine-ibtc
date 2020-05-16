@@ -115,7 +115,7 @@ a, a:focus, a:hover {
     text-decoration: none;
     outline: none;
 }
-highlighted {
+highlighted, .fre-skill-dropdown>li>a.active {
     background-image: none;
     background-color: #635f7e !important;
     color: #FFF;
