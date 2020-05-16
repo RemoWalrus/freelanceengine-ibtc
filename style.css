@@ -184,6 +184,10 @@ a:hover,
 	width: 215px;
 }
 
+.jobs-price {
+	text-align: center;
+}
+
 /* color links and hovers */
 
 a:focus, 
