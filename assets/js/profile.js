@@ -996,7 +996,7 @@
         var html = "";
         var _this = $(this);
 
-        /*if(current_like=="true"){
+        if(current_like=="true"){
             total_likes = total_likes - 1;
             if(total_likes==1)
                 html = "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>"+total_likes+" Like</span>";
@@ -1009,7 +1009,7 @@
             else
                 html = "<i class='fa fa-heart' aria-hidden='true'></i> <span>"+total_likes+" Likes</span>";
         }
-        $('#freelance-view-portfolio-like-'+portfolio_id).html(html);*/
+        $('#freelance-view-portfolio-like-'+portfolio_id).html(html);
 
         $.ajax({
             type: "post",

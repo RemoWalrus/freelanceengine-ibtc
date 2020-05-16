@@ -311,7 +311,7 @@ function lp_like_portfolio(){
 			$likes .= get_current_user_id();
 		update_post_meta($request['portfolio_id'], 'liked_by', $likes);
 		$total_likes_arr = explode(",", $likes);
-		$total_likes = count($likes);
+		$total_likes = count($total_likes_arr);
 		if($total_likes==1)
 			$html .= "<i class='fa fa-heart' aria-hidden='true'></i> <span>".$total_likes." Like</span>";
 		else
