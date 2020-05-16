@@ -72,6 +72,8 @@ $ae_users  = AE_Users::get_instance();
 $user_data = $ae_users->convert( $user );
 $hour_rate = 0;
 
+$license = get_post_meta($convert->ID, 'license', true);
+
 if( isset($convert->hour_rate) )
 	$hour_rate = (int) $convert->hour_rate;
 ?>
@@ -168,7 +170,9 @@ if( isset($convert->hour_rate) )
 
 	                                <?php if(function_exists('et_the_field') && ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER )) {
 		                                et_render_custom_field($convert);
-	                                }?>
+	                                }
+	                                echo $license." test";
+	                                ?>
                                 </div>
 
 								<?php
