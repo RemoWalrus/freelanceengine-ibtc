@@ -403,7 +403,7 @@ video {
 
 /* Hide License Number */
 .license-wrapper {
-        display: none;
+        display: block;
 }
 
 /* make profile bg color transparent */
