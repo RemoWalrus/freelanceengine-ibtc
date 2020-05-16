@@ -46,7 +46,14 @@ $post_object = $ae_post_factory->get( PROFILE );
 								<?php printf(__('%s/hr', ET_DOMAIN), "<span>".fre_price_format($convert->hour_rate)."</span>");?>
 							</div>
 						<?php } ?>
-						<div class="free-experience">
+						<?php
+						if(is_super_admin()){ ?>
+							<div class="free-experience">
+						<?php
+						}else{ ?>
+							<div class="free-experience free-experience-remove-border">
+						<?php
+						} ?>
 							<span><?php echo $convert->experience; ?></span>
 							<?php
 							if(is_super_admin()){ ?>
