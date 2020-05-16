@@ -15,6 +15,10 @@ $project_link = get_permalink( $post->ID );
 $currency     = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD', 'icon' => '$' ) );
 $avg          = 0;
 
+if($project->et_budget==0)
+	$budget = "TBD";
+else
+	$budget = $project->budget;
 
 if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) ) ) {
 	$bidding_id  = 0;
@@ -53,7 +57,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
                     </li>
                     <li>
                         <span><?php _e('Budget',ET_DOMAIN);?></span>
-                        <span class="secondary-color" ><?php echo $project->budget; ?></span>
+                        <span class="secondary-color" ><?php echo $budget; ?></span>
                     </li>
                     
 					<?php if ( $project->text_country != '' ) { ?>
