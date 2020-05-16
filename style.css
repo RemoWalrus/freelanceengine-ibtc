@@ -176,7 +176,7 @@ h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_s
 	font-weight: 700;
 }
 
-h3, h4, .project-detail-title, .project-detail-title {
+h3, h4, .project-detail-title, .project-detail-title, .col-free-bidding h2 a, .fre-field-title, .project-filter-title {
     font-family: 'quiche-sans', sans-serif;
 	letter-spacing: 0.5px;
 }
