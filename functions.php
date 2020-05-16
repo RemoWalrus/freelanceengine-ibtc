@@ -298,6 +298,7 @@ function lp_like_portfolio(){
 		    $update_likes = implode(",",  $likes_arr);
 		    update_post_meta($request['portfolio_id'], 'liked_by', $update_likes);
 		}
+		
 		if(count($likes_arr)==1)
 			$html .= "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>".count($likes_arr)." Like</span>";
 		else

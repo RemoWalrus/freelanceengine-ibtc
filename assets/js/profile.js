@@ -992,6 +992,25 @@
     $(document).on('click', '.freelance-view-portfolio-like', function(event){
         var portfolio_id = $(this).attr('data-img-id');
         var current_like = $(this).attr('data-like');
+        var total_likes = parseInt($(this).attr('data-current-likes'));
+        var html = "";
+        var _this = $(this);
+
+        if(current_like=="true"){
+            total_likes = total_likes - 1;
+            if(total_likes==1)
+                html = "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>"+total_likes+" Like</span>";
+            else
+                html = "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>"+total_likes+" Likes</span>";
+        }else{
+            total_likes = total_likes + 1;
+            if(total_likes==1)
+                html = "<i class='fa fa-heart' aria-hidden='true'></i> <span>"+total_likes+" Like</span>";
+            else
+                html = "<i class='fa fa-heart' aria-hidden='true'></i> <span>"+total_likes+" Likes</span>";
+        }
+        $('#freelance-view-portfolio-like-'+portfolio_id).html(html);
+
         $.ajax({
             type: "post",
             url: ae_globals.ajaxURL,
@@ -999,18 +1018,19 @@
             data: {
                 action: 'lp_like_portfolio',
                 portfolio_id: portfolio_id,
-                current_like: current_like
             },
             beforeSend: function () {
             
             },
             success: function (data) {
                 if (data.success) {
-                    $('#freelance-view-portfolio-like-'+portfolio_id).html(data.data);
-                    if(current_like==false)
-                        $('#freelance-view-portfolio-like-'+portfolio_id).attr('data-like', 'true');
-                    else
-                        $('#freelance-view-portfolio-like-'+portfolio_id).attr('data-like', 'false');
+                    _this.html(data.data);
+                    _this.attr('data-current-likes', total_likes);
+                    if(current_like=="true"){
+                        _this.attr('data-like', 'false');
+                    }else{
+                        _this.attr('data-like', 'true');
+                    }
                 }
             }
         });
@@ -1199,7 +1219,6 @@
                 var data = view.collection;
                 view.collection = false;
                 var portfolio_id = data.ID;
-                console.log(data);
                 if(data){
                     $('.post_title',obj).text(data.post_title);
                     $('.post_content',obj).html(data.post_content);
@@ -1227,7 +1246,7 @@
                             if(likes==1)
                                 likes_str = "Like";
 
-                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" id="freelance-view-portfolio-like-'+vi.id+'" data-img-id="'+vi.id+'" data-attachment="" style="opacity: 1;" data-like="'+current_like+'">  <i class="fa '+heart+'" aria-hidden="true"></i> <span>'+likes+' '+likes_str+'</span></a></div></div>';
+                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" id="freelance-view-portfolio-like-'+vi.id+'" data-img-id="'+vi.id+'" data-attachment="" style="opacity: 1;" data-like="'+current_like+'" data-current-likes='+likes+'>  <i class="fa '+heart+'" aria-hidden="true"></i> <span>'+likes+' '+likes_str+'</span></a></div></div>';
                         })
                     }
                     $('.list_image',obj).html(html_img);
