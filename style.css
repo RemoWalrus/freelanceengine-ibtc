@@ -14,23 +14,28 @@ Version:        7.2
 }
 
 .page-container .blog-content p {
-    line-height: 25px;
-    font-weight: 400;
-    font-size: 15px;
+   line-height: 25px;
+   font-weight: 400;
+   font-size: 15px;
 }
 .wpb_wrapper blockquote > p {
-    font-size: 18px;
+   font-size: 18px;
 }
 .sub-menu {
-    background: transparent;
+   background: transparent;
 }
 #main_header{
-    background-color:rgba(182, 187, 207, 0.90);
+   background-color:rgba(182, 187, 207, 0.90);
 }
-.fre-account .dropdown-menu > li a:hover, .fre-notification i:hover {
+.fre-skill-dropdown>li>a {
+   color: #635f7e;
+}
+.fre-account .dropdown-menu > li a:hover, .fre-notification i:hover, .fre-skill-dropdown>li>a:hover  {
     color: #fff;
 }
-
+.fre-header-wrap {
+    border-bottom: 1px solid #969db7;
+    }
 .fre-menu-main li a:hover {
     background: none;
 	color: #fff;}
@@ -139,9 +144,9 @@ a, a:focus, a:hover {
     text-decoration: none;
     outline: none;
 }
-highlighted, .fre-skill-dropdown>li>a.active {
+.highlighted, .fre-skill-dropdown>li>a.active {
     background-image: none;
-    background-color: #635f7e !important;
+    background-color: #969db7 !important;
     color: #FFF;
 }
 .fre-form-close {
@@ -150,8 +155,16 @@ highlighted, .fre-skill-dropdown>li>a.active {
     font-weight: 700;
 }
 
+div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
+    background-color: #969db7;
+}
+
 .project-detail-box+.project-detail-box {
     margin: 22px 0 25px;
+}
+div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
+    background-image: none;
+    border: 1px solid #969db7;
 }
 
 /* FIX BLOG POST SPACING */
@@ -313,10 +326,10 @@ body,html{margin:0;padding:0;}
 }
 
 div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
-    background-color: #e9f9f9;
+    background-color: rgba(255, 255, 255, 0.37) !important;
 }
 div.fre-chosen-single.chosen-container .chosen-results li.highlighted {
-    background-color: #b6bbcf;
+    background-color: #b6bbcf !important;
 }
 
 /* video homepage */
