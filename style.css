@@ -24,43 +24,74 @@ Version:        7.2
 .sub-menu {
    background: transparent;
 }
+.fre-account.open:after, 
+.fre-menu-main>li:hover:after,
+.fre-account-wrap.open::after {
+	
+    border-color: transparent transparent #d3d5e2 transparent;
+   }
 #main_header{
    background-color:rgba(182, 187, 207, 0.90);
 }
-.fre-skill-dropdown>li>a {
-   color: #635f7e;
-}
-.fre-account .dropdown-menu > li a:hover, .fre-notification i:hover, .fre-skill-dropdown>li>a:hover  {
+.fre-account .dropdown-menu > li a:hover, 
+.fre-notification i:hover, 
+.fre-skill-dropdown>li>a:hover  {
     color: #fff;
 }
 .fre-header-wrap {
     border-bottom: 1px solid #969db7;
     }
-.fre-menu-main li a:hover {
+.fre-menu-main li a:hover, .fre-skill-dropdown>li>a:hover {
     background: none;
-	color: #fff;}
-.fre-account.open .fre-account-info i, .fre-account.open .fre-account-info span {
+	color: #fff;
+}
+.fre-account.open .fre-account-info i, 
+.fre-account.open .fre-account-info span, 
+.fre-skill-dropdown>li>a, 
+.fre-account-wrap.open:after, 
+.fre-account-info span, 
+.fre-account-info:hover i, 
+.fre-account-info, 
+.fre-notification i {
     color: #635f7e;
 }
-.fre-account-info:hover i, .fre-account-info:hover span {
-    color: #635f7e;
+.fre-menu-main > li:hover > a, 
+.fre-account-info span:hover, 
+.fre-account-info>i:hover {
+    color: #2c3e50 !important;
 }
-.fre-menu-main > li:hover > a {
-    color: #2c3e50;
-}
-.fre-menu-main > li {
+.fre-menu-main > li, 
+.dropdown-menu>li>a, 
+div.fre-chosen-single.chosen-container .chosen-results l {
     cursor: pointer;
 	color: #635f7e;
 }
-.dropdown-menu {
+.fre-btn-o:active,
+.fre-btn-o:focus,
+.fre-normal-btn-disable:active,
+.fre-normal-btn-disable:focus,
+.fre-normal-btn:active,
+.fre-normal-btn:focus {
+	background-color: #969DB9;
+	color: #FFFFFF;
+}
+.dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: #d3d5e2;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #d3d5e2;
-    border: 1px solid rgba(1,0,0,.15);
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.fre-loading {
+ border-radius:50%;
+ width:24px;
+ height:24px;
+ border:0.25rem solid rgba(99, 95, 126, 0.2);
+ border-top-color:#1fbdbd;
+ -webkit-animation:fre-spin 1s infinite linear;
+ animation:fre-spin 1s infinite linear
 }
 .chosen-container-single .chosen-single span {
     padding: 0 0 0 15px;
@@ -87,13 +118,20 @@ div.fre-chosen-single.chosen-container-single .chosen-single {
 a, a:focus, a:hover {
 	color: #415161;
 }
-.checkbox-inline span:after, .fre-checkbox span:after {
+.checkbox-inline span:after, 
+.fre-checkbox span:after {
 	color: #625f7d;
 }
-.checkbox-inline input[type=checkbox]:checked+span:before, .fre-checkbox input[type=checkbox]:checked+span:before {
+.checkbox-inline input[type=checkbox]:checked+span:before, 
+.fre-checkbox input[type=checkbox]:checked+span:before {
     border-color: #5c5e5d;
 }
- a:focus, a:hover, .fre-search-dropdown>li>a:hover, .project-filter-clear:active, .project-filter-clear:focus, .project-filter-clear:hover {
+ a:focus, 
+a:hover, 
+.fre-search-dropdown>li>a:hover, 
+.project-filter-clear:active, 
+.project-filter-clear:focus, 
+.project-filter-clear:hover {
     color: #222;
 }
 
@@ -122,7 +160,10 @@ a, a:focus, a:hover {
 	background: transparent;
 }
 /* darker arrows */
-.owl-carousel-stories .owl-next span::before, .owl-carousel-stories .owl-next span::after, .owl-carousel-stories .owl-prev span::before, .owl-carousel-stories .owl-prev span::after {
+.owl-carousel-stories .owl-next span::before, 
+.owl-carousel-stories .owl-next span::after, 
+.owl-carousel-stories .owl-prev span::before, 
+.owl-carousel-stories .owl-prev span::after {
     background: #625e7e;
 }
 
@@ -133,18 +174,24 @@ a, a:focus, a:hover {
 
 /* color links and hovers */
 
- a:focus, a:hover, .fre-search-dropdown>li>a.active  {
+a:focus, 
+a:hover, 
+fre-search-dropdown>li>a.active  {
 	color: #fff;
 }
-.freelance-experience-action a, .portfolio-thumbs-action a  {
+.freelance-experience-action a, 
+.portfolio-thumbs-action a  {
      color: #625e7e;
 }
-a, a:focus, a:hover {
+a, 
+a:focus, 
+a:hover {
     color: #000;
     text-decoration: none;
     outline: none;
 }
-.highlighted, .fre-skill-dropdown>li>a.active {
+.highlighted, 
+.fre-skill-dropdown>li>a.active {
     background-image: none;
     background-color: #969db7 !important;
     color: #FFF;
@@ -153,10 +200,6 @@ a, a:focus, a:hover {
     font-family: quiche-sans, sans-serif;
     letter-spacing: .5px;
     font-weight: 700;
-}
-
-div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
-    background-color: #969db7;
 }
 
 .project-detail-box+.project-detail-box {
@@ -227,7 +270,7 @@ h2.profh2 {
 	letter-spacing: .5px;
 }
 
-.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name {
+.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, #modal_invite .all-selected a {
 	color: #222;
     line-height: 1.4em;
     font-family: quiche-sans;
@@ -235,7 +278,7 @@ h2.profh2 {
 }
 
 
- .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn, .fre-service-btn {
+ .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn, .fre-service-btn, .fre-action-btn:active, .fre-action-btn:focus, .fre-action-btn:hover, .fre-action-btn {
 	text-transform: uppercase;
     letter-spacing: 1.5px;
 	font-family: quiche-sans, sans-serif;
@@ -250,9 +293,10 @@ h2.profh2 {
 }
 
 
-.fre-normal-btn-o:active, .fre-normal-btn-o:focus, .fre-normal-btn-o:hover {
+.fre-normal-btn-o:active, .fre-normal-btn-o:focus, .fre-normal-btn-o:hover, .fre-action-btn:active, .fre-action-btn:focus, .fre-action-btn:hover {
     background: #635f7e;
     color: #FFFFFF;
+	
 }
 .employer-info-save .employer-info-cancel-btn {
     font-size: 16px;
@@ -330,6 +374,7 @@ div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
 }
 div.fre-chosen-single.chosen-container .chosen-results li.highlighted {
     background-color: #b6bbcf !important;
+	color: #635f7e;
 }
 
 /* video homepage */
