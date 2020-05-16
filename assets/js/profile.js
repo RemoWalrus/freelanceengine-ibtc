@@ -1214,15 +1214,20 @@
                     $('.list_skill',obj).html(html_skil);
 
                     var html_img= '';
+
                     if(data.list_image_portfolio) {
                         $(data.list_image_portfolio).each(function (ki, vi) {
                             var likes = vi.likes;
                             var current_like = vi.current_like;
                             var heart = 'fa-heart-o';
+                            var likes_str = "Likes";
                             if(current_like==true){
                                 heart = 'fa-heart';
                             }
-                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" id="freelance-view-portfolio-like-'+vi.id+'" data-img-id="'+vi.id+'" data-attachment="" style="opacity: 1;" data-like="'+current_like+'">  <i class="fa '+heart+'" aria-hidden="true"></i> <span>'+likes+' Likes</span></a></div></div>';
+                            if(likes==1)
+                                likes_str = "Like";
+
+                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" id="freelance-view-portfolio-like-'+vi.id+'" data-img-id="'+vi.id+'" data-attachment="" style="opacity: 1;" data-like="'+current_like+'">  <i class="fa '+heart+'" aria-hidden="true"></i> <span>'+likes+' '+likes_str+'</span></a></div></div>';
                         })
                     }
                     $('.list_image',obj).html(html_img);

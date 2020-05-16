@@ -262,13 +262,14 @@ function lp_fetch_info_portfolio(){
 					}
 
 					$current_like = false;
-					if(!empty($current_like)){
-						if(in_array(get_current_user_id(), $likes_arr)){
-							$current_like = true;
-						}
+					
+					if(in_array(get_current_user_id(), $likes_arr)){
+						$current_like = true;
 					}
+					
 					$portfolio_img['likes'] = count($likes_arr);
 					$portfolio_img['current_like'] = $current_like;
+
 					$portfolio_list_images[] = $portfolio_img;
 				}
 			}
@@ -291,21 +292,29 @@ function lp_like_portfolio(){
 	$likes = get_post_meta($request['portfolio_id'], 'liked_by', true);
 	$likes_arr = explode(',', $likes);
 	$html = "";
-	if($request['current_like']==true){
+	if(in_array(get_current_user_id(), $likes_arr)){
 		if (($key = array_search(get_current_user_id(), $likes_arr)) !== false) {
 		    unset($likes_arr[$key]);
 		    $update_likes = implode(",",  $likes_arr);
 		    update_post_meta($request['portfolio_id'], 'liked_by', $update_likes);
 		}
-		$html .= "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>".count($likes_arr)." Likes</span>";
+		if(count($likes_arr)==1)
+			$html .= "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>".count($likes_arr)." Like</span>";
+		else
+			$html .= "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>".count($likes_arr)." Likes</span>";
+
 	}else{
 		if($likes!="")
 			$likes .= ','.get_current_user_id();
 		else
 			$likes .= get_current_user_id();
 		update_post_meta($request['portfolio_id'], 'liked_by', $likes);
-		$total_likes = count($likes_arr) + 1;
-		$html .= "<i class='fa fa-heart' aria-hidden='true'></i> <span>".$total_likes." Likes</span>";
+		$total_likes_arr = explode(",", $likes);
+		$total_likes = count($likes);
+		if($total_likes==1)
+			$html .= "<i class='fa fa-heart' aria-hidden='true'></i> <span>".$total_likes." Like</span>";
+		else
+			$html .= "<i class='fa fa-heart' aria-hidden='true'></i> <span>".$total_likes." Likes</span>";
 	}
 	$response = array(
 		'success' => true,
