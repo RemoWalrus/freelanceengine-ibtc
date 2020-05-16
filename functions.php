@@ -235,3 +235,82 @@ function filter_site_upload_size_limit( $size ) {
 	}
 }
 add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
+
+add_action('wp_ajax_ae-fetch-info-portfolio-custom','lp_fetch_info_portfolio');
+add_action('wp_ajax_nopriv_ae-fetch-info-portfolio-custom','lp_fetch_info_portfolio');
+
+function lp_fetch_info_portfolio(){
+	$request  = $_REQUEST;
+	$response = array(
+		'success' => false,
+	);
+	if ( ! empty( $request['portfolio_id'] ) ) {
+		$portfolio = get_post( $request['portfolio_id'] );
+		if ( ! empty( $portfolio ) ) {
+			$AE_PostAction = AE_Posts::get_instance();
+			$AE_PostAction->__construct( PORTFOLIO, array( 'skill' ) );
+			$portfolio_info = $AE_PostAction->convert( $portfolio, 'thumbnail' );
+
+			/* Custom code */
+			$portfolio_list_images = array();
+			if(!empty($portfolio_info->list_image_portfolio)){
+				foreach ($portfolio_info->list_image_portfolio as $portfolio_img) {
+					$likes = get_post_meta($portfolio_img['id'], 'liked_by', true);
+					$likes_arr = array();
+					if($likes!=""){
+						$likes_arr = explode(',', $likes);
+					}
+
+					$current_like = false;
+					if(!empty($current_like)){
+						if(in_array(get_current_user_id(), $likes_arr)){
+							$current_like = true;
+						}
+					}
+					$portfolio_img['likes'] = count($likes_arr);
+					$portfolio_img['current_like'] = $current_like;
+					$portfolio_list_images[] = $portfolio_img;
+				}
+			}
+			$portfolio_info->list_image_portfolio = $portfolio_list_images;
+			/* Custom code Ends */
+
+			$response       = array(
+				'success' => true,
+				'data'    => $portfolio_info,
+			);
+		}
+	}
+	wp_send_json( $response );
+}	
+
+add_action('wp_ajax_lp_like_portfolio','lp_like_portfolio');
+add_action('wp_ajax_nopriv_lp_like_portfolio','lp_like_portfolio');
+function lp_like_portfolio(){
+	$request  = $_REQUEST;
+	$likes = get_post_meta($request['portfolio_id'], 'liked_by', true);
+	$likes_arr = explode(',', $likes);
+	$html = "";
+	if($request['current_like']==true){
+		if (($key = array_search(get_current_user_id(), $likes_arr)) !== false) {
+		    unset($likes_arr[$key]);
+		    $update_likes = implode(",",  $likes_arr);
+		    update_post_meta($request['portfolio_id'], 'liked_by', $update_likes);
+		}
+		$html .= "<i class='fa fa-heart-o' aria-hidden='true'></i> <span>".count($likes_arr)." Likes</span>";
+	}else{
+		if($likes!="")
+			$likes .= ','.get_current_user_id();
+		else
+			$likes .= get_current_user_id();
+		update_post_meta($request['portfolio_id'], 'liked_by', $likes);
+		$total_likes = count($likes_arr) + 1;
+		$html .= "<i class='fa fa-heart' aria-hidden='true'></i> <span>".$total_likes." Likes</span>";
+	}
+	$response = array(
+		'success' => true,
+		'data'    => $html,
+	);
+	wp_send_json( $response );
+
+}

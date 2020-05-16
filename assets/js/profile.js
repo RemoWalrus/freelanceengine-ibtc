@@ -43,6 +43,7 @@
             // open modal add video
             'click a.add-video': 'openModalAddVideo',
             'click a.remove-video': 'openModalRemoveVideo',
+            
             // currently working in experience
             //'click .currently-working' : 'currentlyWorkingEvent'
         },
@@ -818,7 +819,7 @@
                     url: ae_globals.ajaxURL,
                     dataType: 'json',
                     data: {
-                        action: 'ae-fetch-info-portfolio',
+                        action: 'ae-fetch-info-portfolio-custom',
                         portfolio_id : id
                     },
                     beforeSend: function () {
@@ -985,10 +986,35 @@
                     }
                 });
             }
-        }
+        },
     });
     
-    
+    $(document).on('click', '.freelance-view-portfolio-like', function(event){
+        var portfolio_id = $(this).attr('data-img-id');
+        var current_like = $(this).attr('data-like');
+        $.ajax({
+            type: "post",
+            url: ae_globals.ajaxURL,
+            dataType: 'json',
+            data: {
+                action: 'lp_like_portfolio',
+                portfolio_id: portfolio_id,
+                current_like: current_like
+            },
+            beforeSend: function () {
+            
+            },
+            success: function (data) {
+                if (data.success) {
+                    $('#freelance-view-portfolio-like-'+portfolio_id).html(data.data);
+                    if(current_like==false)
+                        $('#freelance-view-portfolio-like-'+portfolio_id).attr('data-like', 'true');
+                    else
+                        $('#freelance-view-portfolio-like-'+portfolio_id).attr('data-like', 'false');
+                }
+            }
+        });
+    });
     /*
      *
      * M O D A L  A D D  P O R T F O L I O  V I E W S
@@ -1172,6 +1198,8 @@
                 var obj= $(this);
                 var data = view.collection;
                 view.collection = false;
+                var portfolio_id = data.ID;
+                console.log(data);
                 if(data){
                     $('.post_title',obj).text(data.post_title);
                     $('.post_content',obj).html(data.post_content);
@@ -1188,7 +1216,13 @@
                     var html_img= '';
                     if(data.list_image_portfolio) {
                         $(data.list_image_portfolio).each(function (ki, vi) {
-                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" data-id="877" data-attachment="" style="opacity: 1;"> <i class="fa fa-heart" aria-hidden="true"></i> <span>100 Likes</span></a></div></div>';
+                            var likes = vi.likes;
+                            var current_like = vi.current_like;
+                            var heart = 'fa-heart-o';
+                            if(current_like==true){
+                                heart = 'fa-heart';
+                            }
+                            html_img += '<div class="freelance-portfolio-like-wrap"><div class="freelance-portfolio-like-img-wrap"><a href="javascript:;" class="freelance-portfolio-like-img"><img src="'+vi.image+'" /></a></div><div class="freelance-portfolio-like"><a class="freelance-view-portfolio-like" href="javascript:void(0)" id="freelance-view-portfolio-like-'+vi.id+'" data-img-id="'+vi.id+'" data-attachment="" style="opacity: 1;" data-like="'+current_like+'">  <i class="fa '+heart+'" aria-hidden="true"></i> <span>'+likes+' Likes</span></a></div></div>';
                         })
                     }
                     $('.list_image',obj).html(html_img);
