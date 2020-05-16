@@ -115,7 +115,7 @@ if(  is_user_logged_in() ) {
 
 	if( ( in_array( $user_role, array( EMPLOYER,'administrator' ) ) || (current_user_can('manage_options') && ae_user_role( $user_ID ) != FREELANCER) )  &&  ! $is_post_free ) {
 		$show_project_pack = true;
-	} else if(  in_array( $user_role, array( FREELANCER,'subscriber' ) ) && $pay_to_bid && (!current_user_can('manage_options') || ae_user_role( $user_ID ) == FREELANCER) {
+	} else if(  in_array( $user_role, array( FREELANCER,'subscriber' ) ) && $pay_to_bid && (!current_user_can('manage_options') || ae_user_role( $user_ID ) == FREELANCER) ){
 		$show_bid_pack = true;
 	}
 
