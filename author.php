@@ -107,7 +107,11 @@ if( isset($convert->hour_rate) )
 
 										<?php if ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER ) { ?>
                                             <span><?php echo ! empty( $convert->experience ) ? $convert->experience : ''; ?></span>
+                                            <?php
+                                            if(is_super_admin()){ ?>
                                             <span><?php printf( __('%s projects worked' ,ET_DOMAIN), intval($projects_worked) ); ?> </span>
+                                           	<?php
+                                           	} ?>
 										<?php } else {?>
                                             <span class=""><?php printf( __('%s projects posted',ET_DOMAIN), intval($project_posted) ); ?></span>
                                             <span> <?php printf(__('hire %s freelancers',ET_DOMAIN), intval($hire_freelancer) ); ?></span>

@@ -8,7 +8,7 @@ $tax_input   = $current->tax_input;
 if($current->et_budget==0)
     $budget = "";
 else
-    $budget = $current->budget;
+    $budget = "<span>".$current->budget."</span>";
 
 ?>
 
@@ -27,7 +27,7 @@ else
 				echo "</span>";
 			}
 			?>
-            <?php echo '<span>'.$budget.'</span>'; ?>
+            <?php echo $budget; ?>
         </div>
         <div class="project-list-desc">
             <p><?php echo $current->post_content_trim; ?></p>
