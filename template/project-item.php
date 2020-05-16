@@ -6,7 +6,7 @@ $current     = $post_object->current_post;
 $tax_input   = $current->tax_input;
 
 if($current->et_budget==0)
-    $budget = "TBD";
+    $budget = "";
 else
     $budget = $current->budget;
 
