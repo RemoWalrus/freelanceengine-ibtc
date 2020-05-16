@@ -49,6 +49,7 @@ $user_role   = ae_user_role( $user_ID );
                                                     <select class="fre-chosen-single sort-order" name="orderby">
                                                         <option value="date"><?php _e( 'Newest Profiles', ET_DOMAIN ); ?></option>
                                                         <option value="rating"><?php _e( 'Highest Rating', ET_DOMAIN ); ?></option>
+                                                        <option value="all"><?php _e( 'See All', ET_DOMAIN ); ?></option>
                                                     </select>
                                                 </div>
 											<?php } ?>

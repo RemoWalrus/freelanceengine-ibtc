@@ -73,6 +73,7 @@ $user_data = $ae_users->convert( $user );
 $hour_rate = 0;
 
 $license = get_post_meta($convert->ID, 'license', true);
+$licensed = get_the_taxonomy_list('licensed', $convert);
 
 if( isset($convert->hour_rate) )
 	$hour_rate = (int) $convert->hour_rate;
@@ -169,9 +170,19 @@ if( isset($convert->hour_rate) )
 									<?php } ?>
 
 	                                <?php if(function_exists('et_the_field') && ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER )) {
-		                                et_render_custom_field($convert);
+		                                //et_render_custom_field($convert);
+
+		                                echo '<div class="custom-field-wrapper licensed-wrapper" >';
+							            echo '<span class="ae-field-title licensed-title">'.__('License Held', ET_DOMAIN).':</span>';
+							            echo $licensed;
+							            echo '</div>';
+
+		                                if(is_super_admin() && $license!=""){ ?>
+		                                	<div class="custom-field-wrapper license-wrapper"><span class="ae-field-title license-title"><?php __('License Number', ET_DOMAIN); ?>:</span><span class="license-title"><?php echo $license; ?></span></div>
+		                                <?php 
+		                            	}
 	                                }
-	                                echo $license." test";
+
 	                                ?>
                                 </div>
 
