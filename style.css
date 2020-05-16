@@ -754,6 +754,9 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     	height: 90vh;
 		overflow: hidden;
 	}
+		.fre-jobs-list>li {
+    text-align: center;
+}
 
 	.fre-bg-content {
     	width: 100%;
@@ -787,6 +790,9 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 		display:none;
 		z-index:0;
 	}
+	.fre-jobs-list>li {
+    text-align: center;
+}
 	
 	.fre-page-title, .blog-header-container {
     margin-bottom: 0px;
