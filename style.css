@@ -107,13 +107,27 @@ Version:        7.2
  a:focus, a:hover, .fre-search-dropdown>li>a.active  {
 	color: #fff;
 }
-.freelance-experience-action a {
+.freelance-experience-action a, .portfolio-thumbs-action a  {
      color: #625e7e;
 }
 a, a:focus, a:hover {
     color: #000;
     text-decoration: none;
     outline: none;
+}
+highlighted {
+    background-image: none;
+    background-color: #635f7e !important;
+    color: #FFF;
+}
+.fre-form-close {
+    font-family: quiche-sans, sans-serif;
+    letter-spacing: .5px;
+    font-weight: 700;
+}
+
+.project-detail-box+.project-detail-box {
+    margin: 22px 0 25px;
 }
 
 /* FIX BLOG POST SPACING */
@@ -162,7 +176,7 @@ h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_s
 	font-weight: 700;
 }
 
-h3, h4 {
+h3, h4, .project-detail-title, .project-detail-title {
     font-family: 'quiche-sans', sans-serif;
 	letter-spacing: 0.5px;
 }
@@ -362,11 +376,12 @@ h2.profh2 {
 	letter-spacing: .5px;
 }
 
-.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name {
+.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, .custom-field-wrapper .ae-field-title, .profile-freelance-available>h2, .change-password {
 	color: #222;
     line-height: 1.4em;
     font-family: quiche-sans;
     letter-spacing: 0.5px;
+	font-weight: 100;
 }
 
 
