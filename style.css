@@ -5,7 +5,7 @@ Description:    Child theme for the FreelanceEngine theme
 Author:         Romer Garcia & Latif Pala
 Author URI:     http://romergarcia.com/about/
 Template:       freelanceengine
-Version:        7.2
+Version:        2.1
 */
 /* colors for theme */
 .general>.container {
@@ -642,9 +642,7 @@ h2.profh2 {
 div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="file"]{
   display: block;
 }
-.wp-core-ui .button.button-hero{
 
-}
 
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){

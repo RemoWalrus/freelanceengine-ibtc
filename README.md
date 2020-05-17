@@ -4,4 +4,4 @@
 *Author:*         Romer Garcia & Latif Pala\
 *Author URI:*     <http://romergarcia.com/about/> \
 *Template:*       freelanceengine\
-*Version:*        7.0
+*Version:*        2.1
