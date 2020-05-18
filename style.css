@@ -684,7 +684,6 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     background-color: #969db7 !important;
 	}
 
-}
 
 /* DESKTOP */
 @media only screen and (min-width: 767px) {
@@ -745,7 +744,18 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	.stories2 {
 	background-image: url('assets/images/BGmain.jpg');
 	}
-}
+    
+/* Dropdown colors   */
+    
+.dropdown-menu .skill {
+    background-color: #d3d5e2 !important;
+	}    
+.dropdown-menu .skill a:hover {    
+    background-color: #969db7 !important;
+ 
+    }
+    
+    }
 
 /* MOBILE ONLY */
 @media only screen and (max-width: 766px) and (min-width:721){
