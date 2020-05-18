@@ -668,6 +668,13 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	.get-started-content {
     padding: 78px 320px 78px 0;
 	}
+    
+    footer {
+    display: block;
+    position: relative;
+    padding: 70px 0 0;
+    margin: 0px 0 0;
+	}
 }
 @media only screen and (max-width:1199px){
 	.fre-menu-main li a, .fre-login>li a {
@@ -684,7 +691,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     background-color: #969db7 !important;
 	}
 
-
+}
 /* DESKTOP */
 @media only screen and (min-width: 767px) {
 
@@ -745,17 +752,8 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 	background-image: url('assets/images/BGmain.jpg');
 	}
     
-/* Dropdown colors   */
     
-.dropdown-menu .skill {
-    background-color: #d3d5e2 !important;
-	}    
-.dropdown-menu .skill a:hover {    
-    background-color: #969db7 !important;
- 
-    }
-    
-    }
+}
 
 /* MOBILE ONLY */
 @media only screen and (max-width: 766px) and (min-width:721){
@@ -786,6 +784,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     padding-top: 80px;
     padding-bottom: 80px;
 	}
+    
 	footer {
     display: block;
     position: relative;
@@ -821,7 +820,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     height: 70vh !important;
     max-height: 85vh;
 	}
-	  img.logo {
+	img.logo {
     vertical-align: middle;
     display: block;
     margin: 0 auto 20px;
