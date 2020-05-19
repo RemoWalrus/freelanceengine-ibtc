@@ -544,6 +544,9 @@ h2.profh2 {
 .custom-field .multi_select-field #jobcomp_chosen{
   width: 100% !important;
 }
+.fre-profile-result-sort label{
+  margin-top: 10px;
+}
 
 /* Portfolio like css */
 /*.freelance-portfolio-like-wrap {

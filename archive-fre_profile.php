@@ -45,11 +45,12 @@ $user_role   = ae_user_role( $user_ID );
 										?>
                                         <div class="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7">
 											<?php if ( $query_post >= 1 ) { ?>
+                                                <label for="orderby">Sort By :</label>
                                                 <div class="fre-profile-sort">
+
                                                     <select class="fre-chosen-single sort-order" name="orderby">
                                                         <option value="date"><?php _e( 'Newest Profiles', ET_DOMAIN ); ?></option>
                                                         <option value="rating"><?php _e( 'Highest Rating', ET_DOMAIN ); ?></option>
-                                                        <option value="all"><?php _e( 'See All', ET_DOMAIN ); ?></option>
                                                     </select>
                                                 </div>
 											<?php } ?>
