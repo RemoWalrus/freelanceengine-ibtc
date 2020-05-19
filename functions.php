@@ -334,14 +334,13 @@ function lp_wpforo_kses_allowed_html_email($allowed_html){
 				'br' => array(),
 				'p' => array(),
 				'strong' => array(),
-				'style' => array(),
-				'html'	=> array(),
-				'table'	=> array(),
-				'tr'	=> array(),
-				'td'	=> array(),
-				'div'	=> array(),
-				'img'	=> array(),
-				'span'	=> array(),
+				'style' => array('style' => array()),
+				'table'	=> array('width' => array(), 'cellspacing' => array(), 'cellpadding' => array()),
+				'tr'	=> array('style' => array()),
+				'td'	=> array('style' => array(), 'height' => array(), 'align' => array()),
+				'div'	=> array('style' => array()),
+				'img'	=> array('src' => array(), 'alt' => array(), 'title' => array()),
+				'span'	=> array('style' => array()),
 			);
 	return $allowed_html;
 }
