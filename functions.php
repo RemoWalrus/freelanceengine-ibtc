@@ -324,3 +324,19 @@ function lp_like_portfolio(){
 	wp_send_json( $response );
 
 }
+
+add_filter('wpforo_kses_allowed_html_email', 'lp_wpforo_kses_allowed_html_email', 10, 1);
+function lp_wpforo_kses_allowed_html_email($allowed_html){
+	$allowed_html = array( 
+				'a' => array( 'href' => array(), 'title' => array()),
+				'blockquote' => array(),
+				'h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(),
+				'hr' => array(),
+				'br' => array(),
+				'p' => array(),
+				'strong' => array(),
+				'style' => array(),
+				'body'	=> array(),
+        );
+	return $allowed_html;
+}
