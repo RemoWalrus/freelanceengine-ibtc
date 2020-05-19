@@ -665,8 +665,34 @@
                     "education[subtitle]": "required",
                     "education[y_from]": "required",
                     "education[m_from]": "required",
-                    "education[y_to]": "required",
-                    "education[m_to]": "required",
+                    "education[y_to]": {
+                        required : {
+                            depends: function(element) {
+                                var form_ = element.closest('form');
+                                var checked_currently_studying = $('input[name="education[currently_studying]"]',form_).attr('checked');
+                                if( checked_currently_studying =='checked' ){
+                                    $('.novalidate_if_current',form_).removeClass('error');
+                                    return false;
+                                }else {
+                                    return true;
+                                }
+                            }
+                        }
+                    },
+                    "education[m_to]": {
+                        required : {
+                            depends: function(element) {
+                                var form_ = element.closest('form');
+                                var checked_currently_studying = $('input[name="education[currently_studying]"]',form_).attr('checked');
+                                if( checked_currently_studying =='checked' ){
+                                    $('.novalidate_if_current',form_).removeClass('error');
+                                    return false;
+                                }else {
+                                    return true;
+                                }
+                            }
+                        }
+                    },
                 }
             });
 

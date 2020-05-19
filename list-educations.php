@@ -133,6 +133,7 @@ if ( $is_edit or ! empty( $educations ) ) {
                                             <div class="fre-input-field novalidate_if_current">
                                                 <select class="fre-chosen-single" name="education[y_to]" id="">
                                                     <option value=""><?php _e('Year',ET_DOMAIN) ?></option>
+
 													<?php
 													for ( $i = date( 'Y', time() ); $i >= intval( date( 'Y', time() ) ) - 50; $i -- ) {
 														echo '<option value="' . $i . '">' . $i . '</option>';
@@ -142,6 +143,16 @@ if ( $is_edit or ! empty( $educations ) ) {
                                         </div>
                                     </div>
                                 </div>
+                                <div class="fre-input-field">
+                                    <label class="fre-checkbox no-margin-bottom" for="currently-studying">
+                                        <input id="currently-studying" type="checkbox"
+                                               name="education[currently_studying]"
+                                               value="1" class="currently-studying">
+                                        <span></span>
+                                        <?php _e( 'Still Attending', ET_DOMAIN ) ?>
+                                    </label>
+                                </div>
+
                                 <!-- End to !-->
                                 <div class="fre-input-field no-margin-bottom">
                                     <textarea name="education[content]" cols="30" rows="10" placeholder="<?php _e('Description (optional)',ET_DOMAIN) ?>"></textarea>
@@ -183,14 +194,12 @@ if ( $is_edit or ! empty( $educations ) ) {
 	                                        $date_fr = date_i18n(trim($date_fr_option),strtotime($string_time));
 
 	                                        $date_to = '';
-                                            if( !empty($e_value['m_to']) ){ // update from 1.8.3.1
+                                            if( !empty($e_value['currently_studying']) ){
+                                                $date_to .= ' - '.__('Now',ET_DOMAIN);
+                                            }else if( !empty($e_value['m_to']) ){ // update from 1.8.3.1
                                             	$string_to_time = '01-'.$e_value['m_to']. '-' . $e_value['y_to'];
                                             	$date_to = ' - '.date_i18n(trim($date_fr_option),strtotime($string_to_time));
                                             }
-
-
-
-
 	                                        echo $date_fr . $date_to;
 	                                        ?>
                                         </h4>
@@ -310,6 +319,23 @@ if ( $is_edit or ! empty( $educations ) ) {
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <?php
+                                                $currently_studying_chkd = "";
+                                                if(!empty($e_value['currently_studying']))
+                                                    $currently_studying_chkd = "checked=checked";
+                                                ?>
+
+                                                <div class="fre-input-field">
+                                                    <label class="fre-checkbox no-margin-bottom" for="currently-studying">
+                                                    <label class="fre-checkbox no-margin-bottom"
+                                                           for="currently-studying-<?php echo $education->meta_id ?>">
+                                                        <input id="currently-studying-<?php echo $education->meta_id ?>" type="checkbox"
+                                                               name="education[currently_studying]"
+                                                               value="1" class="currently-studying" <?php echo $currently_studying_chkd; ?> />
+                                                        <span></span>
+                                                        <?php _e( 'Still Attending', ET_DOMAIN ) ?>
+                                                    </label>
                                                 </div>
                                                 <!-- end !-->
 

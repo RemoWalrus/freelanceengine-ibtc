@@ -170,7 +170,7 @@ if( isset($convert->hour_rate) )
 									<?php } ?>
 
 	                                <?php if(function_exists('et_the_field') && ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER )) {
-		                                //et_render_custom_field($convert);
+		                                et_render_custom_field($convert);
 
 		                                echo '<div class="custom-field-wrapper licensed-wrapper" >';
 							            echo '<span class="ae-field-title licensed-title">'.__('License Held', ET_DOMAIN).':</span>';
@@ -178,7 +178,7 @@ if( isset($convert->hour_rate) )
 							            echo '</div>';
 
 		                                if(is_super_admin() && $license!=""){ ?>
-		                                	<div class="custom-field-wrapper license-wrapper"><span class="ae-field-title license-title"><?php __('License Number', ET_DOMAIN); ?>:</span><span class="license-title"><?php echo $license; ?></span></div>
+		                                	<div class="custom-field-wrapper license-wrapper"><span class="ae-field-title license-title"><?php echo __('License Number', ET_DOMAIN); ?>:</span><span class="license-title"><?php echo $license; ?></span></div>
 		                                <?php 
 		                            	}
 	                                }

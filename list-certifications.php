@@ -23,7 +23,6 @@ if($profile_id){
 	$query          = 'SELECT * FROM ' . $wpdb->postmeta . ' WHERE post_id = ' . $profile_id . ' AND meta_key = "certification" ORDER BY meta_id DESC';
 	$certifications = $wpdb->get_results( $query );
 }
-
 if ( $is_edit or ! empty( $certifications ) ) {
 	?>
 
@@ -131,7 +130,8 @@ if ( $is_edit or ! empty( $certifications ) ) {
                                                 <select class="fre-chosen-single" name="certification[y_to]" id="">
                                                     <option value=""><?php _e('Year',ET_DOMAIN) ?></option>
 													<?php
-													for ( $i = date( 'Y', time() ); $i >= intval( date( 'Y', time() ) ) - 50; $i -- ) {
+                                                    $start_year = date( 'Y', time() ) + 4;
+													for ( $i = $start_year; $i >= intval( date( 'Y', time() ) ) - 50; $i -- ) {
 														echo '<option value="' . $i . '">' . $i . '</option>';
 													} ?>
                                                 </select>
