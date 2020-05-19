@@ -325,10 +325,9 @@ function lp_like_portfolio(){
 
 }
 
-add_filter('wpforo_kses_allowed_html_email', 'lp_wpforo_kses_allowed_html_email', 10, 1);
+add_filter('wpforo_kses_allowed_html_email', 'lp_wpforo_kses_allowed_html_email');
 function lp_wpforo_kses_allowed_html_email($allowed_html){
-	$allowed_html = array( 
-				'a' => array( 'href' => array(), 'title' => array()),
+	$allowed_html = array( 'a' => array( 'href' => array(), 'title' => array()),
 				'blockquote' => array(),
 				'h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(),
 				'hr' => array(),
@@ -336,7 +335,7 @@ function lp_wpforo_kses_allowed_html_email($allowed_html){
 				'p' => array(),
 				'strong' => array(),
 				'style' => array(),
-				'body'	=> array(),
-        );
+				'ul'	=> array(),
+			);
 	return $allowed_html;
 }
