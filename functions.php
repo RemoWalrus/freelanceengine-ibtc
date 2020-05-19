@@ -337,6 +337,11 @@ function lp_wpforo_kses_allowed_html_email($allowed_html){
 				'style' => array(),
 				'html'	=> array(),
 				'table'	=> array(),
+				'tr'	=> array(),
+				'td'	=> array(),
+				'div'	=> array(),
+				'img'	=> array(),
+				'span'	=> array(),
 			);
 	return $allowed_html;
 }
