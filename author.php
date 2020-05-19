@@ -170,7 +170,7 @@ if( isset($convert->hour_rate) )
 									<?php } ?>
 
 	                                <?php if(function_exists('et_the_field') && ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER )) {
-		                                et_render_custom_field($convert);
+		                                //et_render_custom_field($convert);
 
 		                                echo '<div class="custom-field-wrapper licensed-wrapper" >';
 							            echo '<span class="ae-field-title licensed-title">'.__('License Held', ET_DOMAIN).':</span>';
