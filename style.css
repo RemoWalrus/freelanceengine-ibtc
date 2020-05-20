@@ -64,8 +64,13 @@ Version:        2.1
 }
 .fre-menu-main > li:hover > a, 
 .fre-account-info span:hover, 
-.fre-account-info>i:hover {
-    color: #2c3e50 !important;
+.fre-account-info>i:hover, 
+.fre-account-info:hover i,
+.fre-account-info:hover span,
+.fre-account .dropdown-menu > li a:hover, 
+.fre-notification i:hover, 
+.fre-skill-dropdown > li > a:hover{
+    color: #fff !important;
 }
 .fre-menu-main > li, 
 .dropdown-menu>li>a, 
@@ -84,24 +89,7 @@ div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .d
 }
 .free-experience.free-experience-remove-border span
 { border-left:0px;  padding-left:0px; }
-.dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #d3d5e2;
-    border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
-.fre-loading {
- border-radius:50%;
- width:24px;
- height:24px;
- border:0.25rem solid rgba(99, 95, 126, 0.2);
- border-top-color:#1fbdbd;
- -webkit-animation:fre-spin 1s infinite linear;
- animation:fre-spin 1s infinite linear
-}
+
 .chosen-container-single .chosen-single span {
     padding: 0 0 0 15px;
 }
@@ -695,6 +683,24 @@ background-color: rgba(255, 255, 255, 0.37) !important;
     padding: 70px 0 0;
     margin: 0px 0 0;
 	}
+    .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+    background-color: #d3d5e2;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #d3d5e2;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+    .fre-loading {
+     border-radius:50%;
+     width:24px;
+     height:24px;
+     border:0.25rem solid rgba(99, 95, 126, 0.2);
+     border-top-color:#1fbdbd;
+     -webkit-animation:fre-spin 1s infinite linear;
+     animation:fre-spin 1s infinite linear
+    }
 }
 @media only screen and (max-width:1199px){
 	.fre-menu-main li a, .fre-login>li a {

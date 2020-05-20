@@ -45,7 +45,7 @@ $user_role   = ae_user_role( $user_ID );
 										?>
                                         <div class="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7">
 											<?php if ( $query_post >= 1 ) { ?>
-                                                <label for="orderby">Sort By :</label>
+                                                <label for="orderby" class="fre-input-field fre-field-title">Sort By :</label>
                                                 <div class="fre-profile-sort">
 
                                                     <select class="fre-chosen-single sort-order" name="orderby">
