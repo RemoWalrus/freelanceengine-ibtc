@@ -273,7 +273,7 @@ global $current_user;
                             <span><?php echo $current_user->display_name; ?></span>
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </div>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu desktop">
                             <li>
                                 <a href="<?php echo et_get_page_link( "profile" ) ?>"><?php _e( 'MY PROFILE', ET_DOMAIN ); ?></a>
                             </li>

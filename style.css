@@ -35,7 +35,9 @@ Version:        2.1
 }
 .fre-account .dropdown-menu > li a:hover, 
 .fre-notification i:hover, 
-.fre-skill-dropdown>li>a:hover  {
+.fre-skill-dropdown>li>a:hover,
+.fre-menu-main li a:hover, 
+.fre-login>li a:hover {
     color: #fff;
 }
 .fre-header-wrap {
@@ -198,6 +200,9 @@ a:hover {
     color: #000;
     text-decoration: none;
     outline: none;
+}
+footer .widget ul li a:hover, .social-list-footer li a i:hover {
+    color: #fff;
 }
 .highlighted, 
 .fre-skill-dropdown>li>a.active {
@@ -636,9 +641,15 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 /*DROPDOWN COLORS*/
-.datepicker td.active.active, .datepicker td.active:hover.active, .chosen-container .chosen-results li.result-selected:hover, .chosen-container .chosen-results li.active-result:hover {
+ 
+   div.fre-input-field> .dropdown-menu, .fre-account .dropdown-menu  {
+       background-color: #d3d5e2;  
+    }
+
+.datepicker td.active.active, .datepicker td.active:hover.active, .chosen-container .chosen-results li.result-selected:hover, .chosen-container .chosen-results li.active-result:hover, .fre-account-wrap .fre-account .dropdown-menu {
     background-color: #969db7 !important;
 }
+
 .chosen-results, .chosen-container-multi .chosen-choices li.search-choice{
     background-color: #d3d5e2;
 }
@@ -650,6 +661,13 @@ div.fre-chosen-multi.chosen-container .chosen-results li.result-selected {
 }
 .chosen-container .chosen-results li.result-selected {
 background-color: rgba(255, 255, 255, 0.37) !important;
+}
+ .fre-skill-dropdown>li>a:hover {
+       color:#ffffff;
+        background-color: #b6bbcf;
+    }
+.dropdown-menu .desktop {
+    background-color: #d3d5e2 !important;  
 }
 
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
@@ -701,24 +719,35 @@ background-color: rgba(255, 255, 255, 0.37) !important;
      -webkit-animation:fre-spin 1s infinite linear;
      animation:fre-spin 1s infinite linear
     }
+    .fre-account-wrap .fre-account .dropdown-menu {
+    background-color: #cfd2df !important;
+}
 }
 @media only screen and (max-width:1199px){
-	.fre-menu-main li a, .fre-login>li a {
-    color: #333144 !important;
-}
-	.fre-menu-main li a:hover, .fre-login>li a:hover {
-		color:#ffffff !important;
-	}
+
+	.fre-menu-main li a:hover, .fre-login>li a:hover, .fre-account-info-tablet .dropdown-menu>li a:hover {
+		color:#ffffff;
+    }
+   
+    .fre-account-info-tablet .dropdown-menu>li, .fre-header-wrapper.active .fre-menu-main>li .dropdown-menu{
+        background-color: #969db7;
+        
+    }
 	.fre-menu-page {
     width: 100%;
     background: #969db7;
 }
 .dropdown-menu {
-    background-color: #969db7 !important;
+    background-color: #969db7 ;
 	}
     .datepicker {
     background-color: #d3d5e2 !important;
     }
+.dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+    background-color: #d3d5e2; 
+    }
+    
+ 
 
 }
 /* DESKTOP */
@@ -780,7 +809,9 @@ background-color: rgba(255, 255, 255, 0.37) !important;
 	.stories2 {
 	background-image: url('assets/images/BGmain.jpg');
 	}
-    
+    .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+    background-color: #d3d5e2;
+    }
     
 }
 
@@ -825,6 +856,9 @@ background-color: rgba(255, 255, 255, 0.37) !important;
    }
    .datepicker {
     background-color: #d3d5e2 !important;
+    }
+    .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+    background-color: #d3d5e2;
     }
 	
 }
@@ -898,8 +932,11 @@ background-color: rgba(255, 255, 255, 0.37) !important;
     background: #969db7;
 	}
 	.dropdown-menu {
-    background-color: #969db7 !important;
+    background-color: #969db7;
 	}
+    .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+        background-color: #d3d5e2;
+    }
 	.freelance-video-add {
     float: left;
     margin-top: 10px;
@@ -922,6 +959,9 @@ background-color: rgba(255, 255, 255, 0.37) !important;
 	}
        .datepicker {
     background-color: #d3d5e2 !important;
+    }
+    .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
+    background-color: #d3d5e2;
     }
 /* SPACING  HOMEPAGE */
 
