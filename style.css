@@ -121,7 +121,7 @@ a, a:focus, a:hover {
 	color: #415161;
 }
 .checkbox-inline span:after, 
-.fre-checkbox span:after {
+.fre-checkbox span:after, .project-detail-status  {
 	color: #625f7d;
 }
 .checkbox-inline input[type=checkbox]:checked+span:before, 
@@ -790,7 +790,7 @@ background-color: rgba(255, 255, 255, 0.37) !important;
     border-bottom: 1px solid #e4e7ea;
     margin-bottom: 20px;
 	}
-
+    
    .media-modal{
     top: 10%;
     bottom: 10%;
