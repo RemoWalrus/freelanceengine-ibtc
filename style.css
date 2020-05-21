@@ -670,6 +670,18 @@ background-color: rgba(255, 255, 255, 0.37) !important;
     background-color: #d3d5e2 !important;  
 }
 
+/*Footer*/
+
+footer h2.widgettitle {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 0 30px;
+    font-weight: 600;
+    font-family: quiche-sans, sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {
