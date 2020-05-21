@@ -38,9 +38,18 @@
                         ?>
                     </div>
                 </div>
-                <?php if($convert->post_content){ ?>
+                <?php 
+                if($convert->post_content){ 
+                    $content_information = "";
+                    if($convert->post_content=="Email"){
+                        $content_information = "test@email.com";
+                    }elseif($convert->post_content=="Phone"){
+                        $content_information = "555 555 5555";
+                    }
+                    ?>
                     <div class="comment-author-history full-text">
                         <p><?php echo $convert->post_content;?></p>
+                        <p><?php echo $content_information; ?></p>
                     </div>
                 <?php } ?>
             </div>
