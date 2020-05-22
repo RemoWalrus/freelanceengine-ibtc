@@ -95,7 +95,7 @@ $phone = get_user_meta($convert->post_author, 'phone', true);
 					}
 				}
 				if(in_array($project_status, array('publish') )){
-					do_action('ae_bid_item_template', $convert, $project );
+					//do_action('ae_bid_item_template', $convert, $project );
 				}
 			}
 			?>
