@@ -682,6 +682,10 @@ footer h2.widgettitle {
     text-transform: uppercase;
 }
 
+.btn-open-msg-modal{
+  margin-top: 10px;
+}
+
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {
