@@ -235,6 +235,10 @@
                     user_email: {
                         required: true,
                         email: true
+                    },
+                    phone:{
+                        number:true,
+                        minlength:10
                     }
                 }
             });

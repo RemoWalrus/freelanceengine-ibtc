@@ -396,12 +396,13 @@ $currency = ae_get_option( 'currency', array(
                                     </p>
 								<?php }
 							} ?>
-
+                            <p> <span><?php _e( 'Phone', ET_DOMAIN ) ?></span><?php echo $user_data->phone ?></p>
                             <div class="employer-secure-edit">
                                 <a href="javascript:void(0)" class="fre-normal-btn-o profile-show-edit-tab-btn"
                                    data-ctn_edit="ctn-edit-account"><?php _e( 'Edit', ET_DOMAIN ) ?></a>
                             </div>
                         </div>
+                        
 
                         <div class="profile-employer-secure-edit cnt-profile-hide" id="ctn-edit-account"
                              style="display: none">
@@ -418,7 +419,12 @@ $currency = ae_get_option( 'currency', array(
 								if ( $use_escrow ) {
 									do_action( 'ae_escrow_recipient_field' );
 								} ?>
-
+                                <div class="fre-input-field">
+                                    <label><?php _e( 'Phone', ET_DOMAIN ) ?></label>
+                                    <input type="text" class="" id="phone" name="phone"
+                                           value="<?php echo $user_data->phone ?>"
+                                           placeholder="<?php _e( 'Enter Phone', ET_DOMAIN ) ?>">
+                                </div>
                                 <div class="employer-info-save btn-update-profile">
                                     <input type="submit" class="fre-normal-btn fre-btn" name="" style="width: 100%"
                                            value="<?php _e( 'Save', ET_DOMAIN ) ?>">
