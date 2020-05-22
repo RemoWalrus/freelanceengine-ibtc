@@ -14,6 +14,10 @@ $convert        = $post_object->convert( $post );
 $project_status = $project->post_status;
 $user_role      = ae_user_role( $user_ID );
 $project_author = $convert->project_author;
+
+$user_data = get_user_by('ID', $convert->post_author);
+$user_email = $user_data->user_email;
+$phone = get_user_meta($convert->post_author, 'phone', true);
 ?>
 <div class="row freelancer-bidding-item">
     <div class="col-md-9 col-sm-9">
@@ -57,8 +61,18 @@ $project_author = $convert->project_author;
     <div class="col-md-3 col-sm-3">
         <div class="col-free-bid">
         	<?php
+    		 	$content_information = "";
+    		 	$content = strip_tags($convert->post_content);
+                if(trim($content)=="Email"){
+                    $content_information = $user_email;
+                }elseif(trim($content)=="Phone"){
+                    $content_information = $phone;
+                }
         		if ( $convert->post_content && $show_bid_info ) {
-					echo '<p>'.$convert->post_content.'</p>';
+					echo $convert->post_content;
+					if($content_information!=""){
+						echo '<p>'.$content_information.'</p>';
+					}
 				}
 		    ?>
         </div>
