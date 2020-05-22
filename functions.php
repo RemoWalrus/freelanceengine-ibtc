@@ -65,6 +65,17 @@ function lp_freelanceengine_enqueue_styles() {
 		), ET_VERSION, true );
 	}
 
+	if(is_page_template('page-register.php') && !is_user_logged_in()){
+		wp_deregister_script( 'authenticate' );
+		wp_enqueue_script( 'authenticate', get_stylesheet_directory_uri() . '/assets/js/authenticate.js', array(
+			'jquery',
+			'underscore',
+			'backbone',
+			'appengine',
+			'fre-lib'
+		), ET_VERSION, true );
+	}
+
 }
 add_action ( 'wp_enqueue_scripts', 'lp_freelanceengine_enqueue_styles');
 
