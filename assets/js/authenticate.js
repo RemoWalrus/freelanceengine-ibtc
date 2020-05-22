@@ -94,7 +94,7 @@
                             required: true,
                             email: true
                         },
-                        user_phone:{
+                        phone:{
                             number: true,
                             minlength:10
                         },

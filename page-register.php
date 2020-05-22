@@ -74,7 +74,7 @@ global $post;
 								<input type="text" name="user_email" id="user_email" placeholder="<?php _e('Email', ET_DOMAIN);?>">
 							</div>
 							<div class="fre-input-field">
-								<input type="text" name="phone" id="user_phone" placeholder="<?php _e('Phone', ET_DOMAIN);?>" />
+								<input type="text" name="phone" id="phone" placeholder="<?php _e('Phone', ET_DOMAIN);?>" />
 							</div>
 							<div class="fre-input-field">
 								<input type="text" name="user_login" id="user_login" placeholder="<?php _e('Username', ET_DOMAIN);?>">
