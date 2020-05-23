@@ -14,6 +14,10 @@ $convert        = $post_object->convert( $post );
 $project_status = $project->post_status;
 $user_role      = ae_user_role( $user_ID );
 $project_author = $convert->project_author;
+
+$user_data = get_user_by('ID', $convert->post_author);
+$user_email = $user_data->user_email;
+$phone = get_user_meta($convert->post_author, 'phone', true);
 ?>
 <div class="row freelancer-bidding-item">
     <div class="col-md-9 col-sm-9">
@@ -57,8 +61,27 @@ $project_author = $convert->project_author;
     <div class="col-md-3 col-sm-3">
         <div class="col-free-bid">
         	<?php
+    		 	$content_information = "";
+    		 	$content = strip_tags($convert->post_content);
+    		 	$content_information_do_action = false;
+                if(trim($content)=="Email"){
+                    $content_information = $user_email;
+                }elseif(trim($content)=="Phone"){
+                    $content_information = $phone;
+                }elseif(trim($content)=="Private Message"){
+                	if(in_array($project_status, array('publish') )){
+                		$content_information_do_action = true;
+					}
+                }
         		if ( $convert->post_content && $show_bid_info ) {
-					echo '<p>'.$convert->post_content.'</p>';
+					echo $convert->post_content;
+					if($content_information!=""){
+						echo '<p>'.$content_information.'</p>';
+					}
+
+					if($content_information_do_action){
+						do_action('ae_bid_item_template', $convert, $project );
+					}
 				}
 		    ?>
         </div>
@@ -80,9 +103,7 @@ $project_author = $convert->project_author;
 						echo '<a class="fre-normal-btn btn-accept-bid btn-accept-bid-no-escrow" id="' . get_the_ID() . '">' . __( 'Accept Bid', ET_DOMAIN ) . '</a>';
 					}
 				}
-				if(in_array($project_status, array('publish') )){
-					do_action('ae_bid_item_template', $convert, $project );
-				}
+				
 			}
 			?>
         </div>

@@ -4,7 +4,7 @@ $payer_of_commission = ae_get_option( 'payer_of_commission' );
 $commission_type     = ae_get_option( 'commission_type' );
 $currency            = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD', 'icon' => '$' ) );
 $commission          = ae_get_option( 'commission', 0 );
-
+$phone = get_user_meta($user_ID, 'phone', true);
 ?>
 <!-- MODAL BIG -->
 <div class="modal fade" id="modal_bid">
@@ -47,7 +47,11 @@ $commission          = ae_get_option( 'commission', 0 );
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <select name="bid_content" class="fre-chosen-single" data-placeholder="<?php _e('Select preferred contact method', ET_DOMAIN); ?>">
                                     <option value="<?php _e('Email', ET_DOMAIN); ?>"><?php _e('Email', ET_DOMAIN); ?></option>
+                                    <?php
+                                    if($phone!=""){ ?>
                                     <option value="<?php _e('Phone', ET_DOMAIN); ?>"><?php _e('Phone', ET_DOMAIN); ?></option>
+                                    <?php
+                                    } ?>
                                     <option value="<?php _e('Private Message', ET_DOMAIN); ?>"><?php _e('Private Message', ET_DOMAIN); ?></option>
                                 </select>
                             </div>
