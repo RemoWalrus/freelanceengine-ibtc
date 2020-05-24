@@ -12,7 +12,7 @@ Version:        2.1
 
 /* THEME COLORS AND BACKGROUNDS */
 
-root:{
+:root {
     --color-main-dark: #635f7e;
     --color-main-header: rgba(182, 187, 207, 0.90);
     --color-sec-mid: #969db7;
@@ -22,8 +22,30 @@ root:{
     --color-semitrans: rgba(255, 255, 255, 0.37);
     --image-bg-chair: url('assets/images/bgchairv1.jpg');
     --type-titles: quiche-sans, sans-serif;
-    
+    --type--body: 'Raleway', sans-serif;
+    --box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
+/*Cool scrollbar*/
+
+/*
+    body::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::scrollbar {
+      width: 5px;
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--color-main-dark);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--color-main-dark);
+    }
+    body::-webkit-scrollbar-thumb {
+      background: var(--color-sec-mid);
+    }
+*/
+
+/*theme color*/
 .general>.container {
 	background-color: var(--color-main-transparent, transparent);
 	width: 100%;
@@ -67,7 +89,7 @@ root:{
     font-size: 14px;
     color: #666f78;
     margin-top: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--type--body);
     font-weight: 400;
 }
 .fre-account.open .fre-account-info i, 
@@ -88,7 +110,7 @@ root:{
 .fre-account .dropdown-menu > li a:hover, 
 .fre-notification i:hover, 
 .fre-skill-dropdown > li > a:hover{
-    color: var(--color-main-light);!important
+    color: var(--color-main-light)!important;
 }
 .fre-menu-main > li, 
 .dropdown-menu>li>a, 
@@ -267,7 +289,7 @@ div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
 }
 
 h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_story, .blog-header-container .blog-classic-top h2, #title_service {
-    font-family: quiche-sans, serif;
+    font-family: var(--type-titles);
 	font-weight: 500;
 	line-height: 1.3em;
 	font-style: normal;
@@ -302,7 +324,7 @@ h2.profh2 {
 .profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, #modal_invite .all-selected a {
 	color: #222;
     line-height: 1.4em;
-    font-family: quiche-sans;
+    font-family: var(--type-titles);
     letter-spacing: 0.5px;
 }
 
@@ -455,7 +477,7 @@ video {
 }
 .fre-page-title h2 {
     margin: 0;
-    font-family: quiche-sans, serif;
+    font-family: var(--type-titles);
 	font-weight: 500;
 	font-style: normal;
 	text-transform: uppercase;
@@ -490,7 +512,7 @@ h2.profh2 {
 .profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, .custom-field-wrapper .ae-field-title, .profile-freelance-available>h2, .change-password {
 	color: #222;
     line-height: 1.4em;
-    font-family: quiche-sans;
+    font-family: var(--type-titles);
     letter-spacing: 0.5px;
 	font-weight: 100;
 }
@@ -736,8 +758,8 @@ footer h2.widgettitle {
     background-clip: padding-box;
     border: 1px solid #d3d5e2;
     border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
     .fre-loading {
      border-radius:50%;
