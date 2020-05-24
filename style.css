@@ -16,6 +16,7 @@ Version:        2.1
     --color-main-dark: #635f7e; /*main color*/
     --color-main-header: rgba(182, 187, 207, 0.90);
     --color-main-mid: #969DB9;
+    --color-title-line: #e4e7ea;
     --color-highlight: #b6bbcf;
     --color-main-light: #d3d5e2;
     --color-white: #fff;
@@ -27,7 +28,8 @@ Version:        2.1
     --color-semitrans: rgba(255, 255, 255, 0.37);
     --image-bg-chair: url('assets/images/bgchairv1.jpg'); /*pages body bg image */
     --image-bg-main: url('assets/images/BGmain.jpg'); /*two chairs bg image*/
-    --image-bg-main2: url('assets/images/BGmain2.jpg'); /*two chairs bg image*/
+    --image-bg-login: url('assets/images/BGlogin1.jpg'); /*main homepage image*/
+    --image-bg-community: url('assets/images/bgcommunity.jpg'); /*community background image*/
     --type-titles: quiche-sans, sans-serif;
     --type-body: 'Raleway', sans-serif;
     --box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -167,19 +169,20 @@ a, a:focus, a:hover {
 }
 .checkbox-inline span:after, 
 .fre-checkbox span:after, .project-detail-status  {
-	color: #625f7d;
+	color: var(--color-main-dark);
 }
 .checkbox-inline input[type=checkbox]:checked+span:before, 
 .fre-checkbox input[type=checkbox]:checked+span:before,
-.fre-tabs>li>a {
-    border-color: #5c5e5d;
+.fre-tabs>li>a{
+    border-color: var(--color-midgray);
 }
  a:focus, 
 a:hover, 
 .fre-search-dropdown>li>a:hover, 
 .project-filter-clear:active, 
 .project-filter-clear:focus, 
-.project-filter-clear:hover {
+.project-filter-clear:hover,
+.fre-search-dropdown > li > a.active {
     color: var(--color-drkgray);
 }
 
@@ -197,6 +200,18 @@ a:hover,
 .fre-work-block span {
     width: 90px;
     height: 90px;
+}
+.fre-work-block {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.fre-how-work p {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50;
+    line-height: 1.8em;
+    overflow: hidden;
+   
 }
 .fre-stories-wrap .stories-img {
     float: right;
@@ -290,7 +305,7 @@ div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
 }
 
 .blog-header-container {
-    border-bottom: 1px solid #e4e7ea;
+    border-bottom: 1px solid var(--color-title-line);
 	z-index: 2;
     background: var(--color-main-transparent, transparent);
 	margin-bottom: 20px
@@ -818,7 +833,7 @@ footer h2.widgettitle {
 		top:-80px;
 		margin-bottom: -85px;
 		position: relative;
-		background-image: url('assets/images/BGlogin1.jpg');
+		background-image: var(--image-bg-login);
     	height: 90vh;
 		overflow: hidden;
 	}
@@ -848,7 +863,7 @@ footer h2.widgettitle {
 	}
 	.fre-page-title {
     padding: 30px 0 25px;
-    border-bottom: 1px solid #e4e7ea;
+    border-bottom: 1px solid var(--color-title-line);
     margin-bottom: 20px;
 	}
     
@@ -862,7 +877,7 @@ footer h2.widgettitle {
 
 	.fre-our-stories {
     padding: 36px 0;
-    background-image: url('assets/images/bgcommunity.jpg');
+    background-image: var(--image-bg-community);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -882,7 +897,7 @@ footer h2.widgettitle {
 		top:-80px;
 		margin-bottom: -85px;
 		position: relative;
-		background-image: url('assets/images/BGlogin1.jpg');
+		background-image: var(--image-bg-login);
     	height: 90vh;
 		overflow: hidden;
 	}
@@ -963,7 +978,7 @@ footer h2.widgettitle {
     position: relative;
     height: 85vh;
 	background-color: var(--color-main-transparent, transparent);
-	background-image: url('assets/images/BGlogin1.jpg');
+	background-image: var(--image-bg-login);
 	background-position: right;
 	}
 	.fre-bg-content {
@@ -983,10 +998,10 @@ footer h2.widgettitle {
 	}
 
 	.fre-menu-main li a, .fre-login>li a {
-    color: #333144 !important;
+    color: var(--color-main-dark) !important;
 	}
 	.fre-menu-main li a:hover, .fre-login>li a:hover {
-		color:#ffffff !important;
+		color:var(--color-white) !important;
 	}
 	.fre-menu-page {
     width: 100%;
@@ -1007,7 +1022,7 @@ footer h2.widgettitle {
   	}
 	.fre-our-stories {
     padding: 36px 0;
-    background-image: url('assets/images/bgcommunity.jpg');
+    background-image: var(--image-bg-community);
     background-attachment: fixed;
 	background-position: center;
     background-size: cover;
