@@ -11,7 +11,7 @@ global $post;
 		<div class="container">
 			<div class="fre-authen-wrapper">
 				<div class="fre-register-default">
-					<h2><?php _e('Sign Up for Free Account', ET_DOMAIN)?></h2>
+					<h2><?php _e('Sign Up for a Free Account', ET_DOMAIN)?></h2>
 					<div class="fre-register-wrap">
 						<div class="row">
 							<div class="col-sm-6">
@@ -33,7 +33,7 @@ global $post;
 					<div class="fre-authen-footer">
 						<?php
 			                if(fre_check_register() && function_exists('ae_render_social_button')){
-			                    $before_string = __("You can use social account to login", ET_DOMAIN);
+			                    $before_string = __("You can use your social accounts to login", ET_DOMAIN);
 			                    ae_render_social_button( array(), array(), $before_string );
 			                }
 			            ?>
