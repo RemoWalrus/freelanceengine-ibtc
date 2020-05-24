@@ -7,9 +7,25 @@ Author URI:     http://romergarcia.com/about/
 Template:       freelanceengine
 Version:        2.1
 */
-/* colors for theme */
+
+
+
+/* THEME COLORS AND BACKGROUNDS */
+
+root:{
+    --color-main-dark: #635f7e;
+    --color-main-header: rgba(182, 187, 207, 0.90);
+    --color-sec-mid: #969db7;
+    --color-main-mid: #969DB9;
+    --color-main-light: #ffffff;
+    --color-main-transparent: transparent;
+    --color-semitrans: rgba(255, 255, 255, 0.37);
+    --image-bg-chair: url('assets/images/bgchairv1.jpg');
+    --type-titles: quiche-sans, sans-serif;
+    
+}
 .general>.container {
-	background-color: transparent;
+	background-color: var(--color-main-transparent, transparent);
 	width: 100%;
 }
 
@@ -22,7 +38,7 @@ Version:        2.1
    font-size: 18px;
 }
 .sub-menu {
-   background: transparent;
+   background: var(--color-main-transparent, transparent);
 }
 .fre-account.open:after, 
 .fre-menu-main>li:hover:after,
@@ -31,21 +47,21 @@ Version:        2.1
     border-color: transparent transparent #d3d5e2 transparent;
    }
 #main_header{
-   background-color:rgba(182, 187, 207, 0.90);
+   background-color:var(--color-main-header);
 }
 .fre-account .dropdown-menu > li a:hover, 
 .fre-notification i:hover, 
 .fre-skill-dropdown>li>a:hover,
 .fre-menu-main li a:hover, 
 .fre-login>li a:hover {
-    color: #fff;
+    color: var(--color-main-light);
 }
 .fre-header-wrap {
-    border-bottom: 1px solid #969db7;
+    border-bottom: 1px solid var(--color-sec-mid);
     }
 .fre-menu-main li a:hover, .fre-skill-dropdown>li>a:hover {
     background: none;
-	color: #fff;
+	color: var(--color-main-light);
 }
 .project-detail-skill .fre-label, .project-list-skill .fre-label a {
     font-size: 14px;
@@ -62,7 +78,7 @@ Version:        2.1
 .fre-account-info:hover i, 
 .fre-account-info, 
 .fre-notification i {
-    color: #635f7e;
+    color: var(--color-main-dark);
 }
 .fre-menu-main > li:hover > a, 
 .fre-account-info span:hover, 
@@ -78,7 +94,7 @@ Version:        2.1
 .dropdown-menu>li>a, 
 div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .dropdown-menu > li .fre-notify-archive > span {
     cursor: pointer;
-	color: #635f7e;
+	color: var(--color-main-dark);
 }
 .fre-btn-o:active,
 .fre-btn-o:focus,
@@ -86,8 +102,8 @@ div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .d
 .fre-normal-btn-disable:focus,
 .fre-normal-btn:active,
 .fre-normal-btn:focus {
-	background-color: #969DB9;
-	color: #FFFFFF;
+	background-color: var(--main-color-mid);
+	color: var(--color-main-light);
 }
 .free-experience.free-experience-remove-border span
 { border-left:0px;  padding-left:0px; }
@@ -104,7 +120,7 @@ div.fre-chosen-single.chosen-container .chosen-drop {
     background-color: #d3d5e2;
 }
  .fre-header-wrapper.notify-active .fre-account-wrap .dropdown-menu-notifi>li:first-child:hover {
-  border:1px solid #625e7e;
+  border:1px solid var(--color-main-dark);
  }
 div.fre-chosen-single.chosen-container-single .chosen-single {
     border: none;
@@ -139,7 +155,7 @@ a:hover,
 }
 
 .fre-menu-page .dropdown-menu>.active>a {
-    background-color: transparent;
+    background-color: var(--color-main-transparent, transparent);
     color: #000;
 }
 .fre-work-block span {
@@ -156,18 +172,17 @@ a:hover,
 }
 
 .fre-get-started {
-    background: #fff;
+    background: var(--color-main-light);
 }
 
 .fre-stories-wrap {
-	background: transparent;
+	background: var(--color-main-transparent, transparent);
 }
 /* darker arrows */
 .owl-carousel-stories .owl-next span::before, 
 .owl-carousel-stories .owl-next span::after, 
 .owl-carousel-stories .owl-prev span::before, 
-.owl-carousel-stories .owl-prev span::after {
-    background: #625e7e;
+.owl-carousel-stories .owl-prev span::after { background: var(--color-main-dark);
 }
 
 .fre-freelancer-wrap {
@@ -188,11 +203,11 @@ a:hover,
 a:focus, 
 a:hover, 
 fre-search-dropdown>li>a.active  {
-	color: #fff;
+	color: var(--color-main-light);
 }
 .freelance-experience-action a, 
 .portfolio-thumbs-action a  {
-     color: #625e7e;
+     color: var(--color-main-dark);
 }
 a, 
 a:focus, 
@@ -202,16 +217,16 @@ a:hover {
     outline: none;
 }
 footer .widget ul li a:hover, .social-list-footer li a i:hover {
-    color: #969db7;
+    color: var(--color-sec-mid);
 }
 .highlighted, 
 .fre-skill-dropdown>li>a.active {
     background-image: none;
-    background-color: #969db7 !important;
-    color: #FFF;
+    background-color: var(--color-sec-mid) !important;
+    color: var(--color-main-light);
 }
 .fre-form-close, .project-action-col a, body .secondary-color, .secondary-color {
-    font-family: quiche-sans, sans-serif;
+    font-family: var(--type-titles);
     letter-spacing: .5px;
     font-weight: 700;
 }
@@ -221,7 +236,7 @@ footer .widget ul li a:hover, .social-list-footer li a i:hover {
 }
 div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
     background-image: none;
-    border: 1px solid #969db7;
+    border: 1px solid var(--color-sec-mid);
 }
 
 /* FIX BLOG POST SPACING */
@@ -241,7 +256,7 @@ div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
 .blog-header-container {
     border-bottom: 1px solid #e4e7ea;
 	z-index: 2;
-    background: transparent;
+    background: var(--color-main-transparent, transparent);
 	margin-bottom: 20px
 }
 .blog-header-container .blog-classic-top {
@@ -259,13 +274,13 @@ h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_s
 	text-transform: uppercase;
 	font-size: 32px;
 	letter-spacing: 3px;
-    color: #635f7e;
+    color: var(--color-main-dark);
 	background-blend-mode:multiply;
 }
 
 .profile-list-title, .fre-freelancer-wrap h2 a, .fre-service .container>h2, .project-list-title {
     font-size: 20px;
-    font-family: quiche-sans, sans-serif;
+    font-family: var(--type-titles);
     letter-spacing: .5px;
 	font-weight: 700;
 }
@@ -280,7 +295,7 @@ h2.profh2 {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.4em;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	letter-spacing: .5px;
 }
 
@@ -295,27 +310,27 @@ h2.profh2 {
  .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn, .fre-submit-btn, .fre-small-btn, .fre-service-btn, .fre-action-btn:active, .fre-action-btn:focus, .fre-action-btn:hover, .fre-action-btn {
 	text-transform: uppercase;
     letter-spacing: 1.5px;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	font-size: 17px;
 	font-weight: 700;
 }
 .profile-employer-secure-wrap>h2, .freelance-video-title, .freelance-portfolio-title, .freelance-experience-title, .freelance-certificate-title, .freelance-education-title,  .fre-authen-login>h2, .fre-register-default>h2, .fre-authen-register>h2, .fre-tabs>li {
 		text-transform: uppercase;
     	letter-spacing: 1px;
-		font-family: quiche-sans, sans-serif;
+		font-family: var(--type-titles);
 		font-size: 20px;
 }
 
 
 .fre-normal-btn-o:active, .fre-normal-btn-o:focus, .fre-normal-btn-o:hover, .fre-action-btn:active, .fre-action-btn:focus, .fre-action-btn:hover {
     background: #635f7e;
-    color: #FFFFFF;
+    color: var(--color-main-light);
 	
 }
 .employer-info-save .employer-info-cancel-btn {
     font-size: 16px;
     cursor: pointer;
-    font-family: quiche-sans, sans-serif;
+    font-family: var(--type-titles);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -384,11 +399,11 @@ body,html{margin:0;padding:0;}
 }
 
 div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
-    background-color: rgba(255, 255, 255, 0.37) !important;
+    background-color: var(--color-semitrans) !important;
 }
 div.fre-chosen-single.chosen-container .chosen-results li.highlighted {
     background-color: #b6bbcf !important;
-	color: #635f7e;
+	color: var(--color-main-dark);
 }
 
 /* video homepage */
@@ -431,7 +446,7 @@ video {
     background: rgba(255, 255, 255, .7);
 }
 .chairbk, .fre-page-wrapper, .fre-service  {
-    background-image: url('assets/images/bgchairv1.jpg');
+    background-image: var(--image-bg-chair);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -446,13 +461,13 @@ video {
 	text-transform: uppercase;
 	font-size: 32px;
 	letter-spacing: 3px;
-    color: #635f7e;
+    color: var(--color-main-dark);
 	background-blend-mode:multiply;
     line-height: 1.3em;
 }
 
 .fre-page-title {
-	background: transparent !important;
+	background: var(--color-main-transparent, transparent) !important;
 }
 
 
@@ -468,7 +483,7 @@ h2.profh2 {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.4em;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	letter-spacing: .5px;
 }
 
@@ -484,19 +499,19 @@ h2.profh2 {
  .fre-normal-btn-o, .fre-normal-btn, .fre-normal-btn, .fre-btn-o, .fre-btn {
 	text-transform: uppercase;
     letter-spacing: 1.5px;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	font-size: 17px;
 	font-weight: 700;
 }
 .profile-employer-secure-wrap>h2, .freelance-video-title, .freelance-portfolio-title, .freelance-experience-title, .freelance-certificate-title, .freelance-education-title,  .fre-authen-login>h2, .freelance-work-title {
 		text-transform: uppercase;
     	letter-spacing: 1px;
-		font-family: quiche-sans, sans-serif;
+		font-family: var(--type-titles);
 		font-size: 20px;
 }
 
 .fre-perfect-freelancer, .fre-page-section, .page-template-page-nosidebar {
-    background-image: url('assets/images/bgchairv1.jpg') !important;
+    background-image: var(--image-bg-chair) !important;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -647,20 +662,18 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     }
 
 .datepicker td.active.active, .datepicker td.active:hover.active, .chosen-container .chosen-results li.result-selected:hover, .chosen-container .chosen-results li.active-result:hover, .fre-account-wrap .fre-account .dropdown-menu {
-    background-color: #969db7 !important;
+    background-color: var(--color-sec-mid) !important;
 }
 
 .chosen-results, .chosen-container-multi .chosen-choices li.search-choice{
     background-color: #d3d5e2;
 }
-.chosen-container .chosen-results li.result-selected {
-    
-}
+
 div.fre-chosen-multi.chosen-container .chosen-results li.result-selected {
  background-color:#e9f9f9
 }
 .chosen-container .chosen-results li.result-selected {
-background-color: rgba(255, 255, 255, 0.37) !important;
+background-color: var(--color-semitrans) !important;
 }
  .fre-skill-dropdown>li>a:hover {
        color:#ffffff;
@@ -674,10 +687,10 @@ background-color: rgba(255, 255, 255, 0.37) !important;
 
 footer h2.widgettitle {
     font-size: 16px;
-    color: #ffffff;
+    color: var(--color-main-light);
     margin: 0 0 30px;
     font-weight: 600;
-    font-family: quiche-sans, sans-serif;
+    font-family: var(--type-titles);
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
@@ -746,15 +759,15 @@ footer h2.widgettitle {
     }
    
     .fre-account-info-tablet .dropdown-menu>li, .fre-header-wrapper.active .fre-menu-main>li .dropdown-menu{
-        background-color: #969db7;
+        background-color: var(--color-sec-mid);
         
     }
 	.fre-menu-page {
     width: 100%;
-    background: #969db7;
+    background: var(--color-sec-mid);
 }
 .dropdown-menu {
-    background-color: #969db7 ;
+    background-color: var(--color-sec-mid) ;
 	}
     .datepicker {
     background-color: #d3d5e2 !important;
@@ -917,7 +930,7 @@ footer h2.widgettitle {
     margin-bottom: 0px;
     position: relative;
     height: 85vh;
-	background-color: transparent;
+	background-color: var(--color-main-transparent, transparent);
 	background-image: url('assets/images/BGlogin1.jpg');
 	background-position: right;
 	}
@@ -934,7 +947,7 @@ footer h2.widgettitle {
     padding: 0;
     margin-top: 0px;
     display: block;
-    background-color: transparent;
+    background-color: var(--color-main-transparent, transparent);
 	}
 
 	.fre-menu-main li a, .fre-login>li a {
@@ -945,10 +958,10 @@ footer h2.widgettitle {
 	}
 	.fre-menu-page {
     width: 100%;
-    background: #969db7;
+    background: var(--color-sec-mid);
 	}
 	.dropdown-menu {
-    background-color: #969db7;
+    background-color: var(--color-sec-mid);
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
         background-color: #d3d5e2;
@@ -990,7 +1003,7 @@ footer h2.widgettitle {
     min-width: 200px;
     text-transform: uppercase;
     letter-spacing: 2px;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	font-size: 16px;
 	}
 	img.logo {
@@ -1029,7 +1042,7 @@ footer h2.widgettitle {
     min-width: 190px;
 	text-transform: uppercase;
     letter-spacing: 1px;
-	font-family: quiche-sans, sans-serif;
+	font-family: var(--type-titles);
 	font-size: 14px;
 	}
 	img.logo {
