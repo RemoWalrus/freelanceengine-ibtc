@@ -23,7 +23,7 @@ $user_role   = ae_user_role( $user_ID );
     <div class="fre-page-wrapper section-archive-profile">
         <div class="fre-page-title">
             <div class="container">
-                <h2><?php _e( 'Available Profiles', ET_DOMAIN ); ?></h2>
+                <h2><?php _e( 'Available Artists', ET_DOMAIN ); ?></h2>
             </div>
         </div>
 

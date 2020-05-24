@@ -16,7 +16,8 @@ Version:        2.1
     --color-main-dark: #635f7e;
     --color-main-header: rgba(182, 187, 207, 0.90);
     --color-main-mid: #969DB9;
-    --color-main-light: #ffffff;
+    --color-main-light: #d3d5e2;
+    --color-main-white: #ffffff;
     --color-main-transparent: transparent;
     --color-semitrans: rgba(255, 255, 255, 0.37);
     --image-bg-chair: url('assets/images/bgchairv1.jpg');
@@ -65,7 +66,7 @@ Version:        2.1
 .fre-menu-main>li:hover:after,
 .fre-account-wrap.open::after {
 	
-    border-color: transparent transparent #d3d5e2 transparent;
+    border-color: transparent transparent var(--color-main-light) transparent;
    }
 #main_header{
    background-color:var(--color-main-header);
@@ -75,14 +76,14 @@ Version:        2.1
 .fre-skill-dropdown>li>a:hover,
 .fre-menu-main li a:hover, 
 .fre-login>li a:hover {
-    color: var(--color-main-light);
+    color: var(--color-main-white);
 }
 .fre-header-wrap {
     border-bottom: 1px solid var(--color-main-mid);
     }
 .fre-menu-main li a:hover, .fre-skill-dropdown>li>a:hover {
     background: none;
-	color: var(--color-main-light);
+	color: var(--color-main-white);
 }
 .project-detail-skill .fre-label, .project-list-skill .fre-label a {
     font-size: 14px;
@@ -109,7 +110,7 @@ Version:        2.1
 .fre-account .dropdown-menu > li a:hover, 
 .fre-notification i:hover, 
 .fre-skill-dropdown > li > a:hover{
-    color: var(--color-main-light)!important;
+    color: var(--color-main-white)!important;
 }
 .fre-menu-main > li, 
 .dropdown-menu>li>a, 
@@ -124,7 +125,7 @@ div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .d
 .fre-normal-btn:active,
 .fre-normal-btn:focus {
 	background-color: var(--main-color-mid);
-	color: var(--color-main-light);
+	color: var(--color-main-white);
 }
 .free-experience.free-experience-remove-border span
 { border-left:0px;  padding-left:0px; }
@@ -138,7 +139,7 @@ div.fre-chosen-single.chosen-container .chosen-drop {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 1px solid #ededed;
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
 }
  .fre-header-wrapper.notify-active .fre-account-wrap .dropdown-menu-notifi>li:first-child:hover {
   border:1px solid var(--color-main-dark);
@@ -193,7 +194,7 @@ a:hover,
 }
 
 .fre-get-started {
-    background: var(--color-main-light);
+    background: var(--color-main-white);
 }
 
 .fre-stories-wrap {
@@ -224,7 +225,7 @@ a:hover,
 a:focus, 
 a:hover, 
 fre-search-dropdown>li>a.active  {
-	color: var(--color-main-light);
+	color: var(--color-main-white);
 }
 .freelance-experience-action a, 
 .portfolio-thumbs-action a  {
@@ -244,7 +245,7 @@ footer .widget ul li a:hover, .social-list-footer li a i:hover {
 .fre-skill-dropdown>li>a.active {
     background-image: none;
     background-color: var(--color-main-mid) !important;
-    color: var(--color-main-light);
+    color: var(--color-main-white);
 }
 .fre-form-close, .project-action-col a, body .secondary-color, .secondary-color {
     font-family: var(--type-titles);
@@ -345,7 +346,7 @@ h2.profh2 {
 
 .fre-normal-btn-o:active, .fre-normal-btn-o:focus, .fre-normal-btn-o:hover, .fre-action-btn:active, .fre-action-btn:focus, .fre-action-btn:hover {
     background: #635f7e;
-    color: var(--color-main-light);
+    color: var(--color-main-white);
 	
 }
 .employer-info-save .employer-info-cancel-btn {
@@ -679,7 +680,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 /*DROPDOWN COLORS*/
  
    div.fre-input-field> .dropdown-menu, .fre-account .dropdown-menu  {
-       background-color: #d3d5e2;  
+       background-color: var(--color-main-light);  
     }
 
 .datepicker td.active.active, .datepicker td.active:hover.active, .chosen-container .chosen-results li.result-selected:hover, .chosen-container .chosen-results li.active-result:hover, .fre-account-wrap .fre-account .dropdown-menu {
@@ -687,7 +688,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
 }
 
 .chosen-results, .chosen-container-multi .chosen-choices li.search-choice{
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
 }
 
 div.fre-chosen-multi.chosen-container .chosen-results li.result-selected {
@@ -701,14 +702,14 @@ background-color: var(--color-semitrans) !important;
         background-color: #b6bbcf;
     }
 .dropdown-menu .desktop {
-    background-color: #d3d5e2 !important;  
+    background-color: var(--color-main-light) !important;  
 }
 
 /*Footer*/
 
 footer h2.widgettitle {
     font-size: 16px;
-    color: var(--color-main-light);
+    color: var(--color-main-white);
     margin: 0 0 30px;
     font-weight: 600;
     font-family: var(--type-titles);
@@ -752,10 +753,10 @@ footer h2.widgettitle {
     margin: 0px 0 0;
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #d3d5e2;
+    border: 1px solid var(--color-main-light);
     border-radius: 0 0 4px 4px;
     -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
@@ -791,10 +792,10 @@ footer h2.widgettitle {
     background-color: var(--color-main-mid) ;
 	}
     .datepicker {
-    background-color: #d3d5e2 !important;
+    background-color: var(--color-main-light) !important;
     }
 .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2; 
+    background-color: var(--color-main-light); 
     }
     
  
@@ -860,7 +861,7 @@ footer h2.widgettitle {
 	background-image: url('assets/images/BGmain.jpg');
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
     }
     
 }
@@ -905,10 +906,10 @@ footer h2.widgettitle {
     width: 50% !important;
    }
    .datepicker {
-    background-color: #d3d5e2 !important;
+    background-color: var(--color-main-light) !important;
     }
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
     }
 	
 }
@@ -985,7 +986,7 @@ footer h2.widgettitle {
     background-color: var(--color-main-mid);
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-        background-color: #d3d5e2;
+        background-color: var(--color-main-light);
     }
 	.freelance-video-add {
     float: left;
@@ -1008,10 +1009,10 @@ footer h2.widgettitle {
     margin: 0px 0 0;
 	}
        .datepicker {
-    background-color: #d3d5e2 !important;
+    background-color: var(--color-main-light) !important;
     }
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
-    background-color: #d3d5e2;
+    background-color: var(--color-main-light);
     }
 /* SPACING  HOMEPAGE */
 

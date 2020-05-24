@@ -11,7 +11,7 @@ global $post;
 		<div class="container">
 			<div class="fre-authen-wrapper">
 				<div class="fre-register-default">
-					<h2><?php _e('Sign Up Free Account', ET_DOMAIN)?></h2>
+					<h2><?php _e('Sign Up for Free Account', ET_DOMAIN)?></h2>
 					<div class="fre-register-wrap">
 						<div class="row">
 							<div class="col-sm-6">
@@ -57,9 +57,9 @@ global $post;
 				<div class="fre-authen-wrapper">
 					<div class="fre-authen-register">
 						<?php if($role == 'employer'){ ?>
-								<h2><?php _e('Sign Up Employer Account', ET_DOMAIN);?></h2>
+								<h2><?php _e('Sign Up for Employer Account', ET_DOMAIN);?></h2>
 						<?php }else{ ?>
-								<h2><?php _e('Sign Up Freelancer Account', ET_DOMAIN);?></h2>
+								<h2><?php _e('Sign Up for Freelancer Account', ET_DOMAIN);?></h2>
 						<?php } ?>
 						<form role="form" id="signup_form">
 							<input type="hidden" name="ae_redirect_url"  value="<?php echo $re_url ?>" />
