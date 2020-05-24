@@ -15,7 +15,6 @@ Version:        2.1
 :root {
     --color-main-dark: #635f7e;
     --color-main-header: rgba(182, 187, 207, 0.90);
-    --color-sec-mid: #969db7;
     --color-main-mid: #969DB9;
     --color-main-light: #ffffff;
     --color-main-transparent: transparent;
@@ -41,7 +40,7 @@ Version:        2.1
       background: var(--color-main-dark);
     }
     body::-webkit-scrollbar-thumb {
-      background: var(--color-sec-mid);
+      background: var(--color-main-mid);
     }
 */
 
@@ -79,7 +78,7 @@ Version:        2.1
     color: var(--color-main-light);
 }
 .fre-header-wrap {
-    border-bottom: 1px solid var(--color-sec-mid);
+    border-bottom: 1px solid var(--color-main-mid);
     }
 .fre-menu-main li a:hover, .fre-skill-dropdown>li>a:hover {
     background: none;
@@ -239,12 +238,12 @@ a:hover {
     outline: none;
 }
 footer .widget ul li a:hover, .social-list-footer li a i:hover {
-    color: var(--color-sec-mid);
+    color: var(--color-main-mid);
 }
 .highlighted, 
 .fre-skill-dropdown>li>a.active {
     background-image: none;
-    background-color: var(--color-sec-mid) !important;
+    background-color: var(--color-main-mid) !important;
     color: var(--color-main-light);
 }
 .fre-form-close, .project-action-col a, body .secondary-color, .secondary-color {
@@ -258,7 +257,7 @@ footer .widget ul li a:hover, .social-list-footer li a i:hover {
 }
 div.fre-chosen-single.chosen-container-single .chosen-search input[type=text] {
     background-image: none;
-    border: 1px solid var(--color-sec-mid);
+    border: 1px solid var(--color-main-mid);
 }
 
 /* FIX BLOG POST SPACING */
@@ -684,7 +683,7 @@ div.moxie-shim.moxie-shim-html5, div.moxie-shim.moxie-shim-html5 input[type="fil
     }
 
 .datepicker td.active.active, .datepicker td.active:hover.active, .chosen-container .chosen-results li.result-selected:hover, .chosen-container .chosen-results li.active-result:hover, .fre-account-wrap .fre-account .dropdown-menu {
-    background-color: var(--color-sec-mid) !important;
+    background-color: var(--color-main-mid) !important;
 }
 
 .chosen-results, .chosen-container-multi .chosen-choices li.search-choice{
@@ -781,15 +780,15 @@ footer h2.widgettitle {
     }
    
     .fre-account-info-tablet .dropdown-menu>li, .fre-header-wrapper.active .fre-menu-main>li .dropdown-menu{
-        background-color: var(--color-sec-mid);
+        background-color: var(--color-main-mid);
         
     }
 	.fre-menu-page {
     width: 100%;
-    background: var(--color-sec-mid);
+    background: var(--color-main-mid);
 }
 .dropdown-menu {
-    background-color: var(--color-sec-mid) ;
+    background-color: var(--color-main-mid) ;
 	}
     .datepicker {
     background-color: #d3d5e2 !important;
@@ -980,10 +979,10 @@ footer h2.widgettitle {
 	}
 	.fre-menu-page {
     width: 100%;
-    background: var(--color-sec-mid);
+    background: var(--color-main-mid);
 	}
 	.dropdown-menu {
-    background-color: var(--color-sec-mid);
+    background-color: var(--color-main-mid);
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
         background-color: #d3d5e2;
