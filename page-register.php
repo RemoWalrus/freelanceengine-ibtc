@@ -17,7 +17,7 @@ global $post;
 							<div class="col-sm-6">
 								<div class="register-employer">
 									<h3><?php _e('Employer', ET_DOMAIN);?></h3>
-									<p><?php _e('Post project, find freelancers and hire favorite to work.', ET_DOMAIN);?></p>
+									<p><?php _e('Post jobs, find artists and hire your favorites to work.', ET_DOMAIN);?></p>
 									<a class="fre-small-btn primary-bg-color" href="<?php echo  et_get_page_link( 'register',array('role' => EMPLOYER) );?>"><?php _e('Sign Up', ET_DOMAIN);?></a>
 								</div>
 							</div>

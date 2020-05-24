@@ -41,5 +41,5 @@
 	<?php } ?>
 </ul>
 <div class="fre-jobs-online-more">
-	<a class="fre-btn-o primary-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('See all jobs', ET_DOMAIN)?></a>
+	<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('See all jobs', ET_DOMAIN)?></a>
 </div>

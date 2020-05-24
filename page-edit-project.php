@@ -22,7 +22,7 @@ $total_bids = $post_convert->total_bids;
 <div class="fre-page-wrapper chairbk">
     <div class="fre-page-title">
         <div class="container">
-            <h2><?php _e('Edit the project', ET_DOMAIN);?></h2>
+            <h2><?php _e('Edit Job Posting', ET_DOMAIN);?></h2>
         </div>
     </div>
 
