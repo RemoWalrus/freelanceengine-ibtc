@@ -59,7 +59,7 @@ global $post;
 						<?php if($role == 'employer'){ ?>
 								<h2><?php _e('Sign Up for Employer Account', ET_DOMAIN);?></h2>
 						<?php }else{ ?>
-								<h2><?php _e('Sign Up for Freelancer Account', ET_DOMAIN);?></h2>
+								<h2><?php _e('Sign Up for Artist Account', ET_DOMAIN);?></h2>
 						<?php } ?>
 						<form role="form" id="signup_form">
 							<input type="hidden" name="ae_redirect_url"  value="<?php echo $re_url ?>" />
