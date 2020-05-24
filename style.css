@@ -88,7 +88,7 @@ root:{
 .fre-account .dropdown-menu > li a:hover, 
 .fre-notification i:hover, 
 .fre-skill-dropdown > li > a:hover{
-    color: #fff !important;
+    color: var(--color-main-light)!important;
 }
 .fre-menu-main > li, 
 .dropdown-menu>li>a, 
