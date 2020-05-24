@@ -104,7 +104,7 @@ global $user_ID;
 					<span>
 						<img src="<?php echo get_theme_mod('img_work_4') ? get_theme_mod('img_work_4') : get_template_directory_uri().'/img/4.png';?>" id="img_work_4" alt="">
 					</span>
-					<p id="desc_work_3"><?php echo get_theme_mod("desc_work_4") ? get_theme_mod("desc_work_3") : __('Use FreelanceEngine platform to chat and share files', ET_DOMAIN);?></p>
+					<p id="desc_work_3"><?php echo get_theme_mod("desc_work_4") ? get_theme_mod("desc_work_4") : __('Use FreelanceEngine platform to chat and share files', ET_DOMAIN);?></p>
 				</div>
 			</div>
 		</div>
