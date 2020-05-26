@@ -154,6 +154,9 @@ div.fre-chosen-single.chosen-container .chosen-drop {
  .fre-header-wrapper.notify-active .fre-account-wrap .dropdown-menu-notifi>li:first-child:hover {
   border:1px solid var(--color-main-dark);
  }
+.login-social-list>li#twitter, .login-social-list>li#google, .login-social-list>li#facebook {
+    background: var(--color-midgray);
+}
 div.fre-chosen-single.chosen-container-single .chosen-single {
     border: none;
     -webkit-box-shadow: none;
