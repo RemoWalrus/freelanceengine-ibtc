@@ -158,7 +158,7 @@ div.fre-chosen-single.chosen-container .chosen-drop {
     background: var(--color-midgray);
 }
 .login-social-list>li#twitter:hover, .login-social-list>li#google:hover, .login-social-list>li#facebook:hover {
-    background: var(--color-darkgray);
+    background: var(--color-drkgray);
 }
 div.fre-chosen-single.chosen-container-single .chosen-single {
     border: none;
