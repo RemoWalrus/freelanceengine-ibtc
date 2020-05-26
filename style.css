@@ -76,7 +76,7 @@ Version:        2.1
 .fre-menu-main>li:hover:after,
 .fre-account-wrap.open::after {
 	
-    border-color: transparent transparent var(--color-main-dark) transparent;
+    border-color: transparent transparent var(--color-main-light) transparent;
    }
 #main_header{
    background-color:var(--color-main-header);
