@@ -24,6 +24,7 @@ Version:        2.1
     --color-midgray: #666f78;
     --color-drkgray: #222;
     --color-black:#000;
+    --color-linkblue:#415161;
     --color-main-transparent: transparent;
     --color-semitrans: rgba(255, 255, 255, 0.37);
     --image-bg-chair: url('assets/images/bgchairv1.jpg'); /*pages body bg image */
@@ -75,7 +76,7 @@ Version:        2.1
 .fre-menu-main>li:hover:after,
 .fre-account-wrap.open::after {
 	
-    border-color: transparent transparent var(--color-main-light) transparent;
+    border-color: transparent transparent var(--color-main-dark) transparent;
    }
 #main_header{
    background-color:var(--color-main-header);
@@ -162,10 +163,10 @@ div.fre-chosen-single.chosen-container-single .chosen-single {
     padding-left: 0px;
     line-height: 42px;
     font-size: 16px;
-    color: #415161
+    color: var(--color-linkblue);
 }
 a, a:focus, a:hover {
-	color: #415161;
+	color: var(--color-linkblue);
 }
 .checkbox-inline span:after, 
 .fre-checkbox span:after, .project-detail-status  {
@@ -455,6 +456,15 @@ div.fre-chosen-single.chosen-container .chosen-results li.result-selected {
 div.fre-chosen-single.chosen-container .chosen-results li.highlighted {
     background-color: var(--color-highlight) !important;
 	color: var(--color-main-dark);
+}
+.fre-work-package {
+    position: relative;
+    padding-right: 350px;
+    min-height: 44px;
+}
+.fre-work-block {
+    margin-top: 40px;
+    padding: 0 10px;
 }
 
 /* video homepage */
