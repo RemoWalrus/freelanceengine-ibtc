@@ -96,7 +96,7 @@ global $current_user;
 					if ( $user_role == 'freelancer' ) {
 						$active_project = 'active';
 						$action_link    = get_post_type_archive_link( PROJECT );
-						$input_hint     = __( 'Find Projects', ET_DOMAIN );
+						$input_hint     = __( 'Find Jobs', ET_DOMAIN );
 					} else if ( $user_role == 'employer' ) {
 						$active_profile = 'active';
 						$action_link    = get_post_type_archive_link( PROFILE );
@@ -116,7 +116,7 @@ global $current_user;
 					$active_project = 'active';
 					$active_profile = '';
 					$action_link    = get_post_type_archive_link( PROJECT );
-					$input_hint     = __( 'Find Projects', ET_DOMAIN );
+					$input_hint     = __( 'Find Jobs', ET_DOMAIN );
 				} else if ( $current_url == get_post_type_archive_link( PROFILE ) ) {
 					$active_profile = 'active';
 					$active_project = '';
@@ -136,7 +136,7 @@ global $current_user;
                                placeholder="<?php echo $input_hint; ?>">
                         <ul class="dropdown-menu fre-search-dropdown">
                             <li><a class="<?php echo $active_profile; ?>" data-type="profile"
-                                   data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Freelancers', ET_DOMAIN ); ?></a>
+                                   data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artistss', ET_DOMAIN ); ?></a>
                             </li>
                             <li><a class="<?php echo $active_project; ?>" data-type="project"
                                    data-action="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
@@ -181,7 +181,7 @@ global $current_user;
                                     <a href="<?php echo et_get_page_link( 'login' ) . '?ae_redirect_url=' . urlencode( et_get_page_link( 'submit-project' ) ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Freelancers', ET_DOMAIN ); ?></a>
+                                    <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artists', ET_DOMAIN ); ?></a>
                                 </li>
                             </ul>
                         </li>
@@ -196,26 +196,26 @@ global $current_user;
                             </li>
 						<?php } else { ?>
                             <li class="fre-menu-employer dropdown">
-                                <a><?php _e( 'PROJECTS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                                <a><?php _e( 'MY JOB POSTINGS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
                                                                              aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'All Projects Posted', ET_DOMAIN ); ?></a>
+                                        <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'All Jobs Posted', ET_DOMAIN ); ?></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo et_get_page_link( 'submit-project' ); ?>"><?php _e( 'Post a Project', ET_DOMAIN ); ?></a>
+                                        <a href="<?php echo et_get_page_link( 'submit-project' ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="fre-menu-employer dropdown-empty">
-                                <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'FREELANCERS', ET_DOMAIN ); ?></a>
+                                <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'ARTISTS', ET_DOMAIN ); ?></a>
                             </li>
 						<?php } ?>
 					<?php } ?>
                     <!-- Main Menu -->
 					<?php if ( has_nav_menu( 'et_header_standard' ) ) { ?>
                         <li class="fre-menu-page dropdown">
-                            <a><?php _e( 'TEST', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <a><?php _e( 'MORE', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
 							<?php
 							$args = array(
 								'theme_location'  => 'et_header_standard',
