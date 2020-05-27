@@ -136,7 +136,7 @@ global $current_user;
                                placeholder="<?php echo $input_hint; ?>">
                         <ul class="dropdown-menu fre-search-dropdown">
                             <li><a class="<?php echo $active_profile; ?>" data-type="profile"
-                                   data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artistss', ET_DOMAIN ); ?></a>
+                                   data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artists', ET_DOMAIN ); ?></a>
                             </li>
                             <li><a class="<?php echo $active_project; ?>" data-type="project"
                                    data-action="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
