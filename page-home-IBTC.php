@@ -19,7 +19,7 @@ global $user_ID;
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
 			
 					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('Find Artist', ET_DOMAIN);?></a>
-					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Projects', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Jobs', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
@@ -34,7 +34,7 @@ global $user_ID;
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
 					<a class="fre-btn primary-bg-color" data-hover="Find Artists" href="<?php echo et_get_page_link('register', array("role"=>'employer')); ?>"><?php _e('<span>Employer</span>', ET_DOMAIN);?></a>
-					<a class="fre-btn primary-bg-color" data-hover="Find Projects" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span>Artistic Professional</span>', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" data-hover="Find Jobs" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span>Artistic Professional</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
@@ -46,7 +46,7 @@ global $user_ID;
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
-					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('<span>Find Projects</span>', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('<span>Find Jobs</span>', ET_DOMAIN);?></a>
 					<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('profile'); ?>"><?php _e('<span>Update Profile</span>', ET_DOMAIN);?></a>
 					<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/community/artists-lounge/');"><?php _e('<span>Connect</span>', ET_DOMAIN);?></a>
 			</div>
