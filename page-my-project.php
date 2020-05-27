@@ -30,10 +30,10 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 					} */ ?>
                     <ul class="fre-tabs nav-tabs-my-work">
                         <li class="active"><a data-toggle="tab"
-                                              href="#current-project-tab"><span><?php _e( 'Current Projects', ET_DOMAIN ); ?></span></a>
+                                              href="#current-project-tab"><span><?php _e( 'Current Applications', ET_DOMAIN ); ?></span></a>
                         </li>
                         <li class="next"><a data-toggle="tab"
-                                            href="#previous-project-tab"><span><?php _e( 'Previous Projects', ET_DOMAIN ); ?></span></a>
+                                            href="#previous-project-tab"><span><?php _e( 'Previous Applications', ET_DOMAIN ); ?></span></a>
                         </li>
                     </ul>
                     <div class="fre-tab-content">

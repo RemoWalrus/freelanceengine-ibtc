@@ -69,7 +69,7 @@ global $current_user;
                                     <div class="hamburger-inner"></div>
                                 </div>
                             </div>
-                        </span>
+                    </span>
                 </div>
             </div>
 			<?php if ( is_user_logged_in() ) { ?>
@@ -100,16 +100,16 @@ global $current_user;
 					} else if ( $user_role == 'employer' ) {
 						$active_profile = 'active';
 						$action_link    = get_post_type_archive_link( PROFILE );
-						$input_hint     = __( 'Find Freelancers', ET_DOMAIN );
+						$input_hint     = __( 'Find Artists', ET_DOMAIN );
 					} else {
 						$active_profile = 'active';
 						$action_link    = get_post_type_archive_link( PROFILE );
-						$input_hint     = __( 'Find Freelancers', ET_DOMAIN );
+						$input_hint     = __( 'Find Artists', ET_DOMAIN );
 					}
 				} else {
 					$active_profile = 'active';
 					$action_link    = get_post_type_archive_link( PROFILE );
-					$input_hint     = __( 'Find Freelancers', ET_DOMAIN );
+					$input_hint     = __( 'Find Artists', ET_DOMAIN );
 				}
 
 				if ( $current_url == get_post_type_archive_link( PROJECT ) ) {
@@ -121,7 +121,7 @@ global $current_user;
 					$active_profile = 'active';
 					$active_project = '';
 					$action_link    = get_post_type_archive_link( PROFILE );
-					$input_hint     = __( 'Find Freelancers', ET_DOMAIN );
+					$input_hint     = __( 'Find Artists', ET_DOMAIN );
 				}
 				?>
 
@@ -139,7 +139,7 @@ global $current_user;
                                    data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Freelancers', ET_DOMAIN ); ?></a>
                             </li>
                             <li><a class="<?php echo $active_project; ?>" data-type="project"
-                                   data-action="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Projects', ET_DOMAIN ); ?></a>
+                                   data-action="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
                             </li>
                         </ul>
                     </div>
@@ -161,11 +161,11 @@ global $current_user;
                     <!-- Menu freelancer -->
 					<?php if ( ! is_user_logged_in() ) { ?>
                         <li class="fre-menu-freelancer dropdown">
-                            <a><?php _e( 'FREELANCERS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                            <a><?php _e( 'ARTISTS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
                                                                           aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Projects', ET_DOMAIN ); ?></a>
+                                    <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
                                 </li>
 								<?php if ( fre_check_register() ) { ?>
                                     <li>
@@ -178,7 +178,7 @@ global $current_user;
                             <a><?php _e( 'EMPLOYERS', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="<?php echo et_get_page_link( 'login' ) . '?ae_redirect_url=' . urlencode( et_get_page_link( 'submit-project' ) ); ?>"><?php _e( 'Post a Project', ET_DOMAIN ); ?></a>
+                                    <a href="<?php echo et_get_page_link( 'login' ) . '?ae_redirect_url=' . urlencode( et_get_page_link( 'submit-project' ) ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Freelancers', ET_DOMAIN ); ?></a>
@@ -189,10 +189,10 @@ global $current_user;
 
 						<?php if ( ae_user_role( $user_ID ) == FREELANCER ) { ?>
                             <li class="fre-menu-freelancer dropdown-empty">
-                                <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'MY PROJECT', ET_DOMAIN ); ?></a>
+                                <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'MY APPLICATIONS', ET_DOMAIN ); ?></a>
                             </li>
                             <li class="fre-menu-employer dropdown-empty">
-                                <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'PROJECTS', ET_DOMAIN ); ?></a>
+                                <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'JOBS', ET_DOMAIN ); ?></a>
                             </li>
 						<?php } else { ?>
                             <li class="fre-menu-employer dropdown">
@@ -215,7 +215,7 @@ global $current_user;
                     <!-- Main Menu -->
 					<?php if ( has_nav_menu( 'et_header_standard' ) ) { ?>
                         <li class="fre-menu-page dropdown">
-                            <a><?php _e( 'PAGES', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <a><?php _e( 'TEST', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
 							<?php
 							$args = array(
 								'theme_location'  => 'et_header_standard',

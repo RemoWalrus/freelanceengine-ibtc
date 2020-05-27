@@ -110,7 +110,7 @@ global $user_ID;
 		</div>
         <div class="row">
             <div class="col-lg-12 col-sm-12">
-            <a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('Pricing'); ?>"><?php _e('Learn More', ET_DOMAIN);?></a>
+            <a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/pricing"><?php _e('Learn More', ET_DOMAIN);?></a>
             </div>
         </div>
 	</div>
