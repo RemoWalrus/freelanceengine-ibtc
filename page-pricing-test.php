@@ -78,7 +78,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 											<p></p><p>Pay as you go Month to Month</p>
 <p></p>
 										</div>
-												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/?pack_id=640">Purchase</a>
+												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/">Purchase</a>
                                         <div class="service-info">
                                         <ul>
                                             <li>Month-to-month subscription</li>
@@ -99,7 +99,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 											<p></p><p>28% Savings Six month subscription paid in one payment of $150 every 6 months</p>
 <p></p>
 										</div>
-												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/?pack_id=641">Purchase</a>
+												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/">Purchase</a>
                                         <div class="service-info">
                                         <ul>
                                             <li>6 month subscription</li>
@@ -121,7 +121,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 <p></p>
 										</div>
 												
-                                            <a class="fre-btn primary-bg-color" href="h<?php echo get_site_url(); ?>/upgrade-account/?pack_id=642">Purchase</a>
+                                            <a class="fre-btn primary-bg-color" href="h<?php echo get_site_url(); ?>/upgrade-account/">Purchase</a>
                                         <div class="service-info">
                                          <ul>
                                             <li>1 year subscription</li>
