@@ -128,6 +128,30 @@ div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .d
     cursor: pointer;
 	color: var(--color-main-dark);
 }
+.fre-service-pricing .service-info p {
+    margin: 10px 0 0;
+    font-size: 15px;
+    line-height: 2.2em;
+}
+.fre-service-pricing .service-info ul {
+    margin:0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.2em;
+    text-align: left;
+    list-style: outside;
+    }
+.fre-service-pricing .service-info ul>li {
+    list-style-type: none!important;
+    padding: 5px 0;
+    
+}
+.fre-service-pricing .service-info ul>li:before {
+    content: '✓ ';
+	display: inline-block;
+	margin-left: -17px;
+    margin-right: 5px;
+}
 .fre-btn-o:active,
 .fre-btn-o:focus,
 .fre-normal-btn-disable:active,
