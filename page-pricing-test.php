@@ -81,7 +81,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/?pack_id=640">Purchase</a>
                                         <div class="service-info">
                                         <ul>
-                                            <li>No Commitments</li>
+                                            <li>Month-to-month subscription</li>
                                             <li>Create a profile and portfolio</li>
                                             <li>Browse competitive beauty jobs</li>
                                             <li>Apply to unlimited beauty jobs</li>
@@ -93,7 +93,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
                                 <div class="col-md-3 col-sm-6">
 									<div class="fre-service-pricing">
 										<div class="service-price">
-											<h2><sup>$</sup>150<sub style="font-size:.3em; ">/month</sub></h2> 										</div>
+											<h2><sup>$</sup>25<sub style="font-size:.3em; ">/month</sub></h2> 										</div>
 										<div class="service-info">
 											<h3>Artist Standard</h3>
 											<p></p><p>28% Savings Six month subscription paid in one payment of $150 every 6 months</p>
@@ -102,7 +102,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
 												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/?pack_id=641">Purchase</a>
                                         <div class="service-info">
                                         <ul>
-                                            <li>No Commitments</li>
+                                            <li>6 month subscription</li>
                                             <li>Create a profile and portfolio</li>
                                             <li>Browse competitive beauty jobs</li>
                                             <li>Apply to unlimited beauty jobs</li>
@@ -114,7 +114,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
                                  <div class="col-md-3 col-sm-6">
 									<div class="fre-service-pricing">
 										<div class="service-price">
-											<h2><sup>$</sup>180<sub style="font-size:.3em; ">/month</sub></h2> 										</div>
+											<h2><sup>$</sup>15<sub style="font-size:.3em; ">/month</sub></h2> 										</div>
 										<div class="service-info">
 											<h3>Artist Premium</h3>
 											<p></p><p>57% Savings Annual subscription paid in one payment of $180 every year</p>
@@ -124,7 +124,7 @@ if( $show_project_pack || $show_bid_pack ){ ?>
                                             <a class="fre-btn primary-bg-color" href="h<?php echo get_site_url(); ?>/upgrade-account/?pack_id=642">Purchase</a>
                                         <div class="service-info">
                                          <ul>
-                                            <li>No Commitments</li>
+                                            <li>1 year subscription</li>
                                             <li>Create a profile and portfolio</li>
                                             <li>Browse competitive beauty jobs</li>
                                             <li>Apply to unlimited beauty jobs</li>
