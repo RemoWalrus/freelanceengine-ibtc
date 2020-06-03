@@ -129,24 +129,28 @@ div.fre-chosen-single.chosen-container .chosen-results l, .fre-account-wrap > .d
 	color: var(--color-main-dark);
 }
 .fre-service-pricing .service-info p {
-    margin: 10px 0 0;
+    margin: 15px 0;
     font-size: 15px;
-    line-height: 2.2em;
+    line-height: 1.4em;
 }
-.fre-service-pricing .service-info ul {
+.fre-service-pricing .service-list ul {
     margin:0;
     padding: 0;
     font-size: 14px;
-    line-height: 1.2em;
+    line-height: 1.5em;
     text-align: left;
     list-style: outside;
-    }
-.fre-service-pricing .service-info ul>li {
+}
+.service-list {
+    margin-top:15px;
+    display: block;
+}
+.fre-service-pricing .service-list ul>li {
     list-style-type: none!important;
     padding: 5px 0;
     
 }
-.fre-service-pricing .service-info ul>li:before {
+.fre-service-pricing .service-list ul>li:before {
     content: '✓ ';
 	display: inline-block;
 	margin-left: -17px;
@@ -404,6 +408,24 @@ h2.profh2 {
     	letter-spacing: 1px;
 		font-family: var(--type-titles);
 		font-size: 20px;
+}
+.freelance-yourplan{
+    text-transform: uppercase;
+    	letter-spacing: 1px;
+		font-family: var(--type-titles);
+		font-size: 17px;
+        display: inline-block;
+    width: auto;
+    height: 48px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid var(--color-main-light);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    line-height: 44px;
 }
 
 

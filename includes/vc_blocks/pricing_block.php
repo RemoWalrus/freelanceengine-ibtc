@@ -63,6 +63,10 @@ class WPBakeryShortCode_fre_pricing_block extends WPBakeryShortCode {
             $col = 'col-md-6 col-sm-6 col-xs-6';
             $class_width='width-580';
         }
+        if($number_plan == 4) {
+            $col = 'col-md-6 col-sm-6 col-xs-6';
+            $class_width='width-580';
+        }
         ?>
         <div class="pricing-container">
             <div class="container  <?php echo $class_width ?> " >
