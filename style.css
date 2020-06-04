@@ -562,6 +562,12 @@ video {
     background-attachment: fixed;
     background-size: cover;
 }
+.fre-service {
+     padding-top: 45px;
+}
+.logout {
+     padding-top: 15px;
+}
 .fre-service-pricing {
     background: rgba(255,255,255,.7);
 }
@@ -806,6 +812,14 @@ footer h2.widgettitle {
 .btn-open-msg-modal{
   margin-top: 10px;
 }
+.profile-filter-clear, .profile-filter-clear:active {
+    border-color: var(--color-main-light);
+    color: var(--color-main-mid);
+}
+
+.profile-filter-clear:active, .profile-filter-clear:focus, .profile-filter-clear:hover {
+    color: var(--color-main-mid);
+}
 
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
@@ -858,7 +872,10 @@ footer h2.widgettitle {
     }
     .fre-account-wrap .fre-account .dropdown-menu {
     background-color: var(--color-main-light) !important;
-}
+    }
+    .fre-service-pricing .service-list ul {
+        padding: 0;
+    }
 }
 @media only screen and (max-width:1199px){
 
@@ -883,9 +900,9 @@ footer h2.widgettitle {
 .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: var(--color-main-light); 
     }
-    
- 
-
+  .fre-service-pricing .service-list ul {
+        padding: 10px;
+    }
 }
 /* DESKTOP */
 @media only screen and (min-width: 767px) {
@@ -948,8 +965,7 @@ footer h2.widgettitle {
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: var(--color-main-light);
-    }
-    
+    }    
 }
 
 /* MOBILE ONLY */
@@ -996,6 +1012,9 @@ footer h2.widgettitle {
     }
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: var(--color-main-light);
+    }
+    .fre-service-pricing .service-list ul {
+        padding: 10px;
     }
 	
 }
@@ -1100,6 +1119,10 @@ footer h2.widgettitle {
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: var(--color-main-light);
     }
+    .fre-service-pricing .service-list ul {
+        padding: 15px;
+    }
+	
 /* SPACING  HOMEPAGE */
 
 }

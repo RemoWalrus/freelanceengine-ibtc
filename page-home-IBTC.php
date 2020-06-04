@@ -73,7 +73,7 @@ global $user_ID;
 <div class="fre-how-work">
 	<div class="container">
 		<h2 id="title_work"><?php echo get_theme_mod("title_work") ? get_theme_mod("title_work") : __('How FreelanceEngine works?', ET_DOMAIN);?></h2>
-        <p>Are you an Artistic Professional or an Artistic Enthusiast?</p>
+        <p id="desc_work_4"><?php echo get_theme_mod("desc_work_1") ? get_theme_mod("desc_work_4") : __('Be part of our growing community of Beauty Professionals and Employers', ET_DOMAIN);?></p>
 		<div class="row">
 			<div class="col-lg-3 col-sm-3">
 				<div class="fre-work-block">
@@ -83,7 +83,7 @@ global $user_ID;
 					<p id="desc_work_1"><?php echo get_theme_mod("desc_work_1") ? get_theme_mod("desc_work_1") : __('Post projects to tell us what you need done', ET_DOMAIN);?></p>
 				</div>
 			</div>
-			<div class="col-lg-3 col-sm-3">
+			<div class="col-lg-4 col-sm-4">
 				<div class="fre-work-block">
 					<span>
 						<img src="<?php echo get_theme_mod('img_work_2') ? get_theme_mod('img_work_2') : get_template_directory_uri().'/img/2.png';?>" id="img_work_2" alt="">
@@ -91,7 +91,7 @@ global $user_ID;
 					<p id="desc_work_2"><?php echo get_theme_mod("desc_work_2") ? get_theme_mod("desc_work_2") : __('Browse profiles, reviews, then hire your most favorite and start project', ET_DOMAIN);?></p>
 				</div>
 			</div>
-			<div class="col-lg-3 col-sm-3">
+			<div class="col-lg-4 col-sm-4">
 				<div class="fre-work-block">
 					<span>
 						<img src="<?php echo get_theme_mod('img_work_3') ? get_theme_mod('img_work_3') : get_template_directory_uri().'/img/3.png';?>" id="img_work_3" alt="">
@@ -99,14 +99,7 @@ global $user_ID;
 					<p id="desc_work_3"><?php echo get_theme_mod("desc_work_3") ? get_theme_mod("desc_work_3") : __('Use FreelanceEngine platform to chat and share files', ET_DOMAIN);?></p>
 				</div>
 			</div>
-            <div class="col-lg-3 col-sm-3">
-				<div class="fre-work-block">
-					<span>
-						<img src="<?php echo get_theme_mod('img_work_4') ? get_theme_mod('img_work_4') : get_template_directory_uri().'/img/4.png';?>" id="img_work_4" alt="">
-					</span>
-					<p id="desc_work_3"><?php echo get_theme_mod("desc_work_4") ? get_theme_mod("desc_work_4") : __('Use FreelanceEngine platform to chat and share files', ET_DOMAIN);?></p>
-				</div>
-			</div>
+<!-- 4th place-->
 		</div>
         <div class="row">
             <div class="col-lg-12 col-sm-12">

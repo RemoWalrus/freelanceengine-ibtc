@@ -33,7 +33,7 @@ $post_object = $ae_post_factory->get( PROFILE );
 			    $postdata[] = $convert;
 			    $hou_rate = (int) $convert->hour_rate; // from 1.8.5
 	?>
-				<div class="col-lg-6 col-md-12">
+				<div class="col-lg-6 col-md-6">
 					<div class="fre-freelancer-wrap">
 						<a class="free-avatar" href="<?php echo get_author_posts_url( $convert->post_author ); ?>">
 							<?php echo $convert->et_avatar;?>

@@ -150,7 +150,7 @@ if(  is_user_logged_in() ) {
                    </ul>
    </div> 
     
-<div class="fre-tab-content fre-service">
+<div class="fre-tab-content fre-service logout">
  <div id="artist-pricing-tab" class="freelancer-current-project-tab fre-panel-tab active">     
    <div class="container">
 			<h2 id="title_service">
@@ -168,7 +168,7 @@ if(  is_user_logged_in() ) {
 											<h2>FREE</h2> 	
                                         </div>
 										<div class="service-info">
-											<h3>Basic </h3>
+											<h3>Artist Basic </h3>
 											<p></p><p>Try us out for free and see what we’re about</p>
                                          <br>
                                             
@@ -279,7 +279,7 @@ if(  is_user_logged_in() ) {
 											<h2>FREE</h2> 	
                                         </div>
 										<div class="service-info">
-											<h3>Basic </h3>
+											<h3>Employer Basic </h3>
 											<p></p><p>Try us out for free and see what we’re about</p>
                                          <br>
                                             
