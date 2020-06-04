@@ -15,7 +15,7 @@ if ( isset( $_GET['category_project'] ) && $_GET['category_project'] != '' ) {
 
     </script>
     <div class="project-filter-header visible-sm visible-xs">
-        <a class="project-filter-title" href=""><?php _e( 'Advance search', ET_DOMAIN ); ?></a>
+        <a class="project-filter-title" href=""><?php _e( 'Advanced search', ET_DOMAIN ); ?></a>
     </div>
     <div class="fre-project-list-filter">
         <form>
