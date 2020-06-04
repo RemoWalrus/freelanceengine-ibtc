@@ -229,7 +229,8 @@ a:hover,
 }
 
 .fre-work-block span {
-    width: 150px;
+    width: 100%;
+    max-width:150px;
     height: auto;
 }
 .fre-work-block {
