@@ -138,8 +138,8 @@ if(  is_user_logged_in() ) {
 
 } else { // visitor.
 	if( $pay_to_bid ){ ?>
-<div class="fre-service">
-<div class="container"></div>
+<div class="fre-page-wrapper">
+<div class="fre-page-title">
  <ul class="fre-tabs nav-tabs-my-work">
                         <li class="active"><a data-toggle="tab"
                              href="#artist-pricing-tab"><span><?php _e( 'Artists', ET_DOMAIN ); ?></span></a>
@@ -147,13 +147,12 @@ if(  is_user_logged_in() ) {
                         <li class="next"><a data-toggle="tab"
                             href="#employer-pricing-tab"><span><?php _e( 'Employers', ET_DOMAIN ); ?></span></a>
                         </li>
-                    </ul>
-    <div>&nbsp;</div>
-        <div>&nbsp;</div>
+                   </ul>
+   </div> 
     
-	<div class="fre-tab-content">
-     <div id="artist-pricing-tab" class="freelancer-current-project-tab fre-panel-tab active">     
-    <div class="container">
+<div class="fre-tab-content fre-service">
+ <div id="artist-pricing-tab" class="freelancer-current-project-tab fre-panel-tab active">     
+   <div class="container">
 			<h2 id="title_service">
 				Select an Artist Plan</h2>
 			<div class="fre-service-content">

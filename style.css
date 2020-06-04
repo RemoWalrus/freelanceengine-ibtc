@@ -23,14 +23,10 @@ Version:        2.1
     --color-litegray: #dbdbdb;
     --color-midgray: #666f78;
     --color-drkgray: #222;
-    --color-black:#000;
+    --color-black: #000;
     --color-linkblue:#415161;
     --color-main-transparent: transparent;
     --color-semitrans: rgba(255, 255, 255, 0.37);
-    --image-bg-chair: url('assets/images/bgchairv1.jpg'); /*pages body bg image */
-    --image-bg-main: url('assets/images/BGmain.jpg'); /*two chairs bg image*/
-    --image-bg-login: url('assets/images/BGlogin1.jpg'); /*main homepage image*/
-    --image-bg-community: url('assets/images/bgcommunity.jpg'); /*community background image*/
     --type-titles: quiche-sans, sans-serif;
     --type-body: 'Raleway', sans-serif;
     --box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -562,7 +558,7 @@ video {
     background: rgba(255, 255, 255, .7);
 }
 .chairbk, .fre-page-wrapper, .fre-service  {
-    background-image: var(--image-bg-chair);
+    background-image: url('assets/images/bgchairv1.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -627,7 +623,7 @@ h2.profh2 {
 }
 
 .fre-perfect-freelancer, .fre-page-section, .page-template-page-nosidebar {
-    background-image: var(--image-bg-chair) !important;
+    background-image: url('assets/images/bgchairv1.jpg') !important;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -898,7 +894,7 @@ footer h2.widgettitle {
 		top:-80px;
 		margin-bottom: -85px;
 		position: relative;
-		background-image: var(--image-bg-login);
+		background-image: url('assets/images/BGlogin1.jpg');
     	height: 90vh;
 		overflow: hidden;
 	}
@@ -942,13 +938,13 @@ footer h2.widgettitle {
 
 	.fre-our-stories {
     padding: 36px 0;
-    background-image: var(--image-bg-community);
+    background-image: url('assets/images/bgcommunity.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
 	
 	.stories2 {
-	background-image: var(--image-bg-main);
+	background-image: url('assets/images/BGmain.jpg');
 	}
     .dropdown-menu, .fre-menu-main > li > .dropdown-menu, .fre-account .dropdown-menu {
     background-color: var(--color-main-light);
@@ -962,7 +958,7 @@ footer h2.widgettitle {
 		top:-80px;
 		margin-bottom: -85px;
 		position: relative;
-		background-image: var(--image-bg-login);
+		background-image: url('assets/images/BGlogin1.jpg');
     	height: 90vh;
 		overflow: hidden;
 	}
@@ -1043,7 +1039,7 @@ footer h2.widgettitle {
     position: relative;
     height: 85vh;
 	background-color: var(--color-main-transparent, transparent);
-	background-image: var(--image-bg-login);
+	background-image: url('assets/images/BGlogin1.jpg');
 	background-position: right;
 	}
 	.fre-bg-content {
@@ -1087,13 +1083,13 @@ footer h2.widgettitle {
   	}
 	.fre-our-stories {
     padding: 36px 0;
-    background-image: var(--image-bg-community);
+    background-image: url('assets/images/bgcommunity.jpg');
     background-attachment: fixed;
 	background-position: center;
     background-size: cover;
 	}
 	.stories2 {
-	background-image: var(--image-bg-main);
+	background-image: url('assets/images/BGmain.jpg');
 	}
 	footer {
     margin: 0px 0 0;
