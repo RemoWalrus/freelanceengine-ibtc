@@ -75,7 +75,7 @@ global $user_ID;
 		<h2 id="title_work"><?php echo get_theme_mod("title_work") ? get_theme_mod("title_work") : __('How FreelanceEngine works?', ET_DOMAIN);?></h2>
         <p id="desc_work_4"><?php echo get_theme_mod("desc_work_1") ? get_theme_mod("desc_work_4") : __('Be part of our growing community of Beauty Professionals and Employers', ET_DOMAIN);?></p>
 		<div class="row">
-			<div class="col-lg-3 col-sm-3">
+			<div class="col-lg-4 col-sm-4">
 				<div class="fre-work-block">
 					<span>
 						<img src="<?php echo get_theme_mod('img_work_1') ? get_theme_mod('img_work_1') : get_template_directory_uri().'/img/1.png';?>" id="img_work_1" alt="">
