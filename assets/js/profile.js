@@ -237,8 +237,8 @@
                         email: true
                     },
                     phone:{
-                        number:true,
-                        minlength:10
+                        phoneUS: true,
+                        required:true
                     }
                 }
             });

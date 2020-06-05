@@ -4,6 +4,10 @@ remove_action('wp_head', 'wp_generator');
 
 function lp_freelanceengine_enqueue_styles() {
 	if ( is_page_template( 'page-profile.php' ) || is_author() || et_load_mobile() ) {
+		wp_enqueue_script( 'additional-validation-methods', get_stylesheet_directory_uri() . '/assets/js/additional-validation-methods.js', array(
+			'jquery',
+		), ET_VERSION, true );
+		
 		wp_enqueue_media();
 
 		wp_deregister_script( 'front' );
@@ -64,8 +68,11 @@ function lp_freelanceengine_enqueue_styles() {
 			'fre-lib'
 		), ET_VERSION, true );
 	}
-
-	if(is_page_template('page-register.php') && !is_user_logged_in()){
+	
+	if((is_page_template('page-register.php') || is_page_template('page-login.php')) && !is_user_logged_in()){
+		wp_enqueue_script( 'additional-validation-methods', get_stylesheet_directory_uri() . '/assets/js/additional-validation-methods.js', array(
+			'jquery',
+		), ET_VERSION, true );
 		wp_deregister_script( 'authenticate' );
 		wp_enqueue_script( 'authenticate', get_stylesheet_directory_uri() . '/assets/js/authenticate.js', array(
 			'jquery',
@@ -244,6 +251,7 @@ function filter_site_upload_size_limit( $size ) {
 	    $size = 100 * 1024 * 1024;
 	    return $size;
 	}
+	return $size;
 }
 add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
 

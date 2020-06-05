@@ -821,7 +821,15 @@ footer h2.widgettitle {
 .profile-filter-clear:active, .profile-filter-clear:focus, .profile-filter-clear:hover {
     color: var(--color-main-mid);
 }
-
+.toggle-password{
+  float: right;
+  margin-left: 0;
+  margin-top: -35px;
+  position: relative;
+  z-index: 99;
+  margin-right: 5px;
+  cursor: pointer;
+}
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {

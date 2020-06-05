@@ -9,6 +9,7 @@
             'submit form#signin_form': 'doLoginNew',
             // user forgot password
             'submit form.forgot_form': 'doSendPassword',
+            'click .toggle-password': 'togglePassword'
         },
         /**
          * init view setup Block Ui and Model User
@@ -95,8 +96,8 @@
                             email: true
                         },
                         phone:{
-                            number: true,
-                            minlength:10
+                            phoneUS: true,
+                            required:true
                         },
                         repeat_pass: {
                             required: true,
@@ -432,6 +433,20 @@
                             '<li>'+msg+'</li>'+
                         '</ul>';
             form.prepend(template);
+        },
+
+        togglePassword:function(event){
+            //$(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $('#user_pass');
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+                $('.toggle-password').addClass('fa-eye');
+                $('.toggle-password').removeClass('fa-eye-slash');                
+            } else {
+                input.attr("type", "password");
+                $('.toggle-password').removeClass('fa-eye');
+                $('.toggle-password').addClass('fa-eye-slash');
+            }
         }
     });
 })(jQuery, window.AE.Models, window.AE.Collections, window.AE.Views);
