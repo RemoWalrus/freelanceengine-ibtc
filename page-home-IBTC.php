@@ -26,7 +26,7 @@ global $user_ID;
 	<?php }else{ ?>
 	<div class="fre-background vid" id="background_banner">
 		<video autoplay muted loop id="myVideo">
-  <source src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/video/IBTC-intro.mp4" type="video/mp4">
+  <source src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/video/IBTC-intro-new.mp4" type="video/mp4">
 </video>
 		
 		<div class="fre-bg-content general">
