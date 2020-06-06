@@ -363,3 +363,18 @@ function lp_wpforo_kses_allowed_html_email($allowed_html){
 			);
 	return $allowed_html;
 }
+
+function lp_ae_define_user_meta($meta_data){
+	array_push($meta_data, 'company_name', 'company_address');
+	return $meta_data;
+}
+add_filter('ae_define_user_meta', 'lp_ae_define_user_meta', 10, 1 );
+
+function lp_update_company_details($user_data){
+	global $user_ID;
+	$company_name = $user_data['company_name'];
+	$company_address = $user_data['company_address'];
+	update_user_meta($user_ID, 'company_name', $company_name);
+	update_user_meta($user_ID, 'company_address', $company_address);
+}
+add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );

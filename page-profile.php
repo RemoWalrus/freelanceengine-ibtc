@@ -17,6 +17,7 @@ $ae_users  = AE_Users::get_instance();
 $user_data = $ae_users->convert( $current_user->data );
 $user_role = ae_user_role( $current_user->ID );
 //convert current profile
+
 $post_object = $ae_post_factory->get( PROFILE );
 
 $profile_id = get_user_meta( $user_ID, 'user_profile_id', true );
@@ -47,6 +48,8 @@ $category       = isset( $profile->tax_input['project_category'][0] ) ? $profile
 get_header();
 // Handle email change requests
 $user_meta = get_user_meta( $user_ID, 'adminhash', true );
+$company_name = $user_data->company_name;
+$company_address = $user_data->company_address;
 
 if ( ! empty( $_GET['adminhash'] ) ) {
 	if ( is_array( $user_meta ) && $user_meta['hash'] == $_GET['adminhash'] && ! empty( $user_meta['newemail'] ) ) {
@@ -118,6 +121,7 @@ $currency = ae_get_option( 'currency', array(
 										<?php }
 									} ?>
                                 </span>
+
                             </div>
                             <div class="<?php echo $role_template; ?>-info-content">
                                 <div class="freelance-rating">
@@ -187,6 +191,14 @@ $currency = ae_get_option( 'currency', array(
 									}
 									?>
 								<?php } ?>
+                                <?php
+                                if($company_name!=""){ ?>
+                                <div class="custom-field-wrapper company-name-wrapper"><span class="ae-field-title company-name-title"><?php _e('Company Name', ET_DOMAIN); ?>:</span><?php echo $company_name; ?></div>
+                                <?php } ?>
+                                <?php
+                                if($company_address!=""){ ?>
+                                <div class="custom-field-wrapper company-address-wrapper"><span class="ae-field-title company-address-title"><?php _e('Company Address', ET_DOMAIN); ?>:</span><?php echo $company_address; ?></div>
+                                <?php } ?>
 
 								<?php //do_action( 'fre_after_block_user_info', $user_id ); ?>
                             </div>
@@ -218,7 +230,18 @@ $currency = ae_get_option( 'currency', array(
                                                name="display_name" id="display_name"
                                                placeholder="<?php _e( 'Your name', ET_DOMAIN ) ?>">
                                     </div>
-
+                                    <?php if ( fre_share_role() || $user_role != FREELANCER ) { ?>
+                                    <div class="fre-input-field">
+                                        <input type="text" value="<?php echo $company_name; ?>"
+                                               name="company_name" id="company_name"
+                                               placeholder="<?php _e( 'Company Name', ET_DOMAIN ) ?>">
+                                    </div>
+                                    <div class="fre-input-field">
+                                        <input type="text" value="<?php echo $company_address; ?>"
+                                               name="company_address" id="company_address"
+                                               placeholder="<?php _e( 'Company Address', ET_DOMAIN ) ?>">
+                                    </div>
+                                    <?php } ?>
 									<?php if ( fre_share_role() || $user_role == FREELANCER ) { ?>
                                         <div class="fre-input-field">
                                             <input type="text" name="et_professional_title"
@@ -460,8 +483,6 @@ $currency = ae_get_option( 'currency', array(
 					get_template_part( 'list', 'portfolios' );
 					wp_reset_query();
 				} ?>
-
-                
 
 				<?php if ( fre_share_role() || $user_role == FREELANCER ) {
 					get_template_part( 'list', 'experiences' );

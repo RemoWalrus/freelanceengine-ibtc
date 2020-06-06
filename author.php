@@ -75,6 +75,8 @@ $hour_rate = 0;
 $license = get_post_meta($convert->ID, 'license', true);
 $licensed = get_the_taxonomy_list('licensed', $convert);
 
+$company_name = $user_data->company_name;
+$company_address = $user_data->company_address;
 if( isset($convert->hour_rate) )
 	$hour_rate = (int) $convert->hour_rate;
 ?>
@@ -169,7 +171,8 @@ if( isset($convert->hour_rate) )
                                         </div>
 									<?php } ?>
 
-	                                <?php if(function_exists('et_the_field') && ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER )) {
+	                                <?php 
+	                                if( fre_share_role() || ae_user_role( $author_id ) == FREELANCER ) {
 		                                //et_render_custom_field($convert);
 
 		                                echo '<div class="custom-field-wrapper licensed-wrapper" >';
@@ -182,7 +185,20 @@ if( isset($convert->hour_rate) )
 		                                <?php 
 		                            	}
 	                                }
+	                                if( is_user_logged_in() && ae_user_role( $author_id ) == EMPLOYER ) {
 
+	                                	if($company_name!=""){
+			                                echo '<div class="custom-field-wrapper company-name-wrapper" >';
+								            echo '<span class="ae-field-title company-name-title">'.__('Company Name', ET_DOMAIN).':</span>';
+								            echo $company_name;
+								            echo '</div>';
+								        }
+
+		                                if(is_super_admin() && $company_address!=""){ ?>
+		                                	<div class="custom-field-wrapper company-address-wrapper"><span class="ae-field-title company-address-title"><?php echo __('Company Address', ET_DOMAIN); ?>:</span><span class="company-address-title"><?php echo $company_address; ?></span></div>
+		                                <?php 
+		                            	}
+	                                }
 	                                ?>
                                 </div>
 
