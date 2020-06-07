@@ -47,12 +47,12 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
                     <li>
 						<?php if ( $project->total_bids > 0 ) {
 							if ( $project->total_bids == 1 ) {
-								printf( __( '<span>Bid</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
+								printf( __( '<span>Applications</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
 							} else {
-								printf( __( '<span>Bids</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
+								printf( __( '<span>Applications</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
 							}
 						} else {
-							printf( __( '<span>Bids</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
+							printf( __( '<span>Applications</span><span class="secondary-color">%s</span>', ET_DOMAIN ), $project->total_bids );
 						} ?>
                     </li>
                     <li>
@@ -167,7 +167,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 						}
 					} else {
 						if ( $project_status == 'publish' ) {
-							echo '<a class="fre-normal-btn primary-bg-color" href="' . et_get_page_link( 'login', array( 'ae_redirect_url' => $project->permalink ) ) . '">' . __( 'Bid', ET_DOMAIN ) . '</a>';
+							echo '<a class="fre-normal-btn primary-bg-color" href="' . et_get_page_link( 'login', array( 'ae_redirect_url' => $project->permalink ) ) . '">' . __( 'Apply', ET_DOMAIN ) . '</a>';
 						}
 					}
 					?>

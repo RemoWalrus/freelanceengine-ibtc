@@ -75,7 +75,7 @@ if ( $project->post_status == "disputing" or $post->post_status == 'disputed' ) 
 							<?php } ?>
                         </li>
                         <li>
-                            <span><?php _e( 'Winning Bid', ET_DOMAIN ); ?></span>
+                            <span><?php _e( 'Winning Application', ET_DOMAIN ); ?></span>
                             <span><?php echo $project->bid_budget_text; ?></span>
                         </li>
                         <li>

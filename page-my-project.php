@@ -102,9 +102,9 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
                                         <div class="fre-table">
                                             <div class="fre-table-head">
                                                 <div class="fre-table-col project-title-col"><?php _e( 'Project Title', ET_DOMAIN ); ?></div>
-                                                <div class="fre-table-col project-bids-col"><?php _e( 'Number Bids', ET_DOMAIN ); ?></div>
-                                                <div class="fre-table-col project-bid-col"><?php _e( 'Bid', ET_DOMAIN ); ?></div>
-                                                <div class="fre-table-col project-average-col"><?php _e( 'Average Bid', ET_DOMAIN ); ?></div>
+                                                <div class="fre-table-col project-bids-col"><?php _e( 'Number Application', ET_DOMAIN ); ?></div>
+                                                <div class="fre-table-col project-bid-col"><?php _e( 'Application', ET_DOMAIN ); ?></div>
+                                                <div class="fre-table-col project-average-col"><?php _e( 'Average Application', ET_DOMAIN ); ?></div>
                                                 <div class="fre-table-col project-status-col"><?php _e( 'Status', ET_DOMAIN ); ?></div>
                                                 <div class="fre-table-col project-action-col"><?php _e( 'Action', ET_DOMAIN ); ?></div>
                                             </div>
@@ -129,12 +129,12 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 															} ?>
                                                         </div>
                                                         <div class="fre-table-col project-bids-col"><?php echo $convert->total_bids ?>
-                                                            <span><?php _e( 'Bids', ET_DOMAIN ); ?></span></div>
+                                                            <span><?php _e( 'Applications', ET_DOMAIN ); ?></span></div>
                                                         <div class="fre-table-col project-bid-col">
-                                                            <span><?php _e( 'Bid', ET_DOMAIN ); ?></span><b><?php echo $convert->bid_budget; ?></b>
+                                                            <span><?php _e( 'Application', ET_DOMAIN ); ?></span><b><?php echo $convert->bid_budget; ?></b>
                                                         </div>
                                                         <div class="fre-table-col project-average-col">
-                                                            <span><?php _e( 'Average Bid', ET_DOMAIN ); ?></span><?php echo $convert->bid_average; ?>
+                                                            <span><?php _e( 'Average Application', ET_DOMAIN ); ?></span><?php echo $convert->bid_average; ?>
                                                         </div>
                                                         <div class="fre-table-col project-status-col <?php if ( $bid_status == 'archive' ) {
 															echo 'project-status-archive';
@@ -145,10 +145,10 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 																echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->project_link ) . '" target="_blank">' . __( 'Workspace', ET_DOMAIN ) . '</a>';
 															} else if ( $bid_status == 'unaccept' ) {
 																echo '<p><i>';
-																_e( 'Your bid is not accepted', ET_DOMAIN );
+																_e( 'Your Application is not accepted', ET_DOMAIN );
 																echo '</i></p>';
-															} else if ( $bid_status == 'publish' ) {
-																echo '<a class="bid-action" data-action="cancel" data-bid-id="' . $convert->ID . '">' . __( 'Cancel Bid', ET_DOMAIN ) . '</a>';
+															} else if ( $bid_status == 'published' ) {
+																echo '<a class="bid-action" data-action="cancel" data-bid-id="' . $convert->ID . '">' . __( 'Cancel Application', ET_DOMAIN ) . '</a>';
 															} else if ( $bid_status == 'disputing' or $bid_status == "disputed" ) {
 																echo '<a href="' . add_query_arg( array( 'dispute' => 1 ), $convert->project_link ) . '" target="_blank">' . __( 'Dispute Page', ET_DOMAIN ) . '</a>';
 															} else if ( $bid_status == 'archive' ) {

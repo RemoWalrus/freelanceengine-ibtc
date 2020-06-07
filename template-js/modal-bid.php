@@ -14,7 +14,7 @@ $phone = get_user_meta($user_ID, 'phone', true);
                 <button type="button" class="close" data-dismiss="modal">
                     <i class="fa fa-times"></i>
                 </button>
-                <h4 class="modal-title"><?php _e( 'Bid this project', ET_DOMAIN ); ?></h4>
+                <h4 class="modal-title"><?php _e( 'Apply to this job', ET_DOMAIN ); ?></h4>
             </div>
             <div class="modal-body">
                 <form role="form" id="bid_form" class="bid-form fre-modal-form">

@@ -25,7 +25,7 @@ get_header();
     <div class="fre-page-wrapper">
         <div class="fre-page-title">
             <div class="container">
-                <h2><?php _e( 'Available Projects', ET_DOMAIN ); ?></h2>
+                <h2><?php _e( 'Available Jobs', ET_DOMAIN ); ?></h2>
             </div>
         </div>
         <div class="fre-page-section section-archive-project">

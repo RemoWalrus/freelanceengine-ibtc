@@ -57,7 +57,7 @@ $currency           = ae_get_option('currency',array('align' => 'left', 'code' =
                     if(current_user_can( 'manage_options' ) && ae_user_role( $user_ID ) != FREELANCER && $project_status != 'close') {
                         get_template_part( 'template/admin', 'project-control' );
                     }elseif( !$user_ID && $project_status == 'publish'){ ?>
-                        <a href="<?php echo et_get_page_link('login', array('ae_redirect_url'=> $project->permalink));?>"  class="btn-apply-project-item" ><?php  _e('Bid',ET_DOMAIN);?></a>
+                        <a href="<?php echo et_get_page_link('login', array('ae_redirect_url'=> $project->permalink));?>"  class="btn-apply-project-item" ><?php  _e('Apply',ET_DOMAIN);?></a>
                     <?php } else {
                         $role = ae_user_role();
                         switch ($project_status) {

@@ -41,7 +41,7 @@ $status_text    = $bid->status_text;
                 <ul class="info-item">
                     <li>
                         <span>
-                            <?php _e("Bidding:", ET_DOMAIN) ?>
+                            <?php _e("Applying:", ET_DOMAIN) ?>
                         </span>
                         <span class="number-blue">
                             <?php echo $bid->bid_budget_text; ?>

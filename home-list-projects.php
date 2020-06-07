@@ -30,7 +30,7 @@
 						if($convert->et_budget>0)
 							echo fre_price_format($convert->et_budget);
 						else
-							echo "-";
+							echo "–";
 						?>
 					</p>
 				</div>

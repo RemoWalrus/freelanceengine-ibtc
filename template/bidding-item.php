@@ -98,9 +98,9 @@ $phone = get_user_meta($convert->post_author, 'phone', true);
 			if ( $user_ID == $project->post_author ) {
 				if ( $convert->flag == 1 ) {
 					if ( ae_get_option( 'use_escrow' ) ) {
-						echo '<a id="' . get_the_ID() . '" rel="' . $project->ID . '" class="fre-normal-btn btn-accept-bid">' . __( 'Accept Bid', ET_DOMAIN ) . '</a>';
+						echo '<a id="' . get_the_ID() . '" rel="' . $project->ID . '" class="fre-normal-btn btn-accept-bid">' . __( 'Accept Application', ET_DOMAIN ) . '</a>';
 					} else {
-						echo '<a class="fre-normal-btn btn-accept-bid btn-accept-bid-no-escrow" id="' . get_the_ID() . '">' . __( 'Accept Bid', ET_DOMAIN ) . '</a>';
+						echo '<a class="fre-normal-btn btn-accept-bid btn-accept-bid-no-escrow" id="' . get_the_ID() . '">' . __( 'Accept Application', ET_DOMAIN ) . '</a>';
 					}
 				}
 				
