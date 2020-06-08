@@ -233,15 +233,21 @@ if( isset($convert->hour_rate) )
                     </div>
 
                     <?php
-                    if(is_admin()){ ?>
+                    if(is_super_admin()){ ?>
                     	<div class="fre-profile-box ibtc-transparent">
                     		<div class="profile-employer-secure-wrap active">
                     			<h2><?php _e( 'Account Details', ET_DOMAIN ); ?></h2>
                     			<div class="profile-employer-secure cnt-profile-hide" id="cnt-account-default" style="display: block">
-	                            <p>
-	                                <span><?php _e( 'Email address', ET_DOMAIN ) ?></span><?php echo $user_data->user_email; ?>
-	                            </p>
-                            	<p> <span><?php _e( 'Phone', ET_DOMAIN ) ?></span><?php echo $user_data->phone ?></p>
+		                            <p>
+		                                <span><?php _e( 'Email address', ET_DOMAIN ) ?></span><?php echo $user_data->user_email; ?>
+		                            </p>
+		                            <?php
+		                            if($user_data->phone!=""){ ?>
+	                            		<p> <span><?php _e( 'Phone', ET_DOMAIN ) ?></span><?php echo $user_data->phone; ?></p>
+	                            	<?php } ?>
+                            	</div>
+                        	</div>
+                    	</div>
                     <?php } ?>
 
 					<?php if ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER ) {
