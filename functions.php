@@ -201,7 +201,7 @@ add_filter( 'secure_signon_cookie', 'set_secure_signon_cookie', 10, 2 );
 	add_action('init', 'lp_mail_footer');
 }*/
 
-//add_filter( 'ae_get_mail_header', 'lp_mail_header');
+add_filter( 'ae_get_mail_header', 'lp_mail_header');
 function lp_mail_header() {
 	$customize = et_get_customization();
 	$logo_url = get_stylesheet_directory_uri()."/assets/images/logo.png";
@@ -225,7 +225,7 @@ function lp_mail_header() {
         return $mail_header;
 }
 
-//add_filter( 'ae_get_mail_footer', 'lp_mail_footer' );
+add_filter( 'ae_get_mail_footer', 'lp_mail_footer' );
 function lp_mail_footer(){
 	$copyright = apply_filters( 'get_copyright', ae_get_option( 'copyright' ) );
 	$mail_footer = '<p>&nbsp;</p></td>
