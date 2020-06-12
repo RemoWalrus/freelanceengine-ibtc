@@ -173,15 +173,12 @@ function lp_remove_video_func(){
 	die;
 }
 
-
 function lp_add_theme_caps(){
 	$freelancer = get_role( 'freelancer' );
 	$freelancer->add_cap( 'upload_files' ); 
 	$freelancer->add_cap( 'manage_options' ); 
 }
 add_action( 'admin_init', 'lp_add_theme_caps');
-
-
 
 function lp_block_wp_admin() {
 	if ( is_admin() && ! current_user_can( 'administrator' ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
