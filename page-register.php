@@ -81,6 +81,7 @@ global $post;
 							</div>
 							<div class="fre-input-field">
 								<input type="password" name="user_pass" id="user_pass" placeholder="<?php _e('Password', ET_DOMAIN);?>">
+								<span toggle="#user_pass" class="fa fa-fw fa-eye-slash fa-2x toggle-password"></span>
 							</div>
 							<div class="fre-input-field">
 								<input type="password" name="repeat_pass" id="repeat_pass" placeholder="<?php _e('Confirm Your Password', ET_DOMAIN);?>">

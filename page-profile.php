@@ -330,7 +330,12 @@ $currency = ae_get_option( 'currency', array(
                                         </div>
 
 									<?php } ?>
-                                    <h2 class="profh2"><?php _e( 'Brief description of Yourself', ET_DOMAIN ) ?></h2>
+                                    <?php
+                                    if(ae_user_role( $user_ID ) == FREELANCER){ ?>
+                                        <h2 class="profh2"><?php _e( 'Brief description of Yourself', ET_DOMAIN ) ?></h2>
+                                    <?php }else{ ?>
+                                        <h2 class="profh2"><?php _e( 'Brief description of Your Company', ET_DOMAIN ) ?></h2>
+                                    <?php } ?>
                                     <div class="fre-input-field">
 										
 										<?php wp_editor( '', 'post_content', ae_editor_settings() ); ?>
