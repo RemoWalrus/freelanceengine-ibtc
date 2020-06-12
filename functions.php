@@ -189,6 +189,7 @@ function lp_block_wp_admin() {
 add_action( 'admin_init', 'lp_block_wp_admin' );
 
 require_once( get_stylesheet_directory() .'/includes/widgets.php');
+require_once( get_stylesheet_directory() .'/includes/notifications.php');
 
 
 function set_secure_signon_cookie($secure_cookie, $credentials){
@@ -375,3 +376,4 @@ function lp_update_company_details($user_data){
 	update_user_meta($user_ID, 'company_address', $company_address);
 }
 add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );
+
