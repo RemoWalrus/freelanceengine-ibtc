@@ -305,7 +305,7 @@ if(  is_user_logged_in() ) {
 										<div class="service-price">
 											<h2><sup>$</sup>30<sub style="font-size:.3em; ">/post</sub></h2> 										</div>
 										<div class="service-info">
-											<h3>Employer Basic</h3>
+											<h3>Employer Premium</h3>
 											<p></p><p>Pay as you go Month to Month</p>
 <p></p>
 										</div>
@@ -316,7 +316,7 @@ if(  is_user_logged_in() ) {
                                         <ul>
                                             <li>Create a profile for your business</li>
                                             <li>Unlimited access to browse our Artists’ profiles</li>
-                                            <li>Post jobs for $30 per unique listings</li>
+                                            <li>Post jobs for $30 per unique listing</li>
                                             <li>Post 1 job active for 30 days</li>
                                             <li>Renew your existing job listing for $30 if you  need more time to find an Artist</li>
                                          </ul> 
@@ -339,7 +339,7 @@ if(  is_user_logged_in() ) {
                                             <li>Unlimited access to browse our Artists’ profiles</li>
                                             <li>Post unlimited jobs, each one stays active for 30 days - no monthly caps!</li>
                                             <li>Apply to unlimited beauty jobs</li>
-                                            <li>Renew your existing job listing for free if you need more time to find an Artis</li>
+                                            <li>Renew your existing job listing for free if you need more time to find an Artist</li>
                                          </ul> 
                                         </div>
 									</div>
