@@ -64,7 +64,11 @@ $phone = get_user_meta($convert->post_author, 'phone', true);
     		 	/*$content_information = "";
     		 	$content = strip_tags($convert->post_content);
     		 	$content_information_do_action = false;*/
-				do_action('ae_bid_item_template', $convert, $project );
+                if( $user_ID == $project->post_author ){
+				    do_action('ae_bid_item_template', $convert, $project );
+                }else{
+                    _e('Only project owner can initiate contact.',ET_DOMAIN);
+                }
 		    ?>
         </div>
         <?php

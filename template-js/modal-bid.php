@@ -71,9 +71,11 @@ $phone = get_user_meta($user_ID, 'phone', true);
 					<?php do_action( 'after_bid_form' ); ?>
                     <div class="fre-form-btn">
                         <button type="submit" class="fre-normal-btn btn-submit">
-							<?php _e( 'Submit', ET_DOMAIN ) ?>
+							<?php _e( 'Yes', ET_DOMAIN ) ?>
                         </button>
-                        <span class="fre-form-close" data-dismiss="modal"><?php _e('Cancel',ET_DOMAIN);?></span>
+                        <button type="button" class="fre-normal-btn" data-dismiss="modal">
+                            <?php _e( 'No', ET_DOMAIN ) ?>
+                        </button>
                     </div>
 
                 </form>
