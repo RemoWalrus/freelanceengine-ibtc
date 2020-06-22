@@ -61,28 +61,10 @@ $phone = get_user_meta($convert->post_author, 'phone', true);
     <div class="col-md-3 col-sm-3">
         <div class="col-free-bid">
         	<?php
-    		 	$content_information = "";
+    		 	/*$content_information = "";
     		 	$content = strip_tags($convert->post_content);
-    		 	$content_information_do_action = false;
-                if(trim($content)=="Email"){
-                    $content_information = $user_email;
-                }elseif(trim($content)=="Phone"){
-                    $content_information = $phone;
-                }elseif(trim($content)=="Private Message"){
-                	if(in_array($project_status, array('publish') )){
-                		$content_information_do_action = true;
-					}
-                }
-        		if ( $convert->post_content && $show_bid_info ) {
-					echo $convert->post_content;
-					if($content_information!=""){
-						echo '<p>'.$content_information.'</p>';
-					}
-
-					if($content_information_do_action){
-						do_action('ae_bid_item_template', $convert, $project );
-					}
-				}
+    		 	$content_information_do_action = false;*/
+				do_action('ae_bid_item_template', $convert, $project );
 		    ?>
         </div>
         <?php

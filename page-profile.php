@@ -367,7 +367,7 @@ $currency = ae_get_option( 'currency', array(
                                 <label for="fre-switch-user-available" class="fre-switch">
                                     <input id="fre-switch-user-available"
                                            type="checkbox" <?php echo $user_available ? 'checked' : ''; ?>>
-                                    <div class="fre-switch-slider">
+                                    <div class="fre-switch-slider" data-before="<?php echo $user_available ? 'OFF' : 'ON'; ?>">
                                     </div>
                                 </label>
                             </div>

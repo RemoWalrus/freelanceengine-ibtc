@@ -35,7 +35,7 @@ function lp_freelanceengine_enqueue_styles() {
 				'backbone',
 				'appengine',
 				'front'
-			), ET_VERSION, true );
+			), 2206, true );
 
 	}
 	if ( is_singular( 'project' ) ) {

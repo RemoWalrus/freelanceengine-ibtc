@@ -830,6 +830,11 @@ footer h2.widgettitle {
   margin-right: 5px;
   cursor: pointer;
 }
+
+.fre-switch .fre-switch-slider::before{
+  content: attr(data-before);
+  text-align: center;
+}
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {

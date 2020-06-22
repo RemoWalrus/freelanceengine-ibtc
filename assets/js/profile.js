@@ -135,20 +135,32 @@
                 if(obj.is(':checked')){
                     view.user.save('user_available','on', {
                         beforeSend: function() {
+                        	$('.fre-switch-slider').attr('data-before', 'OFF');
                             view.blockUi.block(obj.closest('label'));
                         },
                         success: function(res) {
+                        	$('.fre-switch-slider').attr('data-before', 'OFF');
                             view.blockUi.unblock();
-                        }
+                        },
+                        error: function(res){
+                        	$('.fre-switch-slider').attr('data-before', 'ON');
+                            view.blockUi.unblock();	
+                        },
                     });
                 }else {
                     view.user.save('user_available','off', {
                         beforeSend: function() {
+                        	$('.fre-switch-slider').attr('data-before', 'ON');
                             view.blockUi.block(obj.closest('label'));
                         },
                         success: function(res) {
+                        	$('.fre-switch-slider').attr('data-before', 'ON');
                             view.blockUi.unblock();
-                        }
+                        },
+                        error: function(res){
+                        	$('.fre-switch-slider').attr('data-before', 'OFF');
+                            view.blockUi.unblock();	
+                        },
                     });
                 }
             });

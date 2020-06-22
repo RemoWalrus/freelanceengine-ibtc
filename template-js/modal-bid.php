@@ -40,9 +40,10 @@ $phone = get_user_meta($user_ID, 'phone', true);
 						} ?>
                     </div> */ ?>
                     <input type="hidden" name="bid_budget" id="bid_budget" class="form-control" value="0" />
-
                     <div class="fre-input-field">
-                        <label class="fre-field-title" for="bid_content"><?php _e( 'Preferred Method of Contact.', ET_DOMAIN ); ?></label>
+                        <label class="fre-field-title" for="bid_content"><?php _e( 'Are you sure you want to place bid?', ET_DOMAIN ); ?></label>
+                    </div>
+                    <?php /*
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <select name="bid_content" class="fre-chosen-single" data-placeholder="<?php _e('Select preferred contact method', ET_DOMAIN); ?>">
@@ -63,6 +64,7 @@ $phone = get_user_meta($user_ID, 'phone', true);
                         <textarea id="bid_content" name="bid_content"></textarea>
                     </div> */ ?>
                     <input type="hidden" name="post_parent" value="<?php the_ID(); ?>"/>
+                    <input type="hidden" name="post_content" value=""/>
                     <input type="hidden" name="method" value="create"/>
                     <input type="hidden" name="action" value="ae-sync-bid"/>
 
