@@ -371,7 +371,7 @@ $currency = ae_get_option( 'currency', array(
                                     </div>
                                 </label>
                             </div>
-                            <p class="freelance-available-desc"><?php _e( 'Turn on to display an “Invite me”  button on your profile, allowing potential employers to suggest projects for you.', ET_DOMAIN ) ?></p>
+                            <p class="freelance-available-desc"><?php _e( 'Turn on to display an “Invite me”  button on your profile, allowing potential employers to suggest projects for you. (ON By Default)', ET_DOMAIN ) ?></p>
                         </div>
 					<?php } ?>
                 </div>

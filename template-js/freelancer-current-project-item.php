@@ -6,7 +6,7 @@
             <a  class="secondary-color" href="{{= project_link }}">{{= project_title }}</a>
         <# } #>
     </div>
-    <div class="fre-table-col project-bids-col">{{= total_bids }}<span><?php _e( 'Applicationss', ET_DOMAIN ); ?></span></div>
+    <div class="fre-table-col project-bids-col">{{= total_bids }}<span><?php _e( 'Applications', ET_DOMAIN ); ?></span></div>
     <div class="fre-table-col project-bid-col">
         <span><?php _e( 'Apply', ET_DOMAIN ); ?></span><b>{{= bid_budget}}</b>
     </div>

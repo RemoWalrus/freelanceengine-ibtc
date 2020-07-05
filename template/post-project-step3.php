@@ -141,7 +141,7 @@
                     ?>
                 </div>
                 <div class="fre-input-field">
-                    <label class="fre-field-title" for="project-budget"><?php _e('Your project budget', ET_DOMAIN);?></label>
+                    <label class="fre-field-title" for="project-budget"><?php _e('Job compensation <span>*not required</span>', ET_DOMAIN);?></label>
                     <div class="fre-project-budget">
                         <input id="project-budget" step="5" type="number" class="input-item text-field is_number numberValBudget" name="et_budget" min="1">
                         <span><?php echo fre_currency_sign(false);?></span>

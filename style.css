@@ -371,9 +371,14 @@ h2#title_start,  h2#title_freelance, h2#title_project, h2#title_work, h2#title_s
 	font-weight: 700;
 }
 
-h3, h4, .project-detail-title, .project-detail-title, .col-free-bidding h2 a, .fre-field-title, .project-filter-title, .fre-input-field .fre-field-title, .fre-input-field .fre-field-title {
+h3, h4, .project-detail-title, .project-detail-title, .col-free-bidding h2 a, .fre-field-title, .project-filter-title, .fre-input-field .fre-field-title, .fre-input-field .fre-field-title, .form-group.custom-field label.control-label {
     font-family: var(--type-titles);
 	letter-spacing: 0.5px;
+}
+.fre-field-title span {
+    font-family: var(--type-body);
+    font-weight: normal;
+    font-style: italic;
 }
 /* h2 in profiles */
 h2.profh2 {
@@ -385,7 +390,7 @@ h2.profh2 {
 	letter-spacing: .5px;
 }
 
-.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, #modal_invite .all-selected a {
+.profile-freelance-info .freelance-info-avatar .freelance-name,.profile-freelance-info .freelance-info-avatar .freelance-name, #modal_invite .all-selected a, .freelance-portfolio-wrap .portfolio-action a {
 	color: var(--color-drkgray);
     line-height: 1.4em;
     font-family: var(--type-titles);
@@ -592,8 +597,12 @@ video {
 
 /* TAGS ICONS and labels */
 
-.custom-field-wrapper li, .custom-field-wrapper li, .fre-switch input:checked+.fre-switch-slider, .fre-label {
+.custom-field-wrapper li, .custom-field-wrapper li, .fre-label,  {
 	    background-color: var(--color-main-light) !important;
+}
+
+.fre-switch input:checked+.fre-switch-slider{
+    background-color:#00BB04;
 }
 
 /* h2 in profiles */

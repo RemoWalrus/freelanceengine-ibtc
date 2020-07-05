@@ -66,7 +66,7 @@ $currency           = ae_get_option('currency',array('align' => 'left', 'code' =
                                     $has_bid = fre_has_bid( get_the_ID() );
                                     if( $has_bid ) {
                                         ?>
-                                        <a rel="<?php echo $project->ID;?>" href="#" id="<?php echo $has_bid;?>" title= "<?php _e('Cancel this bidding',ET_DOMAIN); ?>"  class="btn-del-project" >
+                                        <a rel="<?php echo $project->ID;?>" href="#" id="<?php echo $has_bid;?>" title= "<?php _e('Cancel this application',ET_DOMAIN); ?>"  class="btn-del-project" >
                                             <?php  _e('Cancel',ET_DOMAIN);?>
                                         </a>
                                     <?php
