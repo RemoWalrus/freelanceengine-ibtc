@@ -128,7 +128,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
 							if ( (int) $project->post_author == $user_ID || $bid_accepted_author == $user_ID ) {
-								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Private Message', ET_DOMAIN ) . '</a>';
+								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Message', ET_DOMAIN ) . '</a>';
 							}
 						} else if ( $project_status == 'complete' ) {
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
