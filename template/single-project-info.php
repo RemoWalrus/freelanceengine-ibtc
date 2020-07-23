@@ -114,9 +114,21 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'dispute' => 1 ), $project_link ) . '">' . __( 'Dispute Page', ET_DOMAIN ) . '</a>';
 							}
 						} else if ( $project_status == 'close' ) {
+							/* Finish Button added for employer */
+							if ( (int) $project->post_author == $user_ID ) { ?>
+								<a title="<?php _e( 'Finish', ET_DOMAIN ); ?>" href="#" id="<?php the_ID(); ?>"
+                               class="fre-action-btn btn-complete-project"> <?php _e( 'Finish', ET_DOMAIN ); ?></a>
+                               	<?php 
+                               	if ( ae_get_option( 'use_escrow' ) ) { ?>
+                               		<a title="<?php _e( 'Close', ET_DOMAIN ); ?>" href="#" id="<?php the_ID(); ?>"
+                                   class="fre-action-btn btn-close-project"><?php _e( 'Close', ET_DOMAIN ); ?></a>
+							<?php 
+								} 
+							}
+
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
 							if ( (int) $project->post_author == $user_ID || $bid_accepted_author == $user_ID ) {
-								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Workspace', ET_DOMAIN ) . '</a>';
+								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Private Message', ET_DOMAIN ) . '</a>';
 							}
 						} else if ( $project_status == 'complete' ) {
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
