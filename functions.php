@@ -378,7 +378,7 @@ function lp_update_company_details($user_data){
 add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );
 
 
-remove_action( 'template_redirect', array( 'Fre_Message', 'preventAccessWorkspace' ) );
+remove_action( 'template_redirect', array( 'Fre_MessageAction', 'preventAccessWorkspace' ) );
 
 add_action( 'template_redirect', 'lp_preventAccessWorkspace' );
 function lp_preventAccessWorkspace() {
