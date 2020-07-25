@@ -377,3 +377,51 @@ function lp_update_company_details($user_data){
 }
 add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );
 
+
+remove_action( 'template_redirect', array( 'Fre_Message', 'preventAccessWorkspace' ) );
+
+add_action( 'template_redirect', 'lp_preventAccessWorkspace' );
+function lp_preventAccessWorkspace() {
+	if ( isset( $_REQUEST['workspace'] ) && $_REQUEST['workspace'] ) {
+		if ( is_singular( PROJECT ) ) {
+			global $post, $user_ID;
+			// check project owner
+			$project = $post;
+
+			// check freelancer was accepted on project
+			$bid_id = get_post_meta( $project->ID, "accepted", true );
+			$bid    = get_post( $bid_id );
+			
+			
+			// current user is not project owner, or working on
+
+			/*( current_user_can( 'manage_options' ) && $user_ID != $project->post_author )*/
+			
+			if ( ! $bid_id || ( $user_ID != $project->post_author && $user_ID != $bid->post_author ) || ! is_user_logged_in() ) {
+				wp_redirect( get_permalink( $post->ID ) );
+				exit;
+			}
+
+		}
+	}
+	if ( is_singular( PROJECT ) ) {
+		global $post, $user_ID;
+		// check project owner
+		$project = $post;
+		if ( current_user_can( 'manage_options' ) && $user_ID != $project->post_author ) {
+			return;
+		}
+		// check freelancer was accepted on project
+		$bid_id = get_post_meta( $project->ID, "accepted", true );
+		$bid    = get_post( $bid_id );
+
+		// current user is not project owner, or working on
+		if ( in_array( $project->post_status, array(
+				'disputing',
+				'disputed'
+			) ) && ( ( $user_ID != $project->post_author && $user_ID != $bid->post_author ) || ! is_user_logged_in() ) ) {
+			wp_redirect( 404 );
+			exit;
+		}
+	}
+}
