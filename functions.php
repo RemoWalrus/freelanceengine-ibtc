@@ -377,9 +377,9 @@ function lp_update_company_details($user_data){
 }
 add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );
 
-add_action( 'wp_head', 'lp_remove_class_action' );
+add_action( 'wp', 'lp_remove_class_action' );
 function lp_remove_class_action(){
-	remove_action( 'template_redirect', array('Fre_MessageAction', 'preventAccessWorkspace' ));
+	remove_action( 'template_redirect', array('AE_Base', 'preventAccessWorkspace' ));
 }
 
 add_action( 'template_redirect', 'lp_preventAccessWorkspace' );
