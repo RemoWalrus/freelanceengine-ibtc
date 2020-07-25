@@ -427,5 +427,3 @@ function lp_preventAccessWorkspace() {
 		}
 	}
 }
-
-add_action('wp', function(){ echo '<pre>';print_r($GLOBALS['wp_filter']); echo '</pre>';exit; } );
