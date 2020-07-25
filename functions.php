@@ -377,10 +377,13 @@ function lp_update_company_details($user_data){
 }
 add_action( 'before_sync_profile', 'lp_update_company_details', 10, 1 );
 
-add_action( 'after_setup_theme', 'lp_remove_class_action' );
+add_action( 'init', 'lp_remove_class_action' );
 function lp_remove_class_action(){
-	remove_action( 'template_redirect', 'preventAccessWorkspace' );
+	//remove_action( 'template_redirect', 'preventAccessWorkspace' );
+	$messageInstance = Fre_MessageAction::get_instance();
+	$messageInstance->remove_action('template_redirect', 'preventAccessWorkspace');
 }
+
 
 add_action( 'template_redirect', 'lp_preventAccessWorkspace', 5 );
 function lp_preventAccessWorkspace() {
