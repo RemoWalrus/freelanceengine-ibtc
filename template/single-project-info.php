@@ -134,7 +134,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 									echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Message', ET_DOMAIN ) . '</a>';
 								}
 							}else{
-								_e('Only project owner can view this information.',ET_DOMAIN);
+								_e('Only project owner can initiate chat.',ET_DOMAIN);
 							}
 						} else if ( $project_status == 'complete' ) {
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );

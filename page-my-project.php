@@ -117,6 +117,7 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 													$convert    = $post_object->convert( $post );
 													$postdata[] = $convert;
 													$bid_status = $convert->post_status;
+                                                    $total_message = lp_get_comments(get_the_ID());
 													?>
 
                                                     <div class="fre-table-row">
@@ -142,7 +143,11 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
                                                         <div class="fre-table-col project-action-col">
 															<?php
 															if ( $bid_status == 'accept' ) {
-																echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->project_link ) . '" target="_blank">' . __( 'Workspace', ET_DOMAIN ) . '</a>';
+                                                                if($total_message>0){
+																    echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->project_link ) . '" target="_blank">' . __( 'Message', ET_DOMAIN ) . '</a>';
+                                                                }else{
+                                                                    _e('Only project owner can initiate chat.',ET_DOMAIN);
+                                                                }
 															} else if ( $bid_status == 'unaccept' ) {
 																echo '<p><i>';
 																_e( 'Your Application is not accepted', ET_DOMAIN );
@@ -402,7 +407,7 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 														<?php
 														if ( $project_status == 'close' ) {
 															echo '<div class="fre-table-col project-action-col">';
-															echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->permalink ) . '" target="_blank">' . __( 'Workspace', ET_DOMAIN ) . '</a>';
+															echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->permalink ) . '" target="_blank">' . __( 'Message', ET_DOMAIN ) . '</a>';
 															echo '</div>';
 														} else if ( $project_status == 'disputing' ) {
 															echo '<div class="fre-table-col project-action-col">';
