@@ -14,6 +14,7 @@ $profile_id   = get_user_meta( $post->post_author, 'user_profile_id', true );
 $project_link = get_permalink( $post->ID );
 $currency     = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD', 'icon' => '$' ) );
 $avg          = 0;
+$total_message = lp_get_comments($post->ID);
 
 if($project->et_budget==0)
 	$budget = "TBD";
@@ -125,11 +126,14 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 							<?php 
 								} 
 							}
-							echo lp_get_comments($post->ID);
 							
-							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
-							if ( (int) $project->post_author == $user_ID || $bid_accepted_author == $user_ID ) {
-								echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Message', ET_DOMAIN ) . '</a>';
+							if($total_message>0){
+								$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
+								if ( (int) $project->post_author == $user_ID || $bid_accepted_author == $user_ID ) {
+									echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Message', ET_DOMAIN ) . '</a>';
+								}
+							}else{
+								_e('Only project owner can view this information.',ET_DOMAIN);
 							}
 						} else if ( $project_status == 'complete' ) {
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
