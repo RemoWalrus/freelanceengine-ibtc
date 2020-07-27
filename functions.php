@@ -436,3 +436,48 @@ function lp_preventAccessWorkspace() {
 		}
 	}
 }
+
+function lp_get_comments($post_id){
+	if ( defined( 'MILESTONE_DIR_URL' ) ) {
+		$query_args = array(
+			'type'       => 'message',
+			'post_id'    => $post_id,
+			'paginate'   => 'load',
+			'order'      => 'DESC',
+			'orderby'    => 'date',
+			'meta_query' => array(
+				array(
+					'key'     => 'fre_comment_file',
+					'compare' => 'NOT EXISTS'
+				)
+			)
+		);
+	} else {
+		$query_args = array(
+			'type'       => 'message',
+			'post_id'    => $post_id,
+			'paginate'   => 'load',
+			'order'      => 'DESC',
+			'orderby'    => 'date',
+			'meta_query' => array(
+				array(
+					'key'     => 'changelog',
+					'value'   => '',
+					'compare' => 'NOT EXISTS'
+				),
+				array(
+					'key'     => 'fre_comment_file',
+					'compare' => 'NOT EXISTS'
+				)
+			)
+		);
+	}
+	$query_args['text'] = __( "Load older message", ET_DOMAIN );
+	/**
+	 * count all reivews
+	 */
+	$total_args = $query_args;
+	$all_cmts   = get_comments( $total_args );
+	$total_messages = count( $all_cmts );
+	return $total_messages;
+}
