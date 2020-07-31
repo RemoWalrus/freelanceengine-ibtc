@@ -14,7 +14,11 @@ $profile_id   = get_user_meta( $post->post_author, 'user_profile_id', true );
 $project_link = get_permalink( $post->ID );
 $currency     = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD', 'icon' => '$' ) );
 $avg          = 0;
+
 $total_message = lp_get_comments($post->ID);
+
+
+
 
 if($project->et_budget==0)
 	$budget = "TBD";
@@ -126,18 +130,44 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 							<?php 
 								} 
 							}
-							
-							if($total_message>0 || (int) $project->post_author == $user_ID){
+
+							$bid_id_accepted = get_post_meta( $project->ID, 'accepted', true );
+							$private_msg_id = get_post_meta( $bid_id_accepted, 'sent_private_msg', true );
+							$private_msg_url = site_url('/private-message/')."?pr_msg_c_id=".$private_msg_id;
+							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
+								
+							if((int) $project->post_author == $user_ID){
 								// Employer can initiate message. 
 								
-								/*$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
-								if ( (int) $project->post_author == $user_ID || $bid_accepted_author == $user_ID ) {
-									echo '<a class="fre-normal-btn" href="' . add_query_arg( array( 'workspace' => 1 ), $project_link ) . '">' . __( 'Message', ET_DOMAIN ) . '</a>';
-								}*/
+								if($private_msg_id!=""){
+									echo '<a class="fre-normal-btn" href="' .$private_msg_url. '">' . __( 'Message', ET_DOMAIN ) . '</a>';
+								}else{
+									// initiate chat
+									$bid_author = get_post_field('post_author', $bid_id_accepted);
+									$to_user = ae_private_msg_user_profile((int)$bid_author);
 
-								do_action('ae_bid_item_template', $convert, $project );
-							}else{
-								_e('Only project owner can initiate chat.',ET_DOMAIN);
+									$data = array(
+										'bid_id'=> $bid_id_accepted,
+										'to_user'=> $to_user,
+										'project_id'=> $project->ID,
+										'project_title'=> $project->post_title,
+										'from_user'=> $user_ID
+									);
+									?>
+									<a class="fre-normal-btn-o btn-send-msg btn-open-msg-modal" href="javascript:void(0)">
+										<?php _e( 'Message', ET_DOMAIN ); ?>
+										<script type="data/json"  class="privatemsg_data">
+					                        <?php  echo json_encode( $data ) ?>
+					                    </script>
+									</a>
+								<?php
+								}
+							}else if($bid_accepted_author == $user_ID){
+								if($private_msg_id!=""){
+									echo '<a class="fre-normal-btn" href="' .$private_msg_url. '">' . __( 'Message', ET_DOMAIN ) . '</a>';
+								}else{
+									_e('Only project owner can initiate chat.',ET_DOMAIN);
+								}
 							}
 						} else if ( $project_status == 'complete' ) {
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
