@@ -195,7 +195,7 @@ function lp_fre_notify_item( $notify ) {
 			break;
 		case 'delete_bid':
 			// Text: <freelancer> cancelled his bid on your project <project_title>
-			$message = sprintf( __( '%s cancelled his bid on your job %s', ET_DOMAIN ),
+			$message = sprintf( __( '%s cancelled his application on your job %s', ET_DOMAIN ),
 				'<strong>' . get_the_author_meta( 'display_name', $freelancer ) . '</strong>',
 				'<strong>' . get_the_title( $project ) . '</strong>'
 			);
@@ -210,7 +210,7 @@ function lp_fre_notify_item( $notify ) {
 			// Text: <freelancer> bidded on your project <project_title>
 			// get bid author
 			$bid_author = get_post_field( 'post_author', $bid );
-			$message    = sprintf( __( '%s bid to your job %s', ET_DOMAIN ),
+			$message    = sprintf( __( '%s application to your job %s', ET_DOMAIN ),
 				'<strong>' . get_the_author_meta( 'display_name', $bid_author ) . '</strong>',
 				'<strong>' . get_the_title( $project ) . '</strong>'
 			);
@@ -224,7 +224,7 @@ function lp_fre_notify_item( $notify ) {
 		case 'bid_accept':
 			// Text: <employer> accepted your bid on the project <project_title>
 			$project_owner = get_post_field( 'post_author', $project );
-			$message       = sprintf( __( '%s accepted your bid on the job %s', ET_DOMAIN ),
+			$message       = sprintf( __( '%s accepted your application on the job %s', ET_DOMAIN ),
 				'<strong>' . get_the_author_meta( 'display_name', $project_owner ) . '</strong>',
 				'<strong>' . get_the_title( $project ) . '</strong>'
 			);
@@ -360,7 +360,7 @@ function lp_fre_notify_item( $notify ) {
 			$status = isset($status) ? $status : '';
 
 			$project_url  = get_permalink($project);
-			$message        = sprintf( __( 'Your job is publish. Go to job details', ET_DOMAIN ),
+			$message        = sprintf( __( 'Your job is published. Go to job details', ET_DOMAIN ),
 				'<strong>' . get_the_author_meta( 'display_name', $owner ) . '</strong>'	);
 			if($status == 'archive'){
 				$message        = sprintf( __( 'Your job is archive. Go to job details', ET_DOMAIN ),

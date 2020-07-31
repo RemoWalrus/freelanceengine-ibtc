@@ -41,7 +41,7 @@ $phone = get_user_meta($user_ID, 'phone', true);
                     </div> */ ?>
                     <input type="hidden" name="bid_budget" id="bid_budget" class="form-control" value="0" />
                     <div class="fre-input-field">
-                        <label class="fre-field-title" for="bid_content"><?php _e( 'Are you sure you want to place bid?', ET_DOMAIN ); ?></label>
+                        <label class="fre-field-title" for="bid_content"><?php _e( 'Are you sure you want to apply?', ET_DOMAIN ); ?></label>
                     </div>
                     <?php /*
                         <div class="row">
