@@ -117,7 +117,11 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 													$convert    = $post_object->convert( $post );
 													$postdata[] = $convert;
 													$bid_status = $convert->post_status;
-                                                    $total_message = lp_get_comments(get_the_ID());
+                                                    
+													$private_msg_id = get_post_meta( get_the_ID(), 'sent_private_msg', true );
+													$private_msg_url = site_url('/private-message/')."?pr_msg_c_id=".$private_msg_id;
+													$bid_accepted_author = get_post_field( 'post_author', get_the_ID() );
+
 													?>
 
                                                     <div class="fre-table-row">
@@ -143,11 +147,11 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
                                                         <div class="fre-table-col project-action-col">
 															<?php
 															if ( $bid_status == 'accept' ) {
-                                                                if($total_message>0){
-																    echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->project_link ) . '" target="_blank">' . __( 'Message', ET_DOMAIN ) . '</a>';
-                                                                }else{
-                                                                    _e('Only project owner can initiate chat.',ET_DOMAIN);
-                                                                }
+																if($private_msg_id!=""){
+																	echo '<a href="' .$private_msg_url. '">' . __( 'Message', ET_DOMAIN ) . '</a>';
+																}else{
+																	_e('Only project owner can initiate chat.',ET_DOMAIN);
+																}
 															} else if ( $bid_status == 'unaccept' ) {
 																echo '<p><i>';
 																_e( 'Your Application is not accepted', ET_DOMAIN );
@@ -390,6 +394,10 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 													$convert        = $post_object->convert( $post, 'thumbnail' );
 													$postdata[]     = $convert;
 													$project_status = $convert->post_status;
+
+													$bid_id_accepted = get_post_meta( get_the_ID(), 'accepted', true );
+													$private_msg_id = get_post_meta( $bid_id_accepted, 'sent_private_msg', true );
+													$private_msg_url = site_url('/private-message/')."?pr_msg_c_id=".$private_msg_id;
 													?>
                                                     <div class="fre-table-row">
                                                         <div class="fre-table-col project-title-col">
@@ -407,8 +415,31 @@ $currency = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD'
 														<?php
 														if ( $project_status == 'close' ) {
 															echo '<div class="fre-table-col project-action-col">';
-															echo '<a href="' . add_query_arg( array( 'workspace' => 1 ), $convert->permalink ) . '" target="_blank">' . __( 'Message', ET_DOMAIN ) . '</a>';
+															if($private_msg_id!=""){
+																echo '<a href="' . $private_msg_url . '" target="_blank">' . __( 'Message', ET_DOMAIN ) . '</a>';
+															}else{
+																// initiate chat
+																$bid_author = get_post_field('post_author', $bid_id_accepted);
+																$to_user = ae_private_msg_user_profile((int)$bid_author);
+
+																$data = array(
+																	'bid_id'=> $bid_id_accepted,
+																	'to_user'=> $to_user,
+																	'project_id'=> get_the_ID(),
+																	'project_title'=> get_the_title(),
+																	'from_user'=> $user_ID
+																);
+																?>
+																<a class="btn-send-msg btn-open-msg-modal" href="javascript:void(0)">
+																	<?php _e( 'Message', ET_DOMAIN ); ?>
+																	<script type="data/json"  class="privatemsg_data">
+												                        <?php  echo json_encode( $data ) ?>
+												                    </script>
+																</a>
+																<?php
+															}
 															echo '</div>';
+
 														} else if ( $project_status == 'disputing' ) {
 															echo '<div class="fre-table-col project-action-col">';
 															echo '<a href="' . add_query_arg( array( 'dispute' => 1 ), $convert->permalink ) . '" target="_blank">' . __( 'Dispute Page', ET_DOMAIN ) . '</a>';

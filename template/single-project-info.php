@@ -15,10 +15,6 @@ $project_link = get_permalink( $post->ID );
 $currency     = ae_get_option( 'currency', array( 'align' => 'left', 'code' => 'USD', 'icon' => '$' ) );
 $avg          = 0;
 
-$total_message = lp_get_comments($post->ID);
-
-
-
 
 if($project->et_budget==0)
 	$budget = "TBD";
@@ -135,7 +131,7 @@ if ( is_user_logged_in() && ( ( fre_share_role() || $user_role == FREELANCER ) )
 							$private_msg_id = get_post_meta( $bid_id_accepted, 'sent_private_msg', true );
 							$private_msg_url = site_url('/private-message/')."?pr_msg_c_id=".$private_msg_id;
 							$bid_accepted_author = get_post_field( 'post_author', $bid_accepted );
-								
+
 							if((int) $project->post_author == $user_ID){
 								// Employer can initiate message. 
 								

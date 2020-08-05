@@ -83,6 +83,13 @@ function lp_freelanceengine_enqueue_styles() {
 		), ET_VERSION, true );
 	}
 
+	wp_deregister_script( 'ae_plugin_js' );
+	wp_enqueue_script('ae_plugin_js', get_stylesheet_directory_uri() . '/assets/js/private_message.js', array(
+        'underscore',
+        'backbone',
+        'appengine',
+        'front'
+    ), ET_VERSION, true);
 }
 add_action ( 'wp_enqueue_scripts', 'lp_freelanceengine_enqueue_styles');
 
