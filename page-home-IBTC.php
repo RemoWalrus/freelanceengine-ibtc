@@ -115,7 +115,8 @@ global $user_ID;
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story">Promotions</h2>
-        <img src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg">
+        <br>
+        <a href="#" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
 		
 	</div>
 </div>
