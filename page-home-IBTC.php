@@ -113,13 +113,7 @@ global $user_ID;
 <!-- List Profiles  and Projects-->
 <?php if(is_user_logged_in()){ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-	<div class="fre-jobs-online">
-		<div class="container">
-			<h2 id="title_project"><?php echo get_theme_mod("title_project") ? get_theme_mod("title_project") : __('Browse numerous freelance jobs online', ET_DOMAIN);?></h2>
-			<?php get_template_part( 'home-list', 'projects' );?>
-		</div>
-	</div>
-	
+
 	<div class="fre-perfect-freelancer">
 		<div class="container">
 			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
@@ -151,12 +145,6 @@ global $user_ID;
 		</div>
 	</div>
 
-	<div class="fre-jobs-online">
-		<div class="container">
-			<h2 id="title_project"><?php echo get_theme_mod("title_project") ? get_theme_mod("title_project") : __('Browse numerous freelance jobs online', ET_DOMAIN);?></h2>
-			<?php get_template_part( 'home-list', 'projects' );?>
-		</div>
-	</div>
 
 <?php } ?>
 
@@ -183,11 +171,8 @@ global $user_ID;
 				<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
 					<h2 id="title_start"><?php echo get_theme_mod("title_start_freelancer") ? get_theme_mod("title_start_freelancer") : __("It's time to start finding freelance jobs online!" , ET_DOMAIN);?></h2>
 					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Projects', ET_DOMAIN)?></a>
-				<?php }else{ ?>
-					<h2 id="title_start"><?php echo get_theme_mod("title_start_employer") ? get_theme_mod("title_start_employer") : __('The best way to find perfect freelancers!', ET_DOMAIN);?></h2>
-					<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('submit-project'); ?>"><?php _e('Post a Project', ET_DOMAIN)?></a>
-				<?php } ?>
-			<?php } ?>
+				<?php } 
+                } ?>
 
 		</div>
 	</div>
