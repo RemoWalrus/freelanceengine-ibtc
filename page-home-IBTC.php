@@ -110,6 +110,17 @@ global $user_ID;
 </div>
 <?php } ?>
 <!-- Block How Work -->
+<!-- Block Advertising -->
+<?php if(!is_user_logged_in()){ ?>
+<div class="fre-our-stories stories2" >
+	<div class="container">
+		<h2 id="title_story">Promotions</h2>
+        <img src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg">
+		
+	</div>
+</div>
+<?php } ?>
+<!-- Block Advertising -->
 <!-- List Profiles  and Projects-->
 <?php if(is_user_logged_in()){ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
