@@ -46,7 +46,7 @@ global $user_ID;
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
-					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('<span>Find Jobs</span>', ET_DOMAIN);?></a>
+					
 					<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('profile'); ?>"><?php _e('<span>Update Profile</span>', ET_DOMAIN);?></a>
 					<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/community/artists-lounge/');"><?php _e('<span>Connect</span>', ET_DOMAIN);?></a>
 			</div>
@@ -116,7 +116,7 @@ global $user_ID;
 	<div class="container">
 		<h2 id="title_story">Promotions</h2>
         <br>
-        <a href="#" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
+        <a href="https://www.instagram.com/inbetweenthechair/" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
 		
 	</div>
 </div>
@@ -141,7 +141,7 @@ global $user_ID;
 			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
 			<?php get_template_part( 'home-list', 'profiles' );?>
 			<div class="fre-perfect-freelancer-more">
-			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all freelancers', ET_DOMAIN);?></a>
+			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all Artists', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
@@ -149,10 +149,10 @@ global $user_ID;
 <?php }else{ ?>
 	<div class="fre-perfect-freelancer">
 		<div class="container">
-			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect freelancers for your projects', ET_DOMAIN);?></h2>
+			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
 			<?php get_template_part( 'home-list', 'profiles' );?>
 			<div class="fre-perfect-freelancer-more">
-			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all freelancers', ET_DOMAIN);?></a>
+			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all Artists', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
@@ -203,5 +203,6 @@ global $user_ID;
 	</div>
 </div>
 <?php }else{ ?>
+
 <?php } ?>
 <?php get_footer(); ?>
