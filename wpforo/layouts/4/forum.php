@@ -67,7 +67,7 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
         <div class="wpf-threads-head">
             <div class="wpf-head-box wpf-thead-status"><?php wpforo_phrase( 'Status' ) ?></div>
             <div class="wpf-head-box wpf-thead-title"><?php wpforo_phrase( 'Topics' ) ?></div>
-            <div class="wpf-head-box wpf-thead-forum"><?php echo _e('Room', 'wpforo'); ?></div>
+            <div class="wpf-head-box wpf-thead-forum"><?php _e('Room', 'wpforo'); ?></div>
             <div class="wpf-head-box wpf-thead-posts"><?php wpforo_phrase( 'Replies' ) ?></div>
             <div class="wpf-head-box wpf-thead-views"><?php wpforo_phrase( 'Views' ) ?></div>
             <div class="wpf-head-box wpf-thead-users"><?php wpforo_phrase( 'Users' ) ?></div>
