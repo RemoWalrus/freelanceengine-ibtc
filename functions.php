@@ -492,4 +492,9 @@ function lp_get_comments($post_id){
 function lp_wpforo_change_author_default_page( $link ){
 	return site_url();
 }
-add_filter( 'author_link', 'lp_wpforo_change_author_default_page', 10, 1 );
+function lp_wpforo_member_profile_url($profile_url, $user, $template){
+	$user_ID = $user['ID'];
+	$author_page_url = get_author_posts_url( $user_ID );
+	return $author_page_url;
+}
+add_filter( 'wpforo_member_profile_url', 'lp_wpforo_member_profile_url', 10, 3 );
