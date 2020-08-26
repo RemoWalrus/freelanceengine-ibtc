@@ -28,7 +28,7 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
     </div>
     <div class="wpf-head-bar">
         <div id="wpf-buttons-<?php echo $cat['forumid'] ?>" class="wpf-head-bar-left wpf-load-threads">
-            <span class="wpf-forums"><i class="fas <?php echo ( WPF()->forum->options['layout_threaded_intro_topics_toggle'] ? 'fa-chevron-up' : 'fa-chevron-down' ) ?>"></i> <?php _e('Room', ET_DOMAIN); ?></span>
+            <span class="wpf-forums"><i class="fas <?php echo ( WPF()->forum->options['layout_threaded_intro_topics_toggle'] ? 'fa-chevron-up' : 'fa-chevron-down' ) ?>"></i> <?php _e('Rooms', ET_DOMAIN); ?></span>
             <?php if( WPF()->forum->options['layout_threaded_filter_buttons'] ): ?>
                 <a class="wpf-threads-filter wpf-newest wpf-active" data-filter="newest" wpf-tooltip="<?php echo esc_attr(wpforo_phrase( 'Newest', false )) ?>" wpf-tooltip-position="top"><i class="fas fa-clock"></i></a>
                 <a class="wpf-threads-filter wpf-hottest" data-filter="hottest" wpf-tooltip="<?php echo esc_attr(wpforo_phrase( 'Popular', false )) ?>" wpf-tooltip-position="top"><i class="fab fa-hotjar"></i></a>
