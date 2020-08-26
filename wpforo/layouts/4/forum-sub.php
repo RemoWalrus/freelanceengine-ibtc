@@ -44,7 +44,8 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p><?php wpforo_phrase('No forum found in this category') ?></p>
+                
+                <p><?php _e('No room found in this category', ET_DOMAIN); ?></p>
             <?php endif; ?>
         </div>
     </div>

@@ -28,7 +28,7 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
     </div>
     <div class="wpf-head-bar">
         <div id="wpf-buttons-<?php echo $cat['forumid'] ?>" class="wpf-head-bar-left wpf-load-threads">
-            <span class="wpf-forums"><i class="fas <?php echo ( WPF()->forum->options['layout_threaded_intro_topics_toggle'] ? 'fa-chevron-up' : 'fa-chevron-down' ) ?>"></i> <?php wpforo_phrase( 'Forums' ) ?></span>
+            <span class="wpf-forums"><i class="fas <?php echo ( WPF()->forum->options['layout_threaded_intro_topics_toggle'] ? 'fa-chevron-up' : 'fa-chevron-down' ) ?>"></i> <?php _e('Room', ET_DOMAIN); ?></span>
             <?php if( WPF()->forum->options['layout_threaded_filter_buttons'] ): ?>
                 <a class="wpf-threads-filter wpf-newest wpf-active" data-filter="newest" wpf-tooltip="<?php echo esc_attr(wpforo_phrase( 'Newest', false )) ?>" wpf-tooltip-position="top"><i class="fas fa-clock"></i></a>
                 <a class="wpf-threads-filter wpf-hottest" data-filter="hottest" wpf-tooltip="<?php echo esc_attr(wpforo_phrase( 'Popular', false )) ?>" wpf-tooltip-position="top"><i class="fab fa-hotjar"></i></a>
@@ -59,7 +59,7 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p><?php wpforo_phrase('No forum found in this category') ?></p>
+                <p><?php _e('No room found in this category', ET_DOMAIN); ?></p>
             <?php endif; ?>
         </div>
     </div>
@@ -67,7 +67,7 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
         <div class="wpf-threads-head">
             <div class="wpf-head-box wpf-thead-status"><?php wpforo_phrase( 'Status' ) ?></div>
             <div class="wpf-head-box wpf-thead-title"><?php wpforo_phrase( 'Topics' ) ?></div>
-            <div class="wpf-head-box wpf-thead-forum"><?php _e('Room', 'wpforo'); ?></div>
+            <div class="wpf-head-box wpf-thead-forum"><?php _e('Room', ET_DOMAIN); ?></div>
             <div class="wpf-head-box wpf-thead-posts"><?php wpforo_phrase( 'Replies' ) ?></div>
             <div class="wpf-head-box wpf-thead-views"><?php wpforo_phrase( 'Views' ) ?></div>
             <div class="wpf-head-box wpf-thead-users"><?php wpforo_phrase( 'Users' ) ?></div>
