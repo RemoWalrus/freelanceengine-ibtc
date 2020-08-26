@@ -488,3 +488,8 @@ function lp_get_comments($post_id){
 	$total_messages = count( $all_cmts );
 	return $total_messages;
 }
+
+function lp_wpforo_change_author_default_page( $link ){
+	return site_url();
+}
+add_filter( 'author_link', 'lp_wpforo_change_author_default_page', 10, 1 );
