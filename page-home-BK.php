@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Homepage IBTC
+ * Template Name: Homepage IBTC Backup
  */
 
 get_header();

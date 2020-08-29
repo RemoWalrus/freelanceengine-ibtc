@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Pricing IBTC Backup
+ * Template Name: Pricing IBTC
  */
 
 get_header();
