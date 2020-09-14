@@ -20,8 +20,8 @@ function wpforo_thread_forum_template( $topicid ){
             <div class="wpf-thread-box wpf-thread-forum">
                 <span class="wpf-circle wpf-m" wpf-tooltip="<?php echo esc_attr($thread['forum']['title'])?>" wpf-tooltip-position="left" wpf-tooltip-size="long" style="border:1px dashed <?php echo $thread['forum']['color'] ?>">
                     <?php
-                    if($thread['meta_key']!=""): ?>
-                        <div id="forum_svg_thread_<?php echo $thread['forumid']; ?>" data-color="<?php echo $thread['color'] ?>" class="forum_svg_thread"><?php echo file_get_contents($thread['meta_key']); ?></div>
+                    if($thread['forum']['meta_key']!=""): ?>
+                        <div id="forum_svg_thread_<?php echo $thread['forum']['forumid']; ?>" data-color="<?php echo $thread['forum']['color'] ?>" class="forum_svg_thread"><?php echo file_get_contents($thread['forum']['meta_key']); ?></div>
                     <?php
                     else: ?>
                         <i class="<?php echo $thread['forum']['icon'] ?>" style="color: <?php echo $thread['forum']['color'] ?>"></i>

@@ -518,8 +518,7 @@ Recommended to add this after forum icon div.
 
 add_action('lp-wpforo-custom-icon-fields', 'lp_wpforo_custom_icon_fields_func');
 function lp_wpforo_custom_icon_fields_func($data){
-	print_r($data);
-	?>
+?>
 	<div id="forum_icon_image" class="postbox">
 		<h3 class="wpf-box-header"><span><?php _e('Forum Icon Image', 'wpforo'); ?></span></h3>
 		<div class="inside" style="padding-top:10px;">
