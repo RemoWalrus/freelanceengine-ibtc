@@ -90,6 +90,9 @@ function lp_freelanceengine_enqueue_styles() {
         'appengine',
         'front'
     ), ET_VERSION, true);
+
+    wp_enqueue_script( 'lp-wpforo-custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(
+			'jquery'), ET_VERSION, true );
 }
 add_action ( 'wp_enqueue_scripts', 'lp_freelanceengine_enqueue_styles');
 
@@ -499,6 +502,20 @@ function lp_wpforo_member_profile_url($profile_url, $user, $template){
 }
 add_filter( 'wpforo_member_profile_url', 'lp_wpforo_member_profile_url', 10, 3 );
 
+/* 
+This action hook is used to add icon image field in forum. But it will not work without adding do_action in wp_foro plugin. 
+So follow these steps if you update the plugin.
+Step -1 : Go to /plugins/wpforo/wpf-admin
+Step -2 : Open forum.php file
+Step -3 : Paste following line of code 
+where you want to display this field. 
+
+<?php do_action('lp-wpforo-custom-icon-fields', $data); ?>
+
+Recommended to add this after forum icon div.
+<div id="forum_icon" class="postbox">
+*/
+
 add_action('lp-wpforo-custom-icon-fields', 'lp_wpforo_custom_icon_fields_func');
 function lp_wpforo_custom_icon_fields_func($data){
 	print_r($data);
@@ -508,8 +525,15 @@ function lp_wpforo_custom_icon_fields_func($data){
 		<div class="inside" style="padding-top:10px;">
 			<div class="form-field">
 				<label for="forum-icon-image" style="display:block; padding-bottom:5px;"><?php _e('Icon Image', 'wpforo'); ?>:</label>
-				<textarea name="forum[meta_key]" rows="3" cols="40"><?php echo esc_html(isset($data['meta_key']) ? $data['meta_key'] : '') ?></textarea>
-                <p style="margin-bottom:0; margin-top:5px;"><?php _e('If you upload icon image then font icons will be ignored.', 'wpforo'); ?> </p>
+				<input type="text" name="forum[meta_key]" value="<?php echo esc_html(isset($data['meta_key']) ? $data['meta_key'] : '') ?>" />
+				<?php
+				if(isset($data['meta_key'])):
+					if($data['meta_key']!=""): ?>
+						<p><img src="<?php echo $data['meta_key']; ?>" height="100" width="100" alt="<?php echo $data['title']; ?>" /></p>
+				<?php		
+					endif;
+				endif; ?>
+				<p style="margin-bottom:0; margin-top:5px;"><?php _e('If you upload icon image then font icons will be ignored.', 'wpforo'); ?> </p>
 			</div>
 		</div>
 	</div> 

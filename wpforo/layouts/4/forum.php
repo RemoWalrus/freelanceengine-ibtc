@@ -48,8 +48,15 @@ $load_more = $items_count >= WPF()->forum->options['layout_threaded_intro_topics
                 <?php foreach($child_forums as $child_forumid): ?>
                     <?php if( $child_forumid == $cat['forumid'] || !WPF()->perm->forum_can('vf', $child_forumid) ) continue; $forum = wpforo_forum( $child_forumid ); ?>
                     <div class="wpf-forum-item <?php wpforo_unread($child_forumid, 'forum'); ?>" style="color:<?php echo $forum['color'] ?>;">
+
                         <span class="wpf-circle wpf-s" style="border: 1px dashed <?php echo $forum['color'] ?>; color: #fff; display: inline-flex;">
-                            <i class="<?php echo $forum['icon'] ?>"></i>
+                            <?php
+                            if($forum['meta_key']!=""): ?>
+                                <div id="forum_svg_<?php echo $forum['forumid']; ?>" data-color="<?php echo $forum['color'] ?>" class="forum_svg"><?php echo file_get_contents($forum['meta_key']); ?></div>
+                            <?php
+                            else: ?>
+                                <i class="<?php echo $forum['icon'] ?>"></i>
+                            <?php endif; ?>
                         </span>
                         <?php $forum_description = (wpfval($forum, 'description')) ? 'wpf-tooltip="' . esc_attr(strip_tags($forum['description'])) . '"  wpf-tooltip-size="long"' : ''; ?>
                         <a href="<?php echo esc_url($forum['url']); ?>" <?php echo $forum_description ?>>
