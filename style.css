@@ -684,7 +684,11 @@ h2.profh2 {
   margin-top: 10px; 
   margin-left: 20px;
 }
-
+.forum_svg svg{ 
+  color: #fff;
+  height: 50px;
+  width: auto;
+}
 /* Portfolio like css */
 /*.freelance-portfolio-like-wrap {
     position: relative;
