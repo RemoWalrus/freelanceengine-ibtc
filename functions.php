@@ -498,3 +498,20 @@ function lp_wpforo_member_profile_url($profile_url, $user, $template){
 	return $author_page_url;
 }
 add_filter( 'wpforo_member_profile_url', 'lp_wpforo_member_profile_url', 10, 3 );
+
+add_action('lp-wpforo-custom-icon-fields', 'lp_wpforo_custom_icon_fields_func');
+function lp_wpforo_custom_icon_fields_func($data){
+	print_r($data);
+	?>
+	<div id="forum_icon_image" class="postbox">
+		<h3 class="wpf-box-header"><span><?php _e('Forum Icon Image', 'wpforo'); ?></span></h3>
+		<div class="inside" style="padding-top:10px;">
+			<div class="form-field">
+				<label for="forum-icon-image" style="display:block; padding-bottom:5px;"><?php _e('Icon Image', 'wpforo'); ?>:</label>
+				<textarea name="forum[meta_key]" rows="3" cols="40"><?php echo esc_html(isset($data['meta_key']) ? $data['meta_key'] : '') ?></textarea>
+                <p style="margin-bottom:0; margin-top:5px;"><?php _e('If you upload icon image then font icons will be ignored.', 'wpforo'); ?> </p>
+			</div>
+		</div>
+	</div> 
+	<?php
+}
