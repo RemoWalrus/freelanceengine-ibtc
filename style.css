@@ -685,7 +685,7 @@ h2.profh2 {
   margin-left: 20px;
 }
 .forum_svg svg{ 
-  color: #fff;
+  fill: #fff;
   height: 50px;
   width: auto;
 }
