@@ -79,8 +79,67 @@ global $current_user;
                         <span><?php echo $current_user->display_name; ?></span>
                     </div>
                 </div>
-			<?php } 
-            if ( is_user_logged_in() ) { ?>
+			<?php } ?>
+                        <div class="fre-menu-top">
+                <ul class="fre-menu-main">
+                    <!-- Menu freelancer -->
+					<?php if ( ! is_user_logged_in() ) { ?>
+                        <li class="fre-menu-freelancer dropdown">
+                            <a><?php _e( 'ARTISTS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                                                                          aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
+                                </li>
+								<?php if ( fre_check_register() ) { ?>
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( 'register' ) . '?role=freelancer'; ?>"><?php _e( 'Create Profile', ET_DOMAIN ); ?></a>
+                                    </li>
+								<?php } ?>
+                            </ul>
+                        </li>
+                        <li class="fre-menu-employer dropdown">
+                            <a><?php _e( 'EMPLOYERS', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo et_get_page_link( 'login' ) . '?ae_redirect_url=' . urlencode( et_get_page_link( 'submit-project' ) ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artists', ET_DOMAIN ); ?></a>
+                                </li>
+                            </ul>
+                        </li>
+					<?php } else { ?>
+
+						<?php if ( ae_user_role( $user_ID ) == FREELANCER ) { ?>
+                            <li class="fre-menu-freelancer dropdown-empty">
+                                <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'MY APPLICATIONS', ET_DOMAIN ); ?></a>
+                            </li>
+                            <li class="fre-menu-employer dropdown-empty">
+                                <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'JOBS', ET_DOMAIN ); ?></a>
+                            </li>
+						<?php } else { ?>
+                            <li class="fre-menu-employer dropdown">
+                                <a><?php _e( 'MY JOB POSTINGS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                                                                             aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'All Jobs Posted', ET_DOMAIN ); ?></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( 'submit-project' ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fre-menu-employer dropdown-empty">
+                                <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'ARTISTS', ET_DOMAIN ); ?></a>
+                            </li>
+						<?php } ?>
+					<?php } ?>
+               
+                </ul>
+            </div>
+            <?php if ( is_user_logged_in() ) { ?>
                 <div class="fre-account-info-tablet">
                     <ul class="dropdown-menu">
                         <li>
