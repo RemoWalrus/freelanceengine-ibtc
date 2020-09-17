@@ -85,13 +85,13 @@ global $current_user;
                     <!-- Menu freelancer -->
 					<?php if ( ! is_user_logged_in() ) { ?>
                       <li class="fre-menu-freelancer dropdown-empty">
-                           <a href="<?php echo et_get_page_link( "community" ); ?>"><?php _e( 'ARTISTS LOUNGE', ET_DOMAIN ); ?></a>
+                           <a href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e( 'ARTISTS LOUNGE', ET_DOMAIN ); ?></a>
                       </li>
 					<?php } else { ?>
 
 						<?php if ( ae_user_role( $user_ID ) == FREELANCER ) { ?>
                             <li class="fre-menu-freelancer dropdown-empty">
-                                <a href="<?php echo et_get_page_link( "community" ); ?>"><?php _e( 'ARTISTS LOUNGE', ET_DOMAIN ); ?></a>
+                                <a href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e( 'ARTISTS LOUNGE', ET_DOMAIN ); ?></a>
                             </li>
 
 					<?php } ?>

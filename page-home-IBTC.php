@@ -197,7 +197,7 @@ global $user_ID;
 		<div class="get-started-content">
  
 					<h2 id="title_start">Do you want to interact with other Artists? Check out our Community</h2>
-					<a class="fre-btn fre-btn primary-bg-color" href="/stage/community/artists-lounge/"><?php _e(' Join Artist Lounge!', ET_DOMAIN)?></a>
+					<a class="fre-btn fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e(' Join Artist Lounge!', ET_DOMAIN)?></a>
 			
 		</div>
 	</div>
