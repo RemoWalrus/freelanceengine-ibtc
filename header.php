@@ -30,7 +30,7 @@ global $current_user;
 	<?php
 	wp_head();
 	if ( function_exists( 'et_render_less_style' ) ) {
-		//et_render_less_style();
+		//et_render_less_style(); 
 	}
 	
 	?>
