@@ -854,6 +854,20 @@ footer h2.widgettitle {
   content: attr(data-before);
   text-align: center;
 }
+.wpcf7-form input[type="email"], .wpcf7-form input[type="tel"]{
+  border: 1px solid #d7d9da;
+  color: #737c85;
+  margin-bottom: 0;
+  height: 45px;
+  padding: 0 15px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+}
+.wpcf7-form input[type="text"], .wpcf7-form textarea{
+  margin-bottom: 0;
+}
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
 	.container {
