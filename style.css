@@ -857,7 +857,7 @@ footer h2.widgettitle {
 .wpcf7-form input[type="email"], .wpcf7-form input[type="tel"]{
   border: 1px solid #d7d9da;
   color: #737c85;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   height: 45px;
   padding: 0 15px;
   border-radius: 4px;
