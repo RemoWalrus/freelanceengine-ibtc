@@ -162,7 +162,7 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
-<?php if(!fre_check_register()){ ?>
+<?php if(!is_user_logged_in()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
@@ -175,15 +175,14 @@ global $user_ID;
 <!-- List Get Started -->
 <div class="fre-get-started">
 	<div class="container">
-		<div class="get-started-content">
-			<?php if(!is_user_logged_in()){ ?>
+		<?php if(!is_user_logged_in()){ ?>
+            <div class="get-started-content">
 				<h2 id="title_start"><?php echo get_theme_mod("title_start") ? get_theme_mod("title_start") : __('Need work done? Join FreelanceEngine community!', ET_DOMAIN);?></h2>
 				<?php if(fre_check_register()){ ?>
 				<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('Get Started', ET_DOMAIN)?></a>
 				<?php } ?>
-			<?php } ?>
-
-		</div>
+            </div>
+        <?php } ?>
 	</div>
 </div>
 <!-- List Get Started -->
