@@ -1006,6 +1006,9 @@ footer h2.widgettitle {
     background-attachment: fixed;
     background-size: cover;
 }
+    img.fullwidth {
+        width: 100% !important;
+    }
 	
 	.stories2 {
 	background-image: url('assets/images/BGmain.jpg');
