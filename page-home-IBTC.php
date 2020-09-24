@@ -181,12 +181,7 @@ global $user_ID;
 				<?php if(fre_check_register()){ ?>
 				<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('Get Started', ET_DOMAIN)?></a>
 				<?php } ?>
-			<?php }else{ ?>
-				<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-					<h2 id="title_start"><?php echo get_theme_mod("title_start_freelancer") ? get_theme_mod("title_start_freelancer") : __("It's time to start finding freelance jobs online!" , ET_DOMAIN);?></h2>
-					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Jobs', ET_DOMAIN)?></a>
-				<?php } 
-                } ?>
+			<?php } ?>
 
 		</div>
 	</div>
