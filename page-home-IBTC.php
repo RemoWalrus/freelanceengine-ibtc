@@ -114,7 +114,7 @@ global $user_ID;
 
 <div class="fre-our-stories stories2" >
 	<div class="container">
-		<h2 id="title_story">What's New</h2>
+		<h2 id="title_story">What's New?</h2>
         <br>
         <a href="https://www.instagram.com/inbetweenthechair/" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
 		
@@ -162,12 +162,14 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
+<?php if(!fre_check_register()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
 		<?php get_template_part( 'home-list', 'testimonial' );?>
 	</div>
 </div>
+<?php } ?>
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
