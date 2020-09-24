@@ -111,16 +111,16 @@ global $user_ID;
 <?php } ?>
 <!-- Block How Work -->
 <!-- Block Advertising -->
-<?php if(!is_user_logged_in()){ ?>
+
 <div class="fre-our-stories stories2" >
 	<div class="container">
-		<h2 id="title_story">Promotions</h2>
+		<h2 id="title_story">What's New?</h2>
         <br>
         <a href="https://www.instagram.com/inbetweenthechair/" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
 		
 	</div>
 </div>
-<?php } ?>
+
 <!-- Block Advertising -->
 <!-- List Profiles  and Projects-->
 <?php if(is_user_logged_in()){ ?>
