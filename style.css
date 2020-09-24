@@ -597,7 +597,7 @@ video {
 
 /* TAGS ICONS and labels */
 
-.custom-field-wrapper li, .custom-field-wrapper li, .fre-label,  {
+.custom-field-wrapper li, .custom-field-wrapper li, .fre-label {
 	    background-color: var(--color-main-light) !important;
 }
 
@@ -693,6 +693,10 @@ h2.profh2 {
   height: 25px;
   padding-top: 5px;
 }
+
+  img.fullwidth {
+        width: 100% !important;
+    }
 
 
 /* Portfolio like css */
