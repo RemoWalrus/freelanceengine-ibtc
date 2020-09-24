@@ -164,12 +164,14 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
+<?php if(!is_user_logged_in()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
 		<?php get_template_part( 'home-list', 'testimonial' );?>
 	</div>
 </div>
+<?php } ?>
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
