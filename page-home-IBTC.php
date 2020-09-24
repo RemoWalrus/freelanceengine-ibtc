@@ -125,16 +125,18 @@ global $user_ID;
 <!-- List Profiles  and Projects-->
 <?php if(is_user_logged_in()){ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-
-	<div class="fre-perfect-freelancer">
-		<div class="container">
-			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
-			<?php get_template_part( 'home-list', 'profiles' );?>
-			<div class="fre-perfect-freelancer-more">
-			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all Artists', ET_DOMAIN);?></a>
-			</div>
-		</div>
-	</div>
+    <!-- load Artists Lounge -->
+        <?php
+            // query for the about page
+            $your_query = new WP_Query( 'slug=community' );
+            // "loop" through query (even though it's just one page) 
+            while ( $your_query->have_posts() ) : $your_query->the_post();
+            the_content();
+            endwhile;
+            // reset post data (important!)
+            wp_reset_postdata();
+            ?>
+	
 	<?php }else{ ?>
 	<div class="fre-perfect-freelancer">
 		<div class="container">
