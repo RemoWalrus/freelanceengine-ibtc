@@ -126,7 +126,15 @@ global $user_ID;
 <?php if(is_user_logged_in()){ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
 
-	
+	<div class="fre-perfect-freelancer">
+		<div class="container">
+			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
+			<?php get_template_part( 'home-list', 'profiles' );?>
+			<div class="fre-perfect-freelancer-more">
+			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all Artists', ET_DOMAIN);?></a>
+			</div>
+		</div>
+	</div>
 	<?php }else{ ?>
 	<div class="fre-perfect-freelancer">
 		<div class="container">
@@ -154,14 +162,12 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
-<?php if(!is_user_logged_in()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
 		<?php get_template_part( 'home-list', 'testimonial' );?>
 	</div>
 </div>
-<?php } ?>
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
@@ -172,8 +178,14 @@ global $user_ID;
 				<h2 id="title_start"><?php echo get_theme_mod("title_start") ? get_theme_mod("title_start") : __('Need work done? Join FreelanceEngine community!', ET_DOMAIN);?></h2>
 				<?php if(fre_check_register()){ ?>
 				<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('Get Started', ET_DOMAIN)?></a>
-			<?php } ?>
-			
+				<?php } ?>
+			<?php }else{ ?>
+				<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
+					<h2 id="title_start"><?php echo get_theme_mod("title_start_freelancer") ? get_theme_mod("title_start_freelancer") : __("It's time to start finding freelance jobs online!" , ET_DOMAIN);?></h2>
+					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Jobs', ET_DOMAIN)?></a>
+				<?php } 
+                } ?>
+
 		</div>
 	</div>
 </div>
