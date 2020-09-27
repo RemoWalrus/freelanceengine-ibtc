@@ -872,7 +872,7 @@ footer h2.widgettitle {
 }
 .wpcf7-form input[type="text"], .wpcf7-form textarea{
   margin-bottom: 0;
-    
+  width: 90%;    
 }
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
