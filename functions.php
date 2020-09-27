@@ -538,3 +538,40 @@ function lp_wpforo_custom_icon_fields_func($data){
 	</div> 
 	<?php
 }
+
+//apply_filters( 'ae_fetch_' . $this->post_type . '_args', $query_args, $this );
+
+add_filter('ae_fetch_fre_profile_args', 'lp_ae_fetch_fre_profile_args', 10, 2);
+function lp_ae_fetch_fre_profile_args($query_args, $obj){
+	global $user_ID;
+	foreach ($query_args['meta_query'] as $meta => $meta_arr) {
+		if(isset($meta_arr['key'])){
+			if($meta_arr['key']=="hour_rate"){
+				unset($query_args['meta_query'][$meta]);
+			}
+		}
+	}
+	$query_args['meta_query'][] = array(
+		'key' => 'user_available',
+        'value' => 'on',
+        'compare' => '='
+	);
+	return $query_args;
+}
+
+add_action( 'pre_get_posts', 'lp_pre_get_profile', 20 );
+function lp_pre_get_profile($query){
+	if ( is_post_type_archive( 'fre_profile' ) ) {
+		$query_profile = $query->query;
+		$post_type     = isset( $query_profile['post_type'] ) ? $query_profile['post_type'] : '';
+		if ( $post_type == PROFILE ) {
+			$meta_query = array();
+		    $meta_query[] = array(
+		      'key' => 'user_available',
+		      'value' => 'on',
+		      'compare' => '=',
+		    );
+		    $query->set('meta_query', $meta_query);
+		}
+	}
+}
