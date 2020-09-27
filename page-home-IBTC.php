@@ -33,7 +33,7 @@ global $user_ID;
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
-					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo et_get_page_link('register', array("role"=>'employer')); ?>"><?php _e('<span>Employer</span>', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo get_site_url(); ?>/employers"><?php _e('<span>Employer</span>', ET_DOMAIN);?></a>
 					<a class="fre-btn primary-bg-color" data-hover="Find Employers" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span>Artistic Professional</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
@@ -111,16 +111,13 @@ global $user_ID;
 <?php } ?>
 <!-- Block How Work -->
 <!-- Block Advertising -->
-<?php if(!is_user_logged_in()){ ?>
+
 <div class="fre-our-stories stories2" >
 	<div class="container">
-		<h2 id="title_story">Promotions</h2>
-        <br>
-        <a href="https://www.instagram.com/inbetweenthechair/" ><img style="width:100%" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/giveaway.jpg"></a>
-		
-	</div>
+        <?php the_content(); ?>
+    </div>
 </div>
-<?php } ?>
+
 <!-- Block Advertising -->
 <!-- List Profiles  and Projects-->
 <?php if(is_user_logged_in()){ ?>
@@ -162,31 +159,27 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
+<?php if(!is_user_logged_in()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
 		<?php get_template_part( 'home-list', 'testimonial' );?>
 	</div>
 </div>
+<?php } ?>
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
 <div class="fre-get-started">
 	<div class="container">
-		<div class="get-started-content">
-			<?php if(!is_user_logged_in()){ ?>
+		<?php if(!is_user_logged_in()){ ?>
+            <div class="get-started-content">
 				<h2 id="title_start"><?php echo get_theme_mod("title_start") ? get_theme_mod("title_start") : __('Need work done? Join FreelanceEngine community!', ET_DOMAIN);?></h2>
 				<?php if(fre_check_register()){ ?>
 				<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('Get Started', ET_DOMAIN)?></a>
 				<?php } ?>
-			<?php }else{ ?>
-				<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-					<h2 id="title_start"><?php echo get_theme_mod("title_start_freelancer") ? get_theme_mod("title_start_freelancer") : __("It's time to start finding freelance jobs online!" , ET_DOMAIN);?></h2>
-					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Jobs', ET_DOMAIN)?></a>
-				<?php } 
-                } ?>
-
-		</div>
+            </div>
+        <?php } ?>
 	</div>
 </div>
 <!-- List Get Started -->

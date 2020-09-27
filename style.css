@@ -597,7 +597,7 @@ video {
 
 /* TAGS ICONS and labels */
 
-.custom-field-wrapper li, .custom-field-wrapper li, .fre-label,  {
+.custom-field-wrapper li, .custom-field-wrapper li, .fre-label {
 	    background-color: var(--color-main-light) !important;
 }
 
@@ -693,6 +693,10 @@ h2.profh2 {
   height: 25px;
   padding-top: 5px;
 }
+
+  img.fullwidth {
+        width: 100% !important;
+    }
 
 
 /* Portfolio like css */
@@ -859,7 +863,11 @@ footer h2.widgettitle {
   color: #737c85;
   margin-bottom: 0;
   height: 45px;
+<<<<<<< HEAD
   width: 90%;  
+=======
+  width: 90%;    
+>>>>>>> stage2
   padding: 0 15px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -868,7 +876,11 @@ footer h2.widgettitle {
 }
 .wpcf7-form input[type="text"], .wpcf7-form textarea{
   margin-bottom: 0;
+<<<<<<< HEAD
   width: 90%;  
+=======
+  width: 90%;    
+>>>>>>> stage2
 }
 /*FREELANCE ENGINE DEFAULT BREAKPOINT */
 @media only screen and (min-width:1200px){
