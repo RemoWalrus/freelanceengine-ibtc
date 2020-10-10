@@ -3,6 +3,7 @@
  * Template Name: Homepage COMING SOON
  */
 
+get_header();
 global $user_ID;
 ?>
 <!-- Block Banner -->
@@ -197,4 +198,3 @@ global $user_ID;
 <?php }else{ ?>
 
 <?php } ?>
-<?php get_footer(); ?>
