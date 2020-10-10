@@ -149,7 +149,7 @@ global $user_ID;
 
 <!-- List Profiles and Projects -->
 <!-- List Testimonials -->
-<?php if(!is_user_logged_in()){ ?>
+<?php if(is_user_logged_in()){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container">
 		<h2 id="title_story"><?php echo get_theme_mod("title_story") ? get_theme_mod("title_story") : __('Hear what our customers have to say', ET_DOMAIN);?></h2>
@@ -160,7 +160,7 @@ global $user_ID;
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
-<?php if(!is_user_logged_in()){ ?>
+<?php if(is_user_logged_in()){ ?>
 <div class="fre-get-started">
 	<div class="container">
 		    <div class="get-started-content">
