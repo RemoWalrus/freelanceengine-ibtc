@@ -67,7 +67,7 @@ if(  is_user_logged_in() ) {
 											<p></p><p>Pay as you go Month to Month</p>
 <p></p>
 										</div>
-												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/">Upgrade</a>
+												<p class="freelance-yourplan">Coming Soon</p>
                                         <div class="service-list">
                                         <ul>
                                             <li>Month-to-month subscription</li>
@@ -88,7 +88,7 @@ if(  is_user_logged_in() ) {
 											<p></p><p>28% Savings Six month subscription paid in one payment of $150 every 6 months</p>
 <p></p>
 										</div>
-												<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/upgrade-account/">Upgrade</a>
+												<p class="freelance-yourplan">Coming Soon</p>
                                         <div class="service-list">
                                         <ul>
                                             <li>6 month subscription</li>
@@ -110,7 +110,7 @@ if(  is_user_logged_in() ) {
 <p></p>
 										</div>
 												
-                                            <a class="fre-btn primary-bg-color" href="h<?php echo get_site_url(); ?>/upgrade-account/">Upgrade</a>
+                                           <p class="freelance-yourplan">Coming Soon</p>
                                         <div class="service-list">
                                          <ul>
                                             <li>1 year subscription</li>
