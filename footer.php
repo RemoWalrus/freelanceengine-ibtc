@@ -17,6 +17,7 @@ if ( is_active_sidebar( 'fre-footer-1' ) || is_active_sidebar( 'fre-footer-2' )
 ) {
 	$flag = true; ?>
     <!-- FOOTER -->
+    <?php if(is_user_logged_in()){ ?>
     <footer>
         <div class="container" id="fre_primary_footer">
             <div class="row">
@@ -74,6 +75,7 @@ if ( is_active_sidebar( 'fre-footer-1' ) || is_active_sidebar( 'fre-footer-2' )
         </div>
     </div>
 </div>
+<?php } ?>
 
 <!-- FOOTER / END -->
 
