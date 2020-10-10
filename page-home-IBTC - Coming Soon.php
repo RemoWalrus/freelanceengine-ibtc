@@ -198,3 +198,4 @@ global $user_ID;
 <?php }else{ ?>
 
 <?php } ?>
+<?php get_footer(); ?>
