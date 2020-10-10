@@ -37,8 +37,8 @@ global $user_ID;
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
                     <br>
                     <img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
-					<a class="fre-btn primary-bg-color" data-hover="Find Freelancers" href="<?php echo get_site_url(); ?>/employers"><?php _e('<span>Employer</span>', ET_DOMAIN);?></a>
-					<a class="fre-btn primary-bg-color" data-hover="Find Employers" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span>Artistic Professional</span>', ET_DOMAIN);?></a>
+					
+					<a data-hover="Find Employers" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span>Tester login</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
