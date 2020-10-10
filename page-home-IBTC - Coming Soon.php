@@ -67,7 +67,7 @@ global $user_ID;
 <?php } ?>
 <!-- Block Banner -->
 <!-- Block How Work -->
-<?php if(is_user_logged_in()){ ?>
+<?php if(!is_user_logged_in()){ ?>
 <!-- comment -->
 <?php }else{ ?>
 <div class="fre-how-work">
@@ -144,17 +144,7 @@ global $user_ID;
 	</div>
 	<?php } ?>
 <?php }else{ ?>
-	<div class="fre-perfect-freelancer">
-		<div class="container">
-			<h2 id="title_freelance"><?php echo get_theme_mod("title_freelance") ? get_theme_mod("title_freelance") : __('Find perfect artists for your projects', ET_DOMAIN);?></h2>
-			<?php get_template_part( 'home-list', 'profiles' );?>
-			<div class="fre-perfect-freelancer-more">
-			<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('See all Artists', ET_DOMAIN);?></a>
-			</div>
-		</div>
-	</div>
-
-
+	
 <?php } ?>
 
 <!-- List Profiles and Projects -->
@@ -170,18 +160,18 @@ global $user_ID;
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
+<?php if(!is_user_logged_in()){ ?>
 <div class="fre-get-started">
 	<div class="container">
-		<?php if(!is_user_logged_in()){ ?>
-            <div class="get-started-content">
+		    <div class="get-started-content">
 				<h2 id="title_start"><?php echo get_theme_mod("title_start") ? get_theme_mod("title_start") : __('Need work done? Join FreelanceEngine community!', ET_DOMAIN);?></h2>
 				<?php if(fre_check_register()){ ?>
 				<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('Get Started', ET_DOMAIN)?></a>
 				<?php } ?>
             </div>
-        <?php } ?>
-	</div>
+      </div>
 </div>
+<?php } ?>
 <!-- List Get Started -->
 <!-- Community -->
 <?php if(ae_user_role($user_ID) == FREELANCER){ ?>
