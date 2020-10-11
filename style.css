@@ -1206,7 +1206,7 @@ footer h2.widgettitle {
 	max-width:650px;
 	}
     img.comingsoon {
-	max-width:350px;
+	max-width:550px;
 	}
 
 }
@@ -1285,5 +1285,6 @@ footer h2.widgettitle {
 }
 
 span.tester {
+    display: block;
     color:var(--color-white); 
 }
