@@ -456,7 +456,7 @@ h2.profh2 {
     margin: 0 auto 5px;
     position: inherit;
 	box-sizing: border-box;
-	padding: 0 60px 30px;
+	padding: 0 60px 15px;
 	max-width: 600px;
 }
 
@@ -888,7 +888,7 @@ footer h2.widgettitle {
     	margin: 0 auto 20px;
     	position: inherit;
 		box-sizing: border-box;
-		padding: 0 60px 35px;
+		padding: 0 60px 15px;
 		max-width: 850px;
 	}
     img.comingsoon {
@@ -1204,6 +1204,9 @@ footer h2.widgettitle {
 	}
 	img.logo {
 	max-width:650px;
+	}
+    img.comingsoon {
+	max-width:350px;
 	}
 
 }
