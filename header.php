@@ -112,7 +112,7 @@ global $current_user;
                             </li>
 							<?php if ( fre_check_register() ) { ?>
                                 <li>
-                                    <a href="<?php echo et_get_page_link( "register" ) ?>"><?php _e( 'SIGN UP', ET_DOMAIN ); ?></a>
+                                    <a href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e( 'SIGN UP', ET_DOMAIN ); ?></a>
                                 </li>
 							<?php } ?>
                         </ul>
