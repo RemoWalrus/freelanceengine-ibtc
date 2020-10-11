@@ -1280,3 +1280,7 @@ footer h2.widgettitle {
     max-width: 320px;
 	}
 }
+
+span.tester {
+    color:var(--color-white); 
+}
