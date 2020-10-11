@@ -38,7 +38,7 @@ global $user_ID;
                     <br>
                     <img class="comingsoon" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
 					
-					<a data-hover="Find Employers" href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e('<span class="tester">Tester login</span>', ET_DOMAIN);?></a>
+					<a data-hover="Find Employers" href="<?php echo et_get_page_link( "login" ) ?>"><?php _e('<span class="tester">Tester login</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
