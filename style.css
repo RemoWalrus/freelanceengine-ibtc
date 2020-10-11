@@ -888,9 +888,19 @@ footer h2.widgettitle {
     	margin: 0 auto 20px;
     	position: inherit;
 		box-sizing: border-box;
-		padding: 0 60px 35px;
+		padding: 0 60px 10px;
 		max-width: 850px;
 	}
+    img.comingsoon {
+    	vertical-align: middle;
+    	display: block;
+    	margin: 0 auto 20px;
+    	position: inherit;
+		box-sizing: border-box;
+		padding: 0 60px 10px;
+		max-width: 700px;
+	}
+
 
 	.fre-how-work {
     	padding-top: 5vh;

@@ -18,7 +18,7 @@ global $user_ID;
 				   
 					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
                     <br>
-                    <img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
+                    <img class="comingsoon" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
 			
 					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('Find Artist', ET_DOMAIN);?></a>
 					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e('Find Jobs', ET_DOMAIN);?></a>
