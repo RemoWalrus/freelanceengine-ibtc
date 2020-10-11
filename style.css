@@ -1286,5 +1286,11 @@ footer h2.widgettitle {
 
 span.tester {
     display: block;
-    color:var(--color-white); 
+    color:var(--color-white);
+    text-transform: uppercase;
+}
+span.tester:hover {
+    display: block;
+    color:var(--color-main-light);
+    text-decoration: underline;
 }
