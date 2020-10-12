@@ -25,7 +25,7 @@ if($file_url!="" || $is_edit) {
         <div class="profile-freelance-video">
         	<div class="row">
         		<div class="<?php echo $is_edit ? 'col-sm-6' :'' ?> col-xs-12">
-            		<h2 class="freelance-video-title"><?php _e( 'Video Introduction', ET_DOMAIN ); ?></h2>
+            		<h2 class="freelance-video-title"><?php _e( 'AVR (Video Introduction)', ET_DOMAIN ); ?></h2>
                 </div>
                 <?php 
                 if($is_edit){ ?>
