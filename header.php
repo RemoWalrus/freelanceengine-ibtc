@@ -85,7 +85,7 @@ global $current_user;
                     <!-- Menu freelancer -->
 					<?php if ( is_user_logged_in() ) { ?>
                      <li class="fre-menu-freelancer dropdown-empty">
-                                <a href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e( 'Artists Lounge', ET_DOMAIN ); ?></a>
+                                <a href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e( 'Artist&lsquo;s Lounge', ET_DOMAIN ); ?></a>
                             </li>
                             
 					<?php } ?>
