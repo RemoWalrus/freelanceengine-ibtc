@@ -552,7 +552,7 @@ function lp_freelanceengine_widgets_init () {
 	register_sidebar( array(
 		'name' => 'Lounge Homepage Area',
 		'id' => 'lounge_homepage_area',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="fre-bg-content general">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
