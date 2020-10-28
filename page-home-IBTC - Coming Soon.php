@@ -117,10 +117,25 @@ global $user_ID;
 <!-- Block Advertising -->
 
 <div class="fre-our-stories stories2" >
-	<div class="container">
-        <?php the_content(); ?>
-		
-    </div>
+	<div class="container page-container">
+	<!-- block control  -->
+	<div class="row block-posts block-page">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="blog-content">
+                <?php
+               		the_content();
+               		wp_link_pages( array(
+                        'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ET_DOMAIN ) . '</span>',
+                        'after'       => '</div>',
+                        'link_before' => '<span>',
+                        'link_after'  => '</span>',
+                    ) );
+                ?>
+            </div><!-- end page content -->
+		</div>
+	</div>
+	<!--// block control  -->
+</div>
 </div>
 
 <!-- Block Advertising -->
