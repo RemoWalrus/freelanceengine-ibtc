@@ -538,3 +538,16 @@ function lp_wpforo_custom_icon_fields_func($data){
 	</div> 
 	<?php
 }
+ /* Counter widget area  */
+function lp_freelanceengine_widgets_init () {
+	
+	register_sidebar( array(
+		'name' => 'Counter Homepage Area',
+		'id' => 'counter_homepage_area',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+}
+add_action( 'widgets_init','lp_freelanceengine_widgets_init');
