@@ -16,8 +16,7 @@ global $user_ID;
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
 				   
-					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
-                    <br>
+					<!--<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg"> -->
                     <img class="comingsoon" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
 					<?php if( dynamic_sidebar('counter_homepage_area') ) : else : endif; ?>
 			
@@ -35,9 +34,7 @@ global $user_ID;
 		<div class="fre-bg-content general">
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
-					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
-                    <br>
-                    <img class="comingsoon" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
+					<img class="comingsoon" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/comingsoon.svg">
 					<?php if( dynamic_sidebar('counter_homepage_area') ) : else : endif; ?>
 					
 					<a data-hover="Find Employers" href="<?php echo et_get_page_link( "login" ) ?>"><?php _e('<span class="tester">Tester login</span>', ET_DOMAIN);?></a>

@@ -52,6 +52,9 @@ Version:        2.1
 */
 
 /*theme color*/
+.time_circles{
+	color: var(--color-white);
+}
 .general>.container {
 	background-color: var(--color-main-transparent, transparent);
 	width: 100%;
