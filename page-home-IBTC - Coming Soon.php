@@ -119,11 +119,6 @@ global $user_ID;
 <div class="fre-our-stories stories2" >
 	<div class="container">
         <?php the_content(); ?>
-		<div class="fre-page-wrapper">
-		 	<div class="fre-page-section">
-		<?php if( dynamic_sidebar('lounge_homepage_area') ) : else : endif; ?>
-			</div>
-		</div>	
 		
     </div>
 </div>
