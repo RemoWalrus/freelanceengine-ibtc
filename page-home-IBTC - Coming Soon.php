@@ -115,7 +115,8 @@ global $user_ID;
 <?php } ?>
 <!-- Block How Work -->
 <!-- Block Advertising -->
-
+<?php if(is_user_logged_in()){ ?>
+	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
 <div class="fre-our-stories stories2" >
 	<div class="container page-container">
 	<!-- block control  -->
@@ -137,6 +138,9 @@ global $user_ID;
 	<!--// block control  -->
 </div>
 </div>
+<?php }else{ ?>
+	
+<?php } ?>
 
 <!-- Block Advertising -->
 <!-- List Profiles  and Projects-->
