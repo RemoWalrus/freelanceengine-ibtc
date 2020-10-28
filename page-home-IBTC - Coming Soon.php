@@ -44,7 +44,7 @@ global $user_ID;
 	<?php } ?>
 <?php }else{ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin1.jpg');">
+	<div class="fre-perfect-freelancer">
 		<div class="fre-page-wrapper">
 			<div class="fre-page-section">
 				<div class="container">
@@ -54,8 +54,8 @@ global $user_ID;
 		</div>
 		
 	</div>
-	fre-page-section<?php }else{ ?>
-	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin2.jpg');">
+	<?php }else{ ?>
+	<div class="fre-perfect-freelancer">
 		<div class="fre-page-wrapper">
 			<div class="fre-page-section">
 				<div class="container">
