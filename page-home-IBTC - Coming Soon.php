@@ -45,7 +45,7 @@ global $user_ID;
 <?php }else{ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
 	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin1.jpg');">
-		<?php if( dynamic_sidebar('counter_homepage_area') ) : else : endif; ?>
+		<?php if( dynamic_sidebar('lounge_homepage_area') ) : else : endif; ?>
 		
 		
 	</div>
