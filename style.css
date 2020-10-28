@@ -465,12 +465,12 @@ h2.profh2 {
 
 /* WP Foro */
 
-.blog-content .wpforo-content{
+ .blog-content .wpforo-main>.wpforo-content{
 	width: 100% !important;
 }
 
-.blog-content .wpforo-right-sidebar{
-	display: none;
+.blog-content .wpforo-main>.wpforo-right-sidebar{
+	display: none !important;
 }
 
 /* Tiny reset thingy */
