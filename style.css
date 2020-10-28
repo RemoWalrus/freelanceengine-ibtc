@@ -465,11 +465,11 @@ h2.profh2 {
 
 /* WP Foro */
 
-.blog-content>.wpforo-content{
+div.blog-content>div.wpforo-content{
 	width: 100% !important;
 }
 
-.blog-content>.wpforo-right-sidebar{
+div.blog-content>div.wpforo-right-sidebar{
 	display: none;
 }
 
