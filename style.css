@@ -463,6 +463,15 @@ h2.profh2 {
 	max-width: 600px;
 }
 
+/* WP Foro */
+
+.blog-content>.wpforo-content{
+	width: 100% !important;
+}
+
+.blog-content>.wpforo-right-sidebar{
+	display: none;
+}
 
 /* Tiny reset thingy */
 body,html{margin:0;padding:0;}
