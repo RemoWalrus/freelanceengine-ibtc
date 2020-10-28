@@ -55,15 +55,18 @@ global $user_ID;
 		
 	</div>
 	<?php }else{ ?>
-	<div class="fre-perfect-freelancer">
-		<div class="fre-page-wrapper">
-			<div class="fre-page-section">
-				<div class="container">
-		<?php if( dynamic_sidebar('lounge_homepage_area') ) : else : endif; ?>
-				</div>
+<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin1.jpg');">
+		<div class="fre-bg-content general">
+			<div class="container">
+				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
+					<img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
+					
+					<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('profile'); ?>"><?php _e('<span>Update Profile</span>', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" href="<?php echo get_site_url(); ?>/community/artists-lounge/');"><?php _e('<span>Connect</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
+
 	<?php } ?>
 <?php } ?>
 <!-- Block Banner -->
@@ -116,6 +119,9 @@ global $user_ID;
 <div class="fre-our-stories stories2" >
 	<div class="container">
         <?php the_content(); ?>
+		
+		<?php if( dynamic_sidebar('lounge_homepage_area') ) : else : endif; ?>
+		
     </div>
 </div>
 
