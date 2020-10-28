@@ -49,7 +49,14 @@ global $user_ID;
 		
 		
 	</div>
-	<<?php if( dynamic_sidebar('lounge_homepage_area') ) : else : endif; ?>class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('<span>Find Artists</span>', ET_DOMAIN);?></a>
+	<?php }else{ ?>
+	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin2.jpg');">
+		<div class="fre-bg-content general">
+			<div class="container">
+				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
+					<img class="logo"src="<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/inbetweelogo_logo.svg">
+					<a class="fre-btn primary-bg-color" href="<?php echo et_get_page_link('submit-project'); ?>"><?php _e('<span>Post a Job</span>', ET_DOMAIN);?></a>
+					<a class="fre-btn primary-bg-color" href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e('<span>Find Artists</span>', ET_DOMAIN);?></a>
 			</div>
 		</div>
 	</div>
