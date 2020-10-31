@@ -44,7 +44,7 @@ global $user_ID;
 	<?php } ?>
 <?php }else{ ?>
 	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
-<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin1.jpg');">
+	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin1.jpg');">
 		<div class="fre-bg-content general">
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
@@ -56,7 +56,7 @@ global $user_ID;
 		</div>
 	</div>
 	<?php }else{ ?>
-<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin2.jpg');">
+	<div class="fre-background" id="background_banner" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/freelanceengine-ibtc/assets/images/BGlogin2.jpg');">
 		<div class="fre-bg-content general">
 			<div class="container">
 				<h1 id="title_banner"><?php echo get_theme_mod("title_banner") ? get_theme_mod("title_banner") : __("Find perfect freelancers for your projects or Look for freelance jobs online?", ET_DOMAIN);?></h1>
@@ -66,7 +66,6 @@ global $user_ID;
 			</div>
 		</div>
 	</div>
-
 	<?php } ?>
 <?php } ?>
 <!-- Block Banner -->
@@ -115,32 +114,12 @@ global $user_ID;
 <?php } ?>
 <!-- Block How Work -->
 <!-- Block Advertising -->
-<?php if(is_user_logged_in()){ ?>
-	<?php if(ae_user_role($user_ID) == FREELANCER){ ?>
+
 <div class="fre-our-stories stories2" >
-	<div class="container page-container">
-	<!-- block control  -->
-	<div class="row block-posts block-page">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="blog-content">
-                <?php
-               		the_content();
-               		wp_link_pages( array(
-                        'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ET_DOMAIN ) . '</span>',
-                        'after'       => '</div>',
-                        'link_before' => '<span>',
-                        'link_after'  => '</span>',
-                    ) );
-                ?>
-            </div><!-- end page content -->
-		</div>
-	</div>
-	<!--// block control  -->
+	<div class="container">
+        <?php the_content(); ?>
+    </div>
 </div>
-</div>
-<?php }else{ ?>
-	
-<?php } ?>
 
 <!-- Block Advertising -->
 <!-- List Profiles  and Projects-->
