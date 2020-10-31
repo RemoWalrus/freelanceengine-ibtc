@@ -124,9 +124,9 @@ $currency = ae_get_option( 'currency', array(
 
                             </div>
                             <div class="<?php echo $role_template; ?>-info-content">
-                               <!-- <div class="freelance-rating">
-                                        <span class="rate-it"
-                                              data-score="<?php echo $rating['rating_score']; ?>"></span>-->
+                                <div class="freelance-rating">
+                                        <span class="rate-it" style="display:none;" <!-- hack to hide stars -->
+                                              data-score="<?php echo $rating['rating_score']; ?>"></span>
 
 									<?php if ( fre_share_role() || ae_user_role( $user_ID ) == FREELANCER ) { ?>
                                         <span class="freelance-empty-info">
