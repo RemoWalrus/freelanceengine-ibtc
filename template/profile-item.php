@@ -24,7 +24,7 @@ $hou_rate = (int) $current->hour_rate;
         <p class="profile-list-subtitle"><?php echo $current->et_professional_title;?></p>
         <div class="profile-list-info">
             <div class="profile-list-detail">
-                <span class="rate-it" data-score="<?php echo $current->rating_score ; ?>"></span>
+               <!--<span class="rate-it" data-score="/<?php echo $current->rating_score ; ?>"></span> -->
                 <span><?php echo $current->experience ?></span>
                 <?php
                 if(is_super_admin()){ ?>
