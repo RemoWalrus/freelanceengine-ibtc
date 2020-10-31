@@ -67,12 +67,12 @@ if ( ! empty( $_GET['adminhash'] ) ) {
 	echo "<script> window.location.href = '" . et_get_page_link( "profile" ) . "'</script>";
 }
 
-/*$rating        = Fre_Review::employer_rating_score( $user_ID );
+$rating        = Fre_Review::employer_rating_score( $user_ID );
 $role_template = 'employer';
 if ( fre_share_role() || ae_user_role( $user_ID ) == FREELANCER ) {
 	$rating        = Fre_Review::freelancer_rating_score( $user_ID );
 	$role_template = 'freelance';
-} */
+} 
 
 $projects_worked = get_post_meta( $profile_id, 'total_projects_worked', true );
 $project_posted  = fre_count_user_posts_by_type( $user_ID, 'project', '"publish","complete","close","disputing","disputed", "archive" ', true );
@@ -125,8 +125,8 @@ $currency = ae_get_option( 'currency', array(
                             </div>
                             <div class="<?php echo $role_template; ?>-info-content">
                                 <div class="freelance-rating">
-                                        <span class="rate-it"
-                                              data-score="<?php echo $rating['rating_score']; ?>"></span>
+                                        <!--<span class="rate-it"
+                                              data-score="<?php echo $rating['rating_score']; ?>"></span>-->
 
 									<?php if ( fre_share_role() || ae_user_role( $user_ID ) == FREELANCER ) { ?>
                                         <span class="freelance-empty-info">
