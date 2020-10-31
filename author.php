@@ -107,8 +107,8 @@ if( isset($convert->hour_rate) )
                                 </div>
                                 <div class="<?php echo $class_name ?>-info-content">
                                     <div class="<?php echo $class_name ?>-rating">
-                                        <span class="rate-it"
-                                              data-score="<?php echo $rating['rating_score']; ?>"></span>
+                                        <!--<span class="rate-it"
+                                              data-score="<?php echo $rating['rating_score']; ?>"></span> -->
 
 										<?php if ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER ) { ?>
                                             <span><?php echo ! empty( $convert->experience ) ? $convert->experience : ''; ?></span>
