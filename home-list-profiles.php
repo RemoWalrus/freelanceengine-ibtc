@@ -40,7 +40,7 @@ $post_object = $ae_post_factory->get( PROFILE );
 						</a>
 						<h2><a href="<?php echo get_author_posts_url( $convert->post_author ); ?>"><?php the_author_meta( 'display_name', $convert->post_author ); ?></a></h2>
 						<p class="secondary-color"><?php echo $convert->et_professional_title;?></p>
-						<div class="free-rating rate-it" data-score="<?php echo $convert->rating_score ; ?>"></div>
+						<!--<div class="free-rating rate-it" data-score="<?php echo $convert->rating_score ; ?>"></div>-->
 						<?php if( $hou_rate > 0) { ?>
 							<div class="free-hourly-rate">
 								<?php printf(__('%s/hr', ET_DOMAIN), "<span>".fre_price_format($convert->hour_rate)."</span>");?>
