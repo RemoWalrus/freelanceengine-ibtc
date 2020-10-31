@@ -163,7 +163,7 @@ global $user_ID;
 <!-- List Testimonials -->
 
 <!-- List Get Started -->
-<?php if(is_user_logged_in()){ ?>
+
 <div class="fre-get-started">
 	<div class="container">
 		    <div class="get-started-content">
@@ -174,7 +174,7 @@ global $user_ID;
             </div>
       </div>
 </div>
-<?php } ?>
+
 <!-- List Get Started -->
 <!-- Community -->
 <?php if(ae_user_role($user_ID) == FREELANCER){ ?>
