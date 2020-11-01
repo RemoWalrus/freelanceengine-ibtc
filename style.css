@@ -51,11 +51,6 @@ Version:        2.1
     }
 */
 
-/* no stars */
-.freelance-rating span.rate-it {
-    font-size: 14px;
-	display: none !important
-}
 
 /*theme color*/
 .time_circles{
