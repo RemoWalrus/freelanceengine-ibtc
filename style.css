@@ -1308,6 +1308,15 @@ span.tester:hover {
     color:var(--color-main-light);
     text-decoration: underline;
 }
+
+/* Artist Lounge Hacks */
 .freelance-rating span.rate-it {
     display:none;
+}
+
+#mceu_16-button {
+	display:none;
+}
+#mceu_13-button {
+	display:none;
 }
