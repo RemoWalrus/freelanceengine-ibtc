@@ -1308,3 +1308,6 @@ span.tester:hover {
     color:var(--color-main-light);
     text-decoration: underline;
 }
+.freelance-rating span.rate-it {
+    display:none;
+}
