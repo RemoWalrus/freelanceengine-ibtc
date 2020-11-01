@@ -57,12 +57,12 @@ if ( $convert ) {
 	$next_post = ae_get_adjacent_post( $convert->ID, false, '', true, 'skill' );
 }
 
-/*$rating          = Fre_Review::employer_rating_score( $author_id );
+$rating          = Fre_Review::employer_rating_score( $author_id );
 $class_name = 'employer';
 if ( fre_share_role() || ae_user_role( $author_id ) == FREELANCER ) {
 	$rating          = Fre_Review::freelancer_rating_score( $author_id );
 	$class_name = 'freelance';
-} */
+}
 $projects_worked = get_post_meta( $profile_id, 'total_projects_worked', true );
 $project_posted = fre_count_user_posts_by_type( $author_id, 'project', '"publish","complete","close","disputing","disputed" ', true );
 $hire_freelancer = fre_count_hire_freelancer( $user_ID );
