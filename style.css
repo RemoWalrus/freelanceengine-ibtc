@@ -51,6 +51,12 @@ Version:        2.1
     }
 */
 
+/* no stars */
+.freelance-rating span.rate-it {
+    font-size: 14px;
+	display: none;
+}
+
 /*theme color*/
 .time_circles{
 	color: var(--color-white);
