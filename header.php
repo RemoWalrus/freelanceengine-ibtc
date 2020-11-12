@@ -30,7 +30,7 @@ global $current_user;
 	<?php
 	wp_head();
 	if ( function_exists( 'et_render_less_style' ) ) {
-		//et_render_less_style(); 
+		//et_render_less_style();
 	}
 	
 	?>
@@ -80,19 +80,72 @@ global $current_user;
                     </div>
                 </div>
 			<?php } ?>
-                        <div class="fre-menu-top">
-                <ul class="fre-menu-main">
-                    <!-- Menu freelancer -->
-					<?php if ( is_user_logged_in() ) { ?>
-                     <li class="fre-menu-freelancer dropdown-empty">
-                                <a href="<?php echo get_site_url(); ?>/community/artists-lounge/"><?php _e( 'Artists&lsquo; Lounge', ET_DOMAIN ); ?></a>
+            <div class="fre-search-wrap">
+				<?php
+				global $wp;
+				$active_profile = '';
+				$active_project = '';
+				$action_link    = '';
+				$input_hint     = '';
+				$current_url    = home_url( add_query_arg( array(), $wp->request ) );
+				$current_url    = $current_url . '/';
+
+				if ( is_user_logged_in() ) {
+					$user_data = get_userdata( $current_user->ID );
+					$user_role = implode( ', ', $user_data->roles );
+					if ( $user_role == 'freelancer' ) {
+						$active_project = 'active';
+						$action_link    = get_post_type_archive_link( PROJECT );
+						$input_hint     = __( 'Find Jobs', ET_DOMAIN );
+					} else if ( $user_role == 'employer' ) {
+						$active_profile = 'active';
+						$action_link    = get_post_type_archive_link( PROFILE );
+						$input_hint     = __( 'Find Artists', ET_DOMAIN );
+					} else {
+						$active_profile = 'active';
+						$action_link    = get_post_type_archive_link( PROFILE );
+						$input_hint     = __( 'Find Artists', ET_DOMAIN );
+					}
+				} else {
+					$active_profile = 'active';
+					$action_link    = get_post_type_archive_link( PROFILE );
+					$input_hint     = __( 'Find Artists', ET_DOMAIN );
+				}
+
+				if ( $current_url == get_post_type_archive_link( PROJECT ) ) {
+					$active_project = 'active';
+					$active_profile = '';
+					$action_link    = get_post_type_archive_link( PROJECT );
+					$input_hint     = __( 'Find Jobs', ET_DOMAIN );
+				} else if ( $current_url == get_post_type_archive_link( PROFILE ) ) {
+					$active_profile = 'active';
+					$active_project = '';
+					$action_link    = get_post_type_archive_link( PROFILE );
+					$input_hint     = __( 'Find Artists', ET_DOMAIN );
+				}
+				?>
+
+                <form class="fre-form-search" action="<?php echo $action_link; ?>" method="post">
+                    <div class="fre-search dropdown">
+                            <span class="fre-search-dropdown-btn dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </span>
+                        <input class="fre-search-field" name="keyword"
+                               value="<?php echo isset( $_POST['keyword'] ) ? $_POST['keyword'] : "" ?>" type="text"
+                               placeholder="<?php echo $input_hint; ?>">
+                        <ul class="dropdown-menu fre-search-dropdown">
+                            <li><a class="<?php echo $active_profile; ?>" data-type="profile"
+                                   data-action="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artists', ET_DOMAIN ); ?></a>
                             </li>
-                            
-					<?php } ?>
-               
-                </ul>
+                            <li><a class="<?php echo $active_project; ?>" data-type="project"
+                                   data-action="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
             </div>
-            <?php if ( is_user_logged_in() ) { ?>
+			<?php if ( is_user_logged_in() ) { ?>
                 <div class="fre-account-info-tablet">
                     <ul class="dropdown-menu">
                         <li>
@@ -102,8 +155,90 @@ global $current_user;
                         <li><a href="<?php echo wp_logout_url(); ?>"><?php _e( 'LOGOUT', ET_DOMAIN ); ?></a></li>
                     </ul>
                 </div>
-			<?php } 
-            if ( ! is_user_logged_in() ) { ?>
+			<?php } ?>
+            <div class="fre-menu-top">
+                <ul class="fre-menu-main">
+                    <!-- Menu freelancer -->
+					<?php if ( ! is_user_logged_in() ) { ?>
+                        <li class="fre-menu-freelancer dropdown">
+                            <a><?php _e( 'ARTISTS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                                                                          aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'Find Jobs', ET_DOMAIN ); ?></a>
+                                </li>
+								<?php if ( fre_check_register() ) { ?>
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( 'register' ) . '?role=freelancer'; ?>"><?php _e( 'Create Profile', ET_DOMAIN ); ?></a>
+                                    </li>
+								<?php } ?>
+                            </ul>
+                        </li>
+                        <li class="fre-menu-employer dropdown">
+                            <a><?php _e( 'EMPLOYERS', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo et_get_page_link( 'login' ) . '?ae_redirect_url=' . urlencode( et_get_page_link( 'submit-project' ) ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'Find Artists', ET_DOMAIN ); ?></a>
+                                </li>
+                            </ul>
+                        </li>
+					<?php } else { ?>
+
+						<?php if ( ae_user_role( $user_ID ) == FREELANCER ) { ?>
+                            <li class="fre-menu-freelancer dropdown-empty">
+                                <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'MY APPLICATIONS', ET_DOMAIN ); ?></a>
+                            </li>
+                            <li class="fre-menu-employer dropdown-empty">
+                                <a href="<?php echo get_post_type_archive_link( PROJECT ); ?>"><?php _e( 'JOBS', ET_DOMAIN ); ?></a>
+                            </li>
+						<?php } else { ?>
+                            <li class="fre-menu-employer dropdown">
+                                <a><?php _e( 'MY JOB POSTINGS', ET_DOMAIN ); ?><i class="fa fa-caret-down"
+                                                                             aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( "my-project" ); ?>"><?php _e( 'All Jobs Posted', ET_DOMAIN ); ?></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo et_get_page_link( 'submit-project' ); ?>"><?php _e( 'Post a Job', ET_DOMAIN ); ?></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fre-menu-employer dropdown-empty">
+                                <a href="<?php echo get_post_type_archive_link( PROFILE ); ?>"><?php _e( 'ARTISTS', ET_DOMAIN ); ?></a>
+                            </li>
+						<?php } ?>
+					<?php } ?>
+                    <!-- Main Menu -->
+					<?php if ( has_nav_menu( 'et_header_standard' ) ) { ?>
+                        <li class="fre-menu-page dropdown">
+                            <a><?php _e( 'MORE', ET_DOMAIN ); ?><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+							<?php
+							$args = array(
+								'theme_location'  => 'et_header_standard',
+								'menu'            => '',
+								'container'       => '',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'dropdown-menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => ''
+							);
+							wp_nav_menu( $args );
+							?>
+                        </li>
+					<?php } ?>
+                    <!-- Main Menu -->
+                </ul>
+            </div>
+			<?php if ( ! is_user_logged_in() ) { ?>
                 <div class="fre-account-wrap">
                     <div class="fre-login-wrap">
                         <ul class="fre-login">
@@ -112,7 +247,7 @@ global $current_user;
                             </li>
 							<?php if ( fre_check_register() ) { ?>
                                 <li>
-                                    <a href="<?php echo et_get_page_link('register', array("role"=>'freelancer')); ?>"><?php _e( 'SIGN UP', ET_DOMAIN ); ?></a>
+                                    <a href="<?php echo et_get_page_link( "register" ) ?>"><?php _e( 'SIGN UP', ET_DOMAIN ); ?></a>
                                 </li>
 							<?php } ?>
                         </ul>
