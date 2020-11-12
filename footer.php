@@ -17,7 +17,6 @@ if ( is_active_sidebar( 'fre-footer-1' ) || is_active_sidebar( 'fre-footer-2' )
 ) {
 	$flag = true; ?>
     <!-- FOOTER -->
-    <?php if(is_user_logged_in()){ ?>
     <footer>
         <div class="container" id="fre_primary_footer">
             <div class="row">
@@ -75,7 +74,6 @@ if ( is_active_sidebar( 'fre-footer-1' ) || is_active_sidebar( 'fre-footer-2' )
         </div>
     </div>
 </div>
-<?php } ?>
 
 <!-- FOOTER / END -->
 
@@ -92,7 +90,7 @@ if (/*!is_page_template( 'page-auth.php' ) && !is_page_template('page-submit-pro
 
 if ( is_page_template( 'page-profile.php' ) ) {
 	/* ======= modal add portfolio template ======= */
-	get_template_part( 'template-js/modal', 'add-portfolio' );
+    get_template_part( 'template-js/modal', 'add-portfolio' );
 
 	get_template_part( 'template-js/modal', 'delete-portfolio' );
 
@@ -100,6 +98,7 @@ if ( is_page_template( 'page-profile.php' ) ) {
 
 	get_template_part( 'template-js/modal', 'delete-meta-history' );
 	get_template_part( 'template-js/modal', 'upload-avatar' );
+	
 	/* ======= modal add portfolio template / end  ======= */
 }
 /* ======= modal change password template ======= */
@@ -162,7 +161,7 @@ get_template_part( 'template-js/modal', 'forgot-pass' );
 
 // modal edit project
 if ( ( get_query_var( 'author' ) == $user_ID && is_author() )
-     || (current_user_can('manage_options') && ae_user_role( $user_ID ) != FREELANCER) || is_post_type_archive( PROJECT )
+     || current_user_can( 'manage_options' ) || is_post_type_archive( PROJECT )
      || is_page_template( 'page-profile.php' ) || is_singular( PROJECT )
 ) {
 	//get_template_part( 'template-js/modal', 'edit-project' );
